@@ -62,7 +62,7 @@ En dessous → le loop ne tourne pas assez vite.
 |---|---|---|
 | **Rôle** | Growth/Distribution lead | CTO/Builder + Distribution |
 | **Temps/jour** | 7-10h | 7-10h |
-| **Split** | 100% distribution | 70% build + 30% distribution |
+| **Split dans ce repo** | 100% distribution | 30% distribution (le build se fait dans des projets Claude séparés) |
 | **Angle communautés** | Growth, conversion, acquisition, pricing | Technique, automatisation, stack, workflow |
 | **Comptes** | @delgado_ro72224 (perso) | @FabGangi (perso) |
 | **Studio** | Gère @foundrytwo | — |
@@ -117,27 +117,27 @@ Coaches/course creators (25/41), restaurants (22/41), real estate (20/41) — re
 
 ---
 
-## 7. SÉQUENCE DE BUILD
+## 7. CADENCE PRODUITS
 
-### Sprint 1 — Pendant le warming (S1-S3, 06-26 avril)
+### Cycle par produit
+Le build se fait dans des projets Claude séparés. Ce repo ne gère que la distribution.
 
-F build en parallèle du warming Reddit/Facebook :
-- **StoreMD** MVP : monitoring récurrent + historique + benchmark + alertes
-- **ListingLab** MVP : scan catalogue Shopify + scoring + priorisation + bulk rewrite
+| Étape | Durée | Responsable |
+|-------|-------|-------------|
+| Build | 2-5 jours | F (dans un projet Claude dédié) |
+| Distribution + validation | 1-2 semaines | R + F (dans ce repo) |
+| Décision GO/KILL | 48h test | R + F |
+| Scale ou next | Continu | R + F |
 
-### Sprint 2 — Après validation (S4-S6, fin avril - mai)
+### Cadence
+- Build : 3-4 SaaS/mois (Claude Code full-time)
+- Distribution : le bottleneck n'est plus le build, c'est la distribution
+- Objectif M3 : 12 SaaS testés, 2-3 validés, 1-2 avec MRR
+- Objectif M6 : 24 SaaS testés, portfolio de 4-5 SaaS actifs
 
-Choix basé sur quelle vertical a le mieux répondu :
-- Si e-commerce domine → **ChargebackShield**
-- Si agences/freelancers domine → **ClientPulse**
-
-### Sprint 3 — Mois 2-3 (juin-juillet)
-
-Le produit non-choisi au Sprint 2 + ProfitPilot ou CreatorSuite selon la traction.
-
-### Vision M6 (octobre 2026)
-
-Portfolio de 4-5 SaaS sur 2 verticals, distribués dans les mêmes communautés, cross-sell entre tous les produits, moat data croissant.
+### Suivi
+Le statut de chaque produit est dans produits/STATUS.md.
+Quand F finit un build → il met à jour STATUS.md → R commence la distribution.
 
 ---
 
@@ -160,11 +160,11 @@ Portfolio de 4-5 SaaS sur 2 verticals, distribués dans les mêmes communautés,
 | Willingness-to-pay prouvée | Les gens paient déjà pour des solutions |
 | Validation 48h | 10+ signups avant tout build |
 
-### Contrainte RETIRÉE
-
+### Contraintes RETIRÉES
 | Ancienne contrainte | Pourquoi retirée |
 |--------------------|-----------------|
-| Time-to-market ≤ 4 semaines | Claude Code + IA = pas de limite. La complexité est un moat. |
+| Time-to-market ≤ 4 semaines | Claude Code = build en 2-5 jours. Plus de limite. |
+| 1 SaaS/mois | Cadence accélérée : 3-4 SaaS/mois. Le search algorithm est 3-4x plus rapide. |
 
 ---
 
@@ -227,6 +227,8 @@ Détails complets dans WARMING-FARMING.md.
 - L'approche build-first
 - La cible dev
 - La limite time-to-market de 4 semaines
+- La cadence 1 SaaS/mois (remplacée par 3-4 SaaS/mois)
+- Le suivi du build dans ce repo (le build est dans des projets Claude séparés)
 
 Le framework de scoring /35 reste utilisable pour évaluer de nouvelles idées, mais les contraintes distribution-first et le scoring bonus distribution (+6 max) s'ajoutent obligatoirement.
 
@@ -245,3 +247,5 @@ Le framework de scoring /35 reste utilisable pour évaluer de nouvelles idées, 
 | 03/04/2026 | KILL PayloadDiff + DevToolsAPI | Cible dev = hors stratégie |
 | 03/04/2026 | LD → StoreMD, FPA → ListingLab, QF → LeadQuiz | Mutations profondes, pas des pivots cosmétiques |
 | 03/04/2026 | Nouveaux produits : ClientPulse (36), ChargebackShield (35), ProfitPilot (33) | Problèmes à 10-25K$/an, moat data, scoring top |
+| 03/04/2026 | Cadence 3-4 SaaS/mois | Claude Code = build en 2-5j. La distribution est le bottleneck. |
+| 03/04/2026 | Ce repo = distribution uniquement | Le build se fait dans des projets Claude séparés |

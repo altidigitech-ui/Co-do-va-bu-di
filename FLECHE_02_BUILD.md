@@ -181,29 +181,15 @@ Un seul outil qui fait TOUT le workflow post-création :
 
 ---
 
-## RECOMMANDATION SÉQUENCE (sans limite de build)
+## SÉQUENCE DE LANCEMENT
 
-### Sprint 1 — Pendant le warming (S1-S3)
+L'ordre de lancement dépend de la validation dans les communautés.
 
-**F build en parallèle du warming :**
+| Priorité | Produit | Validé quand | Distribué où |
+|----------|---------|-------------|-------------|
+| 1 | StoreMD + ListingLab | Premiers produits — validation pendant le warming | r/shopify, Shopify Entrepreneurs FB |
+| 2 | ChargebackShield OU ClientPulse | Selon quelle vertical répond le mieux | E-com ou agences |
+| 3 | ProfitPilot, CreatorSuite, AdAudit | Mois 2-3 selon traction | Cross-sell dans les verticals actives |
 
-1. **StoreMD** = mutation de Leak Detector. Le core existe. Ajouter : monitoring récurrent (Celery), historique (Supabase), benchmark (Playwright multi-sites), alertes (Resend), dashboard trends (Next.js + Recharts). Time : 1 semaine pour le MVP monitoring, 2 semaines pour le benchmark et dashboard.
-
-2. **ListingLab** = FicheProduitAI mutée. Context.md prêt. Ajouter : scan catalogue complet (API Shopify), scoring par listing, priorisation des faibles, bulk rewrite. Time : 1-2 semaines MVP.
-
-### Sprint 2 — Après validation (S4-S6)
-
-3. **ClientPulse** OU **ChargebackShield** selon quelle vertical a le mieux répondu en validation.
-
-- Si e-commerce domine → **ChargebackShield** (le problème le plus coûteux, le moat le plus fort)
-- Si agences/freelancers domine → **ClientPulse** (le score le plus haut, remplace 6 outils)
-
-### Sprint 3 — Mois 2-3
-
-4. Le produit non-choisi au Sprint 2
-5. **ProfitPilot** si l'audience e-commerce est solide
-6. **CreatorSuite V1** (text repurposing) si les creators convertissent
-
-### La vision à M6
-
-Un portfolio de 4-5 SaaS concentrés sur 2 verticals (e-commerce + agences), distribués dans les mêmes communautés, cross-sell entre tous les produits, moat data croissant sur chacun.
+Le build est fait par F dans des projets Claude séparés (2-5 jours par produit).
+Ce fichier ne gère que les specs et le scoring, pas le build.
