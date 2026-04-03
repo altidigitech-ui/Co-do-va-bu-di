@@ -14,8 +14,9 @@ Focus Mois 1 : e-commerce (base commune R+F) + lurk agences dès S3.
 |-------|--------|
 | 9h-9h30 | Setup Reddit : créer compte, username naturel, bio courte, avatar crédible |
 | 9h30-10h | S'abonner à 20 subs : **Généraux** (r/AskReddit, r/explainlikeimfive, r/CasualConversation, r/mildlyinteresting, r/todayilearned, r/LifeProTips) + **3-4 intérêts perso** + **LURK uniquement** (r/shopify, r/ecommerce, r/Entrepreneur) |
-| 10h-10h30 | Browse Reddit : scroller le feed, lire 15-20 posts, upvote 5-10 posts |
-| 10h30-11h | Setup Facebook : profil complet (photo, cover, bio partielle) |
+| 10h-10h30 | Setup outils veille : créer compte F5Bot + configurer keywords (voir strategie/PLAYBOOK-DISTRIBUTION.md §5) + ajouter RSS feeds dans Feedly |
+| 10h30-11h | Browse Reddit : scroller le feed, lire 15-20 posts, upvote 5-10 posts |
+| 11h-11h30 | Setup Facebook : profil complet (photo, cover, bio partielle) |
 | 11h-11h30 | Ajouter 2-3 amis FB réels. Scroller le feed 10 min. |
 | 14h-14h30 | Browse Reddit : lire les posts dans les subs cibles e-com (LURK) |
 | 14h30-15h | Browse Facebook : scroller, liker 2-3 posts d'amis |

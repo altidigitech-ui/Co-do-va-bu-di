@@ -111,3 +111,46 @@
 | Mentionner F2 dans les 2 premières semaines | Grille la couverture | F2 arrive quand R et F sont établis |
 | Poster aux mauvais horaires | Portée faible | 14h30-16h FR ou 19h-20h FR (pics US) |
 | Actions en rafale | Détection bot | Espacer les actions de quelques minutes |
+
+---
+
+## 5. OUTILS DE VEILLE — Trouver les posts qui valent le coup
+
+### F5Bot (gratuit) — Alertes keywords Reddit
+- URL : f5bot.com
+- Créer un compte par personne
+- Setup à J1 (inclus dans le plan 30 jours)
+
+Keywords R :
+"shopify conversion", "store not converting", "low sales shopify", "chargeback shopify", "shopify slow", "facebook ads ecommerce", "best tool ecommerce", "freelancer reporting", "client report agency", "marketing freelancer tools"
+
+Keywords F :
+"shopify speed", "shopify slow loading", "store performance", "automate shopify", "youtube thumbnail", "repurpose video", "content workflow automation", "too many tools creator"
+
+- Flag "only-reddit" sur chaque keyword
+- Alerte par email — check 2x/jour (matin + après-midi)
+- Quand un post pertinent arrive → ouvrir → commenter si < 6h (fenêtre d'engagement Reddit)
+
+### RSS Feeds (gratuit via Feedly)
+Ajouter ces feeds dans Feedly :
+- reddit.com/r/shopify/rising/.rss
+- reddit.com/r/ecommerce/rising/.rss
+- reddit.com/r/digital_marketing/rising/.rss (R)
+- reddit.com/r/NewTubers/rising/.rss (F)
+
+Les posts en "Rising" = meilleur ratio visibilité/compétition. Commenter un post Rising dans les 60 premières minutes = maximum de visibilité.
+
+### Critères pour commenter un post (ne pas commenter n'importe quoi)
+- Le post a 2-15 commentaires (assez de traction, pas encore noyé)
+- Le post est dans les 6 dernières heures (au-delà c'est trop tard)
+- Le post pose un PROBLÈME que R ou F peut résoudre
+- Le post N'A PAS déjà une réponse parfaite (il y a de la place pour ajouter de la valeur)
+- Le post est dans un sub e-com (M1) ou agences/creators (M2-M3 selon le split)
+
+### Workflow quotidien
+1. Ouvrir Feedly → scanner les posts Rising (2 min)
+2. Check email F5Bot → voir les alertes keywords (1 min)
+3. Ouvrir les 3-5 meilleurs posts
+4. Pour chaque post : copier le titre + 2 lignes de contexte → coller à Claude → Claude génère le commentaire avec le framework adapté (voir angles-et-templates.md) et la voix (voir VOIX.md) → 30 sec par commentaire
+5. Relire, ajuster 2-3 mots si nécessaire → poster → 1 min par commentaire
+6. Total : 15-20 min pour 5 commentaires de qualité
