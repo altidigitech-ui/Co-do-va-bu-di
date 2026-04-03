@@ -8,9 +8,19 @@ Le build des SaaS se fait dans des projets Claude séparés — PAS ici.
 Technique, automatisation, IA en production, stack, workflow, diagnostics.
 Ton : expert accessible, concret, passionné, honnête sur les galères.
 
-## Communautés (lead)
-- Content Creators : r/NewTubers, r/youtubers, r/ContentCreators, YouTube Creators Hub FB
-- E-commerce (support) : r/shopify (angle technique), r/ecommerce
+## Communautés
+
+### Mois 1 (avril) — Full e-com + lurk creators
+- ACTIF : r/shopify (angle tech), r/ecommerce, Shopify Entrepreneurs FB (angle tech), Shopify Newbies FB
+- LURK dès S3 : r/NewTubers, r/youtubers, YouTube Creators Hub FB (browse, upvote, noter douleurs, pas de commentaire)
+
+### Mois 2 (mai) — Distribution e-com + warming→distribution creators
+- ACTIF e-com : distribution StoreMD, ListingLab, ChargebackShield (angle technique)
+- ACTIF creators (lead) : r/NewTubers, r/youtubers, r/ContentCreators, YouTube Creators Hub FB
+- SUPPORT agences : rejoint les subs de R pour cross-engagement
+
+### Mois 3 (juin) — Les 3 verticals
+- ACTIF partout. Scale ce qui marche.
 
 ## Volume quotidien minimum
 - Commentaires Reddit : 8-10

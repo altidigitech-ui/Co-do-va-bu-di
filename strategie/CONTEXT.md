@@ -69,19 +69,42 @@ En dessous → le loop ne tourne pas assez vite.
 
 ---
 
-## 5. VERTICALS CIBLES
+## 5. VERTICALS CIBLES & SPLIT
 
-### Verticals GO (infiltration active)
+### Stratégie de split
 
-| Vertical | Score /41 | Communautés principales | Lead |
-|----------|-----------|------------------------|------|
-| **E-commerce sellers** (Shopify/Amazon) | 33 | r/shopify (340K), r/ecommerce (100K), Shopify Entrepreneurs FB (100K) | R |
-| **Agences marketing & freelancers** | 31 | r/digital_marketing (200K), r/freelance (200K), Digital Distillery FB (148K) | R |
-| **Content creators** (YouTube/TikTok) | 28 | r/NewTubers (579K), r/youtubers (262K), YouTube Creators Hub FB | F |
+| Vertical | Warming (solo) | Distribution (duo) | Lead warming |
+|----------|---------------|-------------------|-------------|
+| **E-commerce** (base commune) | R+F ensemble dès J1 | R+F ensemble | R+F |
+| **Agences/Freelancers** | R solo dès S3 (J15) | R lead + F rejoint M2 | R |
+| **Content Creators** | F solo dès S3 (J15) | F lead + R rejoint M2 | F |
+
+Principe : le warming se fait en solo (vitesse), la distribution se fait en duo (densité + cross-engagement).
+
+### Timeline par mois
+
+| Mois | R | F |
+|------|---|---|
+| **Mois 1 (avril)** | 80% e-com warming + 20% lurk agences (dès S3) | 80% e-com warming + 20% lurk creators (dès S3) |
+| **Mois 2 (mai)** | 40% distribution e-com + 60% agences (warming→distrib) | 40% distribution e-com + 60% creators (warming→distrib) |
+| **Mois 3 (juin)** | Scale ce qui marche. R+F dans les 3 verticals. | Scale ce qui marche. R+F dans les 3 verticals. |
+
+### Communautés par vertical
+
+**E-commerce (base commune R+F) :**
+- Reddit : r/shopify (340K), r/ecommerce (100K), r/FulfillmentByAmazon (50K)
+- Facebook : Shopify Entrepreneurs (100K), Shopify Newbies (100K), Ecommerce Entrepreneurs (50K)
+
+**Agences/Freelancers (R lead, F rejoint M2) :**
+- Reddit : r/digital_marketing (200K), r/freelance (200K), r/SEO (200K), r/PPC (50K)
+- Facebook : Digital Distillery (148K), Superstar SEO (76K), Marketing Solved (30K)
+
+**Content Creators (F lead, R rejoint M2) :**
+- Reddit : r/NewTubers (579K), r/youtubers (262K), r/ContentCreators, r/podcasting (100K)
+- Facebook : YouTube Creators Hub (50K)
 
 ### Verticals BACKLOG
-
-Coaches/course creators (25/41), restaurants (22/41), real estate (20/41) — revisiter si les 3 premières ne convertissent pas.
+Coaches/course creators (25/41), restaurants (22/41), real estate (20/41).
 
 ---
 
@@ -89,21 +112,21 @@ Coaches/course creators (25/41), restaurants (22/41), real estate (20/41) — re
 
 ### 6.1 Mutations des SaaS existants
 
-| Original | Mutation | Cible | Score | Statut |
-|----------|---------|-------|-------|--------|
-| Leak Detector | **StoreMD** — Médecin CRO permanent : monitoring continu, benchmark concurrence, alertes, historique | E-commerce | 34/41 | Sprint 1 |
-| FicheProduitAI | **ListingLab** — Labo d'optimisation catalogue : scan complet, scoring par listing, priorisation, bulk rewrite, benchmark | E-commerce | 32/41 | Sprint 1 |
-| QuizForge | **LeadQuiz** — Quiz lead generation : connecté au catalogue Shopify, recommandation produit, analytics | E-com + Coaches | 28/41 | Sprint 3 |
+| Original | Mutation | Cible | Score | Mois |
+|----------|---------|-------|-------|------|
+| Leak Detector | **StoreMD** — Médecin CRO permanent : monitoring continu, benchmark concurrence, alertes, historique | E-commerce | 34/41 | Mois 1 |
+| FicheProduitAI | **ListingLab** — Labo d'optimisation catalogue : scan complet, scoring par listing, priorisation, bulk rewrite, benchmark | E-commerce | 32/41 | Mois 1 |
+| QuizForge | **LeadQuiz** — Quiz lead generation : connecté au catalogue Shopify, recommandation produit, analytics | E-com + Coaches | 28/41 | Mois 3 |
 
 ### 6.2 Nouveaux SaaS à créer
 
-| Produit | Vertical | Problème (coût/an) | Score | Sprint |
-|---------|----------|-------------------|-------|--------|
-| **ClientPulse** — Hub IA du freelancer (prospect→propose→deliver→report→bill→retain) | Agences/Freelancers | 15-25K$ (6 outils + 20h/sem perdues) | 36/41 | Sprint 2 |
-| **ChargebackShield** — Prévention fraude IA prédictive + contestation auto | E-commerce | 10K$ (800$/mois chargebacks) | 35/41 | Sprint 2 |
-| **ProfitPilot** — Comptabilité e-commerce automatisée IA ("TurboTax for Shopify") | E-commerce | 20K$ (temps + erreurs + déductions) | 33/41 | Sprint 3 |
-| **CreatorSuite** — Studio IA tout-en-un (transcribe→repurpose→clip→thumbnail→schedule→analytics) | Creators | 1.6K$ outils + 15h/sem | 31/41 | Sprint 3 |
-| **AdAudit** — Audit publicitaire IA (Meta + Google Ads) | Agences | 12K$+ budget gaspillé | 30/41 | Sprint 3 |
+| Produit | Vertical | Problème (coût/an) | Score | Mois |
+|---------|----------|-------------------|-------|------|
+| **ClientPulse** — Hub IA du freelancer (prospect→propose→deliver→report→bill→retain) | Agences/Freelancers | 15-25K$ (6 outils + 20h/sem perdues) | 36/41 | Mois 2 |
+| **ChargebackShield** — Prévention fraude IA prédictive + contestation auto | E-commerce | 10K$ (800$/mois chargebacks) | 35/41 | Mois 1 |
+| **ProfitPilot** — Comptabilité e-commerce automatisée IA ("TurboTax for Shopify") | E-commerce | 20K$ (temps + erreurs + déductions) | 33/41 | Mois 2 |
+| **CreatorSuite** — Studio IA tout-en-un (transcribe→repurpose→clip→thumbnail→schedule→analytics) | Creators | 1.6K$ outils + 15h/sem | 31/41 | Mois 3 |
+| **AdAudit** — Audit publicitaire IA (Meta + Google Ads) | Agences | 12K$+ budget gaspillé | 30/41 | Mois 2 |
 
 ### 6.3 SaaS KILL
 
@@ -117,23 +140,30 @@ Coaches/course creators (25/41), restaurants (22/41), real estate (20/41) — re
 
 ---
 
-## 7. CADENCE PRODUITS
+## 7. CADENCE PRODUITS — 9 SaaS en 3 mois
+
+### Plan 3 mois
+
+| Mois | Produits (F build) | Vertical | Distribution |
+|------|-------------------|----------|-------------|
+| **Mois 1 (avril)** | StoreMD, ListingLab, ChargebackShield | E-commerce | R+F ensemble dans e-com |
+| **Mois 2 (mai)** | ClientPulse, ProfitPilot, AdAudit | Agences + E-com | R lead agences, F lead creators. Les deux distribuent e-com. |
+| **Mois 3 (juin)** | CreatorSuite, LeadQuiz, [wildcard] | Creators + Cross-sell | R+F dans les 3 verticals. Scale ce qui marche. |
 
 ### Cycle par produit
 Le build se fait dans des projets Claude séparés. Ce repo ne gère que la distribution.
 
 | Étape | Durée | Responsable |
 |-------|-------|-------------|
-| Build | 2-5 jours | F (dans un projet Claude dédié) |
-| Distribution + validation | 1-2 semaines | R + F (dans ce repo) |
+| Build | 2-5 jours | F (projet Claude dédié) |
+| Distribution + validation | 1-2 semaines | R + F (ce repo) |
 | Décision GO/KILL | 48h test | R + F |
 | Scale ou next | Continu | R + F |
 
-### Cadence
-- Build : 3-4 SaaS/mois (Claude Code full-time)
-- Distribution : le bottleneck n'est plus le build, c'est la distribution
-- Objectif M3 : 12 SaaS testés, 2-3 validés, 1-2 avec MRR
-- Objectif M6 : 24 SaaS testés, portfolio de 4-5 SaaS actifs
+### Objectifs
+- Mois 1 : 3 SaaS live, audience e-com chaude, warming secondaire lancé
+- Mois 2 : 6 SaaS live, 2 verticals actives, premiers MRR
+- Mois 3 : 9 SaaS live, 3 verticals actives, identification du winner
 
 ### Suivi
 Le statut de chaque produit est dans produits/STATUS.md.

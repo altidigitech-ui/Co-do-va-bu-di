@@ -7,9 +7,19 @@ Co-fondateur Growth de FoundryTwo. Distribution full-time dans ce repo.
 Growth, conversion, acquisition, pricing, CRO, cold outreach.
 Ton : direct, data-driven, provocateur.
 
-## Communautés (lead)
-- E-commerce : r/shopify, r/ecommerce, Shopify Entrepreneurs FB, Shopify Newbies FB
-- Agences/Freelancers : r/digital_marketing, r/freelance, Digital Distillery FB, Marketing Solved FB
+## Communautés
+
+### Mois 1 (avril) — Full e-com + lurk agences
+- ACTIF : r/shopify, r/ecommerce, Shopify Entrepreneurs FB, Shopify Newbies FB, Ecommerce Entrepreneurs FB
+- LURK dès S3 : r/digital_marketing, r/freelance, Digital Distillery FB (browse, upvote, noter douleurs, pas de commentaire)
+
+### Mois 2 (mai) — Distribution e-com + warming→distribution agences
+- ACTIF e-com : distribution StoreMD, ListingLab, ChargebackShield
+- ACTIF agences (lead) : r/digital_marketing, r/freelance, r/SEO, r/PPC, Digital Distillery FB, Marketing Solved FB
+- SUPPORT creators : rejoint les subs de F pour cross-engagement
+
+### Mois 3 (juin) — Les 3 verticals
+- ACTIF partout. Scale ce qui marche.
 
 ## Volume quotidien minimum
 - Commentaires Reddit : 8-10
