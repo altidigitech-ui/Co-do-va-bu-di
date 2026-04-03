@@ -359,17 +359,10 @@ Le warming décale la validation de ~3 semaines par rapport au plan initial :
 | Premiers commentaires subs cibles | 06/04 | 13/04 (J+7) |
 | Premiers posts dans subs cibles | 13/04 | 22/04 (J+16) |
 | Validation 48h (post "qui veut tester?") | 20/04 | 04/05 (J+28) |
-| Début build (si validation OK) | 23/04 | 05/05 |
+| Produit prêt pour distribution | — | 05/05 (F build en 2-5j dans un projet séparé) |
 | Produit live | mi-mai | fin mai - début juin |
 
-**Le point positif :** le warming N'EST PAS du temps perdu. Pendant ces 3-4 semaines, R et F :
-- Comprennent les communautés en profondeur
-- Documentent les douleurs RÉELLES (pas des hypothèses)
-- Deviennent des visages familiers = distribution plus facile quand le produit arrive
-- Identifient les prospects chauds pour le cold DM à J+22
-- Testent quel angle (growth vs technique) résonne le mieux dans chaque communauté
-
-Le warming est la Phase 1 du loop. C'est déjà de la distribution — vous construisez le canal AVANT d'avoir le produit à mettre dedans.
+Le warming N'EST PAS du temps perdu. Pendant ces 3-4 semaines, R et F distribuent. En parallèle, F build les premiers produits (StoreMD, ListingLab) dans des projets Claude séparés. Les deux avancent simultanément.
 
 ---
 
