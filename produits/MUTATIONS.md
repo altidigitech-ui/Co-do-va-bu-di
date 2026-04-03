@@ -1,137 +1,112 @@
-# FLÈCHE 1 (V2) — SaaS EXISTANTS → Mutations profondes
+# MUTATIONS — SaaS existants transformés en agents IA
 
-**Date :** 03 avril 2026
-**Lens :** Pas de limite de build. La complexité = le moat. Claude Code build tout.
+Dernière mise à jour : 03/04/2026
+
+## Architecture commune
+
+Chaque SaaS partage le même squelette :
+
+**Stack :** FastAPI + Next.js 14 (PWA) + Supabase + Stripe + Claude API + Celery + Redis
+
+**Agent IA 4 couches :**
+1. DÉTECTER — Webhooks, cron jobs, événements temps réel
+2. ANALYSER — Claude API interprète, compare, diagnostique en langage humain
+3. AGIR — Notification push + email + action recommandée en 1 clic
+4. APPRENDRE — Le client accepte ou refuse → l'agent s'améliore
+
+**PWA :** Service worker + manifest.json. Installable Android + iOS. Notifications push. Offline mode.
 
 ---
 
-## PRINCIPE
+## 1. STOREMD — Le médecin IA permanent de ta boutique (Score 34/41)
 
-On ne "pivote" plus Leak Detector avec un nouveau titre et 3 prompts modifiés. On le MUTE en quelque chose de fondamentalement plus puissant en exploitant le core engine (Playwright + Claude API + scoring) comme base d'un produit qui résout un problème à 10K$/an, pas à 29$/mois.
+**Base :** Leak Detector | **Cible :** E-commerce Shopify | **Mois :** 1
 
----
+### Le problème (10-120K$/an)
+Le merchant ne sait pas que son store est cassé jusqu'à ce que les ventes baissent. Une baisse de 0.1% de conversion sur un store à 100K$/mois = 1200$/mois perdu. Personne ne surveille le store 24/7. Un app update casse le mobile, un theme update ralentit le checkout, une image en 4000px tue le speed score — il le découvre des semaines plus tard.
 
-## 1. LEAK DETECTOR → STOREMD : Le médecin IA permanent de ta boutique
+### Features
 
-### Le problème réel (pas le symptôme)
+| Feature | Ce que l'agent fait |
+|---------|-------------------|
+| Health Score 24/7 | Score /100 mis à jour chaque nuit. Mobile + Desktop séparés. Le merchant ouvre l'app le matin et voit la santé de son store. |
+| Diagnostic 3 couches | Analyse Traffic Quality → Product Engagement → Cart-to-Purchase. Identifie LAQUELLE des 3 couches est cassée. Pas des graphiques — des phrases. |
+| Alertes régressives | Détecte quand un score BAISSE vs veille/semaine. Push notification immédiate : "Score mobile tombé à 61 (-14). Cause probable : app X installée hier." |
+| App Impact Scanner | Mesure l'impact de CHAQUE app Shopify sur le speed. "14 apps installées, 5 inutilisées depuis 30+ jours. Les retirer = 2.3s de load time en moins." |
+| Benchmark concurrence | Scanne 3-5 concurrents. Compare les scores. "Votre score mobile : 61. Vos concurrents : 78, 82, 73." |
+| Historique 90 jours | Timeline évolution du score avec événements marqués. Corrélation visuelle avec les changements effectués. |
+| Fix Generator | Pour chaque problème → action corrective en langage simple. Pas "Optimize LCP" mais "Désinstallez Popup Manager. +1.8s de vitesse." |
+| Weekly Report Push | Rapport lundi matin en push + email. Score, tendance, top 3 actions. Le merchant ne fait rien. |
 
-La conversion est le problème le plus coûteux. 1000 visiteurs à 0.5% de conversion = 5 ventes. À 2.5% = 25 ventes. C'est 20 ventes perdues pour 1000 visiteurs. À 50$ de panier moyen, un store de 10K visiteurs/mois perd 10 000$ par mois.
-
-Les outils CRO existants (Hotjar, Lucky Orange, Google Optimize RIP) montrent des heatmaps et des recordings. Le merchant VOIT le problème mais ne sait pas QUOI FAIRE. Et c'est un audit ponctuel — il le fait une fois, corrige 2 trucs, et ne revient jamais.
-
-### Ce que StoreMD fait (bien au-delà de Leak Detector)
-
-**Leak Detector = un diagnostic ponctuel.** StoreMD = un médecin IA permanent qui surveille ta boutique 24/7.
-
-| Feature | Leak Detector (actuel) | StoreMD (mutation) |
-|---------|----------------------|-------------------|
-| Audit ponctuel | ✅ Score /100 sur 8 catégories | ✅ Inclus comme "premier check-up" |
-| Monitoring continu | ❌ | ✅ Re-scan automatique hebdomadaire, alertes si un score baisse |
-| Diagnostic spécifique Shopify | ❌ Generic landing page | ✅ Analyse product pages, collection pages, checkout flow, cart page |
-| Benchmark concurrence | ❌ | ✅ Scanne 3-5 concurrents et compare les scores |
-| Recommandations actionnables non-tech | ❌ Jargon CRO | ✅ "Déplace ton bouton Ajouter au panier au-dessus de la ligne de flottaison" avec screenshot annoté |
-| A/B test suggestions | ❌ | ✅ L'IA suggère quoi tester en priorité basé sur l'impact estimé |
-| Historique et trends | ❌ | ✅ Dashboard avec évolution du score dans le temps |
-| Score par device | ❌ | ✅ Score séparé mobile vs desktop (70%+ du trafic e-com = mobile) |
-| Speed monitoring | Basique | ✅ Core Web Vitals tracking + alertes si ça se dégrade |
-| Intégration Shopify | ❌ | ✅ App Shopify native (V2) — install en 1 clic, accès aux données boutique |
-
-### Stack technique
-
-- **Core existant** : Playwright (scraping), Claude API (analyse), scoring engine
-- **À ajouter** : Celery + Redis (jobs récurrents de monitoring), Supabase (historique scores), webhook alertes (email/Slack), API Shopify (V2 pour install native)
-- **Complexité** : HAUTE — et c'est le point. Un vibe coder ne peut pas reproduire un monitoring CRO continu avec benchmark concurrence en une après-midi.
+### L'agent en action
+Dimanche 3h → StoreMD scanne → compare avec vendredi → détecte mobile checkout 0.8s plus lent → identifie app update samedi → lundi 8h push : "Your mobile checkout slowed down. Reviews+ updated yesterday. Recommended: update or contact support."
 
 ### Pricing
-
-| Plan | Prix | Ce qu'il inclut |
-|------|------|----------------|
-| Free | 0$ | 1 audit ponctuel, 1 page, résultats limités |
-| Starter | 29$/mois | 1 store, scan hebdo, 5 pages, historique 30 jours |
-| Pro | 79$/mois | 1 store, scan quotidien, pages illimitées, benchmark 3 concurrents, alertes |
-| Agency | 199$/mois | 10 stores, tout inclus, white-label rapports, API access |
-
-### Revenue potentiel
-
-Un store qui perd 10K$/mois en conversions ratées paie 79$/mois les yeux fermés. 500 stores Pro = 39K$ MRR. Le pricing est justifié par le ROI client.
+Free (1 audit ponctuel) → 29$/mois (1 store, scan hebdo) → 79$/mois (scan quotidien, benchmark 3 concurrents) → 199$/mois (10 stores, white-label, API)
 
 ### Moat
-
-- **Data accumulation** : plus de scans = meilleur benchmark sectoriel. Personne ne part une fois qu'il a 6 mois d'historique.
-- **Complexité technique** : monitoring continu + benchmark + historique + alertes = pas reproduisable en un weekend.
-- **Intégration Shopify App Store** : une fois dans le store, c'est un canal de distribution permanent avec 4.6M+ boutiques.
+Data accumulation (6 mois d'historique = irremplaçable) + intégration Shopify App Store + complexité technique
 
 ---
 
-## 2. FICHEPRODUITAI → LISTINGLAB : Le labo d'optimisation de listings IA
+## 2. LISTINGLAB — Le labo d'optimisation de catalogue (Score 32/41)
 
-### Le problème réel
+**Base :** FicheProduitAI | **Cible :** E-commerce Shopify | **Mois :** 1
 
-Ce n'est pas juste "mes descriptions sont mauvaises". C'est un problème systémique : le merchant a 200-5000 produits, chaque listing a 8-12 éléments à optimiser (titre, description, images alt-text, meta title, meta description, tags, variant names, collection assignments), et il ne sait pas LESQUELS de ses listings sont les plus faibles ni PAR OÙ commencer.
+### Le problème (5-30K$/an)
+200-5000 produits, 8-12 éléments par listing à optimiser. Le merchant ne sait pas lesquels sont faibles ni par où commencer. Les outils existants génèrent à l'aveugle. Personne ne fait : analyse existant → score → diagnostic → réécriture ciblée → benchmark.
 
-### Ce que ListingLab fait (au-delà de la simple génération)
+### Features
 
-| Feature | Apps existantes (GoWise, SEO On) | ListingLab |
-|---------|--------------------------------|-----------|
-| Génération description IA | ✅ | ✅ Inclus |
-| Analyse catalogue complet | ❌ Product par product | ✅ Scan de TOUT le catalogue d'un coup — identifie les 20% de listings les plus faibles |
-| Score par listing | ❌ | ✅ Score /100 : titre, description, SEO, images, trust signals, competitor comparison |
-| Priorisation | ❌ | ✅ "Ces 15 listings vous font perdre le plus de ventes — commencez par eux" |
-| Réécriture ciblée | ❌ Réécriture aveugle | ✅ Réécriture SEULEMENT de ce qui est faible, garde ce qui marche |
-| Benchmark concurrence | ❌ | ✅ Compare chaque listing avec les top sellers de la même catégorie |
-| SEO complet | Basique (meta tags) | ✅ Keywords research, search volume, difficulty — spécifique à la niche du produit |
-| Multi-langue | Certains | ✅ Génération/optimisation en 20+ langues (marchés internationaux) |
-| Bulk operations | Certains | ✅ Réécriture batch de 500 listings en 1 clic |
-| A/B testing titres | ❌ | ✅ Génère 3 variantes de titre avec prédiction de CTR |
-| Connexion Shopify native | Variable | ✅ Pull et push direct dans Shopify — pas de CSV |
-| Suivi dans le temps | ❌ | ✅ Le score évolue — on voit l'impact des changements |
-
-### Stack
-
-- FastAPI + Next.js + Supabase + Claude API
-- API Shopify (pull produits, push modifications)
-- Scraping concurrence (Playwright)
-- Keyword research API (Datamuse, Google Trends API, ou custom)
+| Feature | Ce que l'agent fait |
+|---------|-------------------|
+| Catalogue Scan | Scanne TOUS les listings via API Shopify. Score /100 par listing. Vue d'ensemble en 1 écran. |
+| Priorisation par impact | Classe par REVENUE potentiel. "Ce listing : 500 vues/mois mais 0.3% conversion. Le fixer = 2000$/mois." |
+| Diagnostic par élément | Pour chaque listing faible : quel élément est le problème (titre, description, images, SEO). |
+| Rewrite ciblé | Réécrit UNIQUEMENT ce qui est faible. Garde ce qui marche. |
+| Benchmark catégorie | Compare chaque listing aux top sellers de la même catégorie (scraping concurrence). |
+| Bulk Operations | Réécrire 50-500 listings en 1 clic. Review + approve avant push Shopify. Pas de CSV. |
+| SEO Engine | Keywords par produit. Volume, difficulté, suggestions. |
+| Multi-langue | Optimisation en 20+ langues (marchés internationaux). |
+| New Product Watch | Webhook Shopify : nouveau produit ajouté → analyse auto → alerte si faible → version optimisée proposée en 5 min. |
 
 ### Pricing
+Free (5 analyses) → 29$/mois (100 produits) → 79$/mois (1000 produits, benchmark, A/B titles) → 199$/mois (illimité, API, white-label)
 
-| Plan | Prix | Produits |
-|------|------|---------|
-| Free | 0$ | 5 analyses, pas de réécriture |
-| Starter | 29$/mois | 100 produits, réécriture, SEO basique |
-| Pro | 79$/mois | 1000 produits, benchmark, A/B titles, multi-langue |
-| Enterprise | 199$/mois | Illimité, API, white-label |
+### Moat
+Data catalogue + intégration Shopify bidirectionnelle + SEO engine
 
 ---
 
-## 3. QUIZFORGE → LEADQUIZ : Quiz de lead generation pour e-commerce et coaches
+## 3. LEADQUIZ — Quiz lead gen connecté catalogue (Score 28/41)
 
-### Le pivot
+**Base :** QuizForge | **Cible :** E-com + Coaches | **Mois :** 3
 
-QuizForge tel que planifié (SCORM export, formation) = niche étroite, willingness-to-pay faible.
+### Le problème
+Typeform (39$/mois) et Interact (89$/mois) ne sont PAS connectés au catalogue Shopify. Le quiz recommande des produits mais le lien est manuel. Analytics basiques.
 
-**LeadQuiz** = quiz interactifs comme outil de LEAD GENERATION pour les e-commerçants et les coaches. "Trouvez votre type de peau" → résultat personnalisé → recommandation produit → capture email → vente.
+### Features
 
-| Feature | Typeform/Interact | LeadQuiz |
-|---------|------------------|----------|
-| Création quiz | ✅ | ✅ + IA génère le quiz à partir de la description du catalogue |
-| Design | Bon | ✅ Templates e-commerce et coaching prêts à l'emploi |
-| Recommandation produit | Limité | ✅ Connecté au catalogue Shopify — recommande les VRAIS produits |
-| Capture email | ✅ | ✅ + intégration Klaviyo, Mailchimp, Brevo |
-| Analytics | Basique | ✅ Conversion par question, drop-off analysis, revenue attribué |
-| IA | ❌ | ✅ L'IA analyse les résultats et optimise le quiz automatiquement |
-| Prix | 39-249$/mois | 19-79$/mois (undercut) |
+| Feature | Ce que l'agent fait |
+|---------|-------------------|
+| Quiz Generator | 3 phrases de description → quiz complet en 2 min (questions, logique, résultats). |
+| Catalogue Connect | API Shopify. Résultats = VRAIS produits avec lien "Ajouter au panier". |
+| Email Capture | Capture email AVANT résultats. Intégration Klaviyo, Mailchimp, Brevo. |
+| Revenue Attribution | Connecte résultats quiz → achats réels Shopify. ROI du quiz en temps réel. |
+| Auto-Optimize | L'agent analyse les drop-offs par question. Suggère des modifications. A/B test auto. |
 
-### Revenue : 2-5K$ MRR à M6. Niche mais forte rétention.
+### Pricing
+Free (1 quiz, 50 réponses/mois) → 19$/mois (3 quiz, 500 réponses) → 49$/mois (illimité) → 79$/mois (multi-stores)
 
 ---
 
-## SYNTHÈSE V2 — Mutations profondes
+## CROSS-SELL E-COM
 
-| Produit original | Mutation | Complexité | Moat | Revenue M6 |
-|-----------------|----------|-----------|------|-----------|
-| Leak Detector | **StoreMD** — Médecin CRO permanent | HAUTE (monitoring continu, benchmark, alertes) | Data accumulation + App Store Shopify | 5-15K$ MRR |
-| FicheProduitAI | **ListingLab** — Labo d'optimisation catalogue | HAUTE (scan catalogue complet, benchmark, bulk) | Data + intégration Shopify + SEO engine | 5-15K$ MRR |
-| QuizForge | **LeadQuiz** — Quiz lead gen e-com/coaches | MOYENNE | Templates + intégration catalogue | 2-5K$ MRR |
-| PayloadDiff | ❌ KILL | — | — | — |
-| DevToolsAPI | ❌ KILL | — | — | — |
+| Si le client utilise | On propose | Pitch |
+|---------------------|-----------|-------|
+| StoreMD | ListingLab | "Store healthy mais listings faibles" |
+| ListingLab | StoreMD | "Listings optimisés mais store a des problèmes" |
+| StoreMD + ListingLab | ChargebackShield | "Vous convertissez bien, protégez vos revenus" |
+| Tout | ProfitPilot | "Vous vendez — mais quel est votre VRAI profit ?" |
+
+Bundle e-com : StoreMD + ListingLab + ChargebackShield + ProfitPilot = 199$/mois (au lieu de 316$). Le merchant qui a les 4 ne quitte jamais.

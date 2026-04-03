@@ -1,195 +1,142 @@
-# FLÈCHE 2 (V2) — Nouveaux SaaS à créer (problèmes à 10K$/an)
+# NOUVEAUX SaaS — Créés from scratch
 
-**Date :** 03 avril 2026
-**Lens :** La complexité = le moat. On construit ce qui est DIFFICILE à reproduire.
-**Filtre :** Chaque produit résout un problème qui coûte > 5K$/an au client.
-
----
-
-## VERTICAL E-COMMERCE
+Dernière mise à jour : 03/04/2026
+Même architecture commune que MUTATIONS.md (Agent 4 couches + PWA).
 
 ---
 
-### 1. CHARGEBACKSHIELD — Prévention fraude IA prédictive
+## MOIS 1 — E-COMMERCE
 
-**Le problème (800$/mois par store en moyenne) :**
-Les merchants posent littéralement la question "comment les chargebacks sont-ils légaux ?" quand ils perdent des litiges avec preuves de tracking, confirmation de livraison, et messages clients. Les banques se rangent du côté des clients 80% du temps. Un seul chargeback de 4200$ peut tuer une petite boutique. Les outils existants sont RÉACTIFS — ils aident APRÈS le chargeback. Personne ne prévient AVANT.
+### 1. CHARGEBACKSHIELD — Bouclier anti-fraude prédictif (Score 35/41)
 
-**La solution :**
-IA qui analyse chaque commande AVANT l'expédition et score le risque de chargeback. Signals : adresse de livraison différente de la facturation, email jetable, comportement d'achat atypique, historique IP, vitesse de commande, combinaison produit/quantité suspecte. Si le score de risque est élevé → alerte au merchant → action recommandée (confirmation email, appel, annulation).
+**Cible :** E-commerce Shopify | **Problème :** 10K$/an (800$/mois chargebacks)
 
-**En plus :** génération automatique de dossiers de contestation quand un chargeback arrive. L'IA compile les preuves (tracking, emails, screenshots) dans le format exact que les banques exigent.
+Le système est truqué contre les merchants. Tracking, confirmation livraison, messages clients — ils perdent quand même 80% des disputes. Un chargeback de 100$ coûte 461$ réellement (produit + shipping + fees + temps). Dépasser 0.9% de ratio = amendes 25-100K$/mois + perte du droit de traiter les paiements.
 
-**Concurrence :**
-| Outil | Prix | Limite |
-|-------|------|--------|
-| Chargeflow | 25% du chargeback récupéré | RÉACTIF — intervient après. Cher (25% commission). |
-| NoFraud | 19$+/mois | Orienté fraude paiement, pas chargeback friendly fraud |
-| Shopify Protect | Gratuit (Shop Pay) | Uniquement Shop Pay Checkout, très limité |
+Les outils existants (Chargeflow, Disputifier) sont RÉACTIFS. Personne ne prévient AVANT l'expédition.
 
-**LE GAP :** Aucun outil ne fait de la PRÉDICTION + PRÉVENTION + CONTESTATION automatisée dans un seul produit pour les petits merchants Shopify.
+| Feature | Ce que l'agent fait |
+|---------|-------------------|
+| Pre-Ship Score | Score risque 0-100 par commande AVANT expédition. Analyse : adresse mismatch, email jetable, vélocité achat, historique IP, comportement navigation. Push : "Commande #4521 risque 87% — confirmer ou bloquer ?" |
+| Smart Hold | Commandes >75% risque → attente auto avec notification. Commandes safe → passent sans friction. |
+| Auto-Evidence Builder | Chargeback reçu → l'agent compile le dossier automatiquement (tracking, emails, screenshots) dans le format Visa/Mastercard. Contestation en 1 clic. |
+| Pattern Detection | Patterns de fraude cross-merchants. Un pattern chez un merchant protège TOUS les autres. Network effect. |
+| Ratio Monitor | Surveille le ratio en temps réel. Alerte AVANT le seuil 0.9%. "Ratio à 0.72%. À ce rythme → 0.9% dans 18 jours." |
+| Friendly Fraud Detector | Identifie les clients qui achètent puis disputent. Marqués pour les futures commandes. |
+| Revenue Dashboard | Combien sauvé : chargebacks évités + gagnés. "Ce mois : 4800$ sauvés, 1200$ récupérés. ROI abonnement : 60x." |
 
-**Stack :** FastAPI + Supabase + ML scoring (features engineering sur les données commande) + Claude API (génération dossiers contestation) + Shopify API (webhooks commandes)
+**Pricing :** Free (50 commandes/mois) → 49$/mois (500) → 99$/mois (2000) → 199$/mois (illimité)
 
-**Pricing :** Free (50 commandes/mois) → 49$/mois (500 commandes) → 99$/mois (2000) → 199$/mois (illimité)
-
-**Moat :** MASSIF. Chaque commande analysée enrichit le modèle. Plus de data = meilleure prédiction. Network effect : les patterns de fraude détectés chez un merchant protègent tous les autres.
-
-**Score : 35/41** — Le problème coûte le plus cher (800$/mois), la willingness-to-pay est maximale (ROI 10x), et le moat data est le plus fort.
+**Moat :** Data ML + network effect (chaque merchant renforce la détection pour tous)
 
 ---
 
-### 2. PROFITPILOT — Comptabilité e-commerce automatisée IA
+## MOIS 2 — AGENCES + E-COM RENFORCÉ
 
-**Le problème (20K$/an) :**
-La comptabilité DIY prend 15-20h par mois (600-800$ en coût d'opportunité), les comptables coûtent 300-1000$/mois. Les déductions fiscales manquées valent des milliers, les pénalités d'audit potentielles aussi, et les erreurs mènent à de mauvaises décisions business.
+### 2. CLIENTPULSE — Le cerveau IA du freelancer (Score 36/41)
 
-Shopify donne les données de ventes, mais c'est seulement 20% de ce qui est nécessaire pour une comptabilité correcte. Les frais de transaction, apps, ads, shipping, returns, refunds — tout est dans des systèmes différents avec des formats différents.
+**Cible :** Agences/Freelancers marketing | **Problème :** 15-25K$/an (6 outils + 20h/sem non-productif)
 
-**La solution :**
-"TurboTax for Shopify". Connecte Shopify + Stripe + PayPal + Meta Ads + Google Ads + compte bancaire → l'IA catégorise automatiquement TOUT → profit & loss en temps réel → alerte si les marges baissent → rapport fiscal 1-clic → prédiction de cashflow.
+Le freelancer travaille 50-60h/semaine. 30-35h productives. Le reste : prospection, proposals, reporting, admin, relances. 6-8 outils à 200-500$/mois.
 
-**Ce que ça fait concrètement :**
-- Profit réel par produit (pas juste le revenue — TOUT inclus : COGS, shipping, ads, fees, returns)
-- Dashboard : "Aujourd'hui tu as fait 847$ de revenue mais seulement 203$ de profit réel"
-- Alertes : "Ton produit X te coûte plus qu'il ne rapporte depuis 2 semaines"
-- Rapport fiscal : "Voici tes charges déductibles ce trimestre — tu rates 1200$ de déductions"
-- Prédiction : "À ce rythme, tu seras en cash négatif dans 6 semaines"
+| Module | Ce que l'agent fait |
+|--------|-------------------|
+| PROSPECT | Scanne le site d'un prospect → mini-audit CRO/SEO 60 sec → message d'approche personnalisé. Taux de réponse 5-10x vs cold email generic. |
+| PROPOSE | Brief en 3 phrases → proposal complète en 2 min (scope, timeline, pricing, livrables). Templates par service. Signature électronique. |
+| DELIVER | Kanban par client. Deadlines, livrables. L'agent alerte : "Client X n'a pas répondu depuis 7 jours." |
+| REPORT | Connecte GA4 + Meta Ads + Google Ads → rapport mensuel 1 clic avec insights IA en phrases. White-label PDF. |
+| BILL | Factures auto. Suivi paiements. Relances J+7, J+14, J+30 automatiques. |
+| RETAIN | Détecte signaux de churn : "Client Y n'ouvre plus les rapports depuis 2 mois. Risque élevé. Suggestion : call stratégique gratuit." |
 
-**Concurrence :**
-| Outil | Prix | Limite |
-|-------|------|--------|
-| QuickBooks | 30-200$/mois | PAS spécifique e-commerce. Nécessite catégorisation manuelle. |
-| A2X | 19-99$/mois | Bon mais JUSTE la réconciliation Shopify→QuickBooks. Pas de P&L, pas d'alertes, pas de prédiction. |
-| BeProfit | 25-150$/mois | Dashboard profit mais pas de comptabilité complète, pas de fiscal |
+**Pricing :** Free (2 clients) → 29$/mois (5 clients) → 79$/mois (15 clients) → 149$/mois (illimité, white-label)
 
-**LE GAP :** Aucun outil ne fait comptabilité + profit tracking + alertes + fiscal + prédiction cashflow en un seul endroit pour les e-commerçants. Ils utilisent 3-4 outils ou un comptable.
+**Moat :** Data clients + historique + templates = switching cost massif après 6 mois
+
+### 3. PROFITPILOT — Comptabilité e-com IA (Score 33/41)
+
+**Cible :** E-commerce | **Problème :** 20K$/an (15-20h/mois compta + erreurs + déductions manquées)
+
+Le merchant sait combien Shopify lui verse. Il ne sait pas combien il GAGNE après COGS, shipping, ads, fees, returns, taxes.
+
+| Feature | Ce que l'agent fait |
+|---------|-------------------|
+| True Profit par produit | Profit RÉEL temps réel : revenue - COGS - shipping - ads - fees - returns. "Yoga Mat : 49$ revenue, 4.20$ profit réel." |
+| Daily P&L | Mis à jour quotidiennement. "Hier : 847$ revenue, 203$ profit réel (24% marge)." |
+| Margin Alerts | Alerte si un produit passe en marge négative. "Accessories en négatif depuis 12 jours." |
+| Ad Spend Tracker | Attribue le coût pub à chaque produit. "60% du budget ads va vers des produits à marge <10%." |
+| Tax Ready | Catégorisation auto. Rapport fiscal 1 clic. Détection déductions manquées. |
+| Cashflow Forecast | Prédit le cashflow 30/60/90 jours. "Compte à 0 dans 47 jours. Réduire ads de 20% = +23 jours de runway." |
 
 **Pricing :** 29$/mois (1 store) → 79$/mois (multi-stores + fiscal) → 149$/mois (prédictions + advisory IA)
 
-**Moat :** Data financière = la donnée la plus sticky. Personne ne migre ses données comptables. Le switching cost est ÉNORME.
+### 4. ADAUDIT — Auditeur publicitaire IA (Score 30/41)
 
-**Score : 33/41**
+**Cible :** Agences marketing | **Problème :** 12K$+/an budget ads gaspillé
 
----
-
-## VERTICAL AGENCES / FREELANCERS
-
----
-
-### 3. CLIENTPULSE — Le cerveau IA du freelancer marketing
-
-**Le problème (le vrai, pas le symptôme) :**
-Le freelancer marketing ne perd pas juste du temps en reporting. Il perd du temps sur TOUT le cycle client : prospection → proposal → onboarding → exécution → reporting → facturation → retention. Et il utilise 6-8 outils séparés (Apollo pour la prospection, Google Docs pour les proposals, Notion pour le project management, Looker Studio pour les rapports, Stripe pour la facturation, Mailchimp pour les emails). Chaque outil coûte 20-100$/mois. Total stack : 200-500$/mois.
-
-Les heures réelles de travail incluent la prospection, les proposals, la comptabilité et la maintenance logicielle. Le freelancer travaille 50-60h/semaine mais seulement 30-35h génèrent directement du revenue.
-
-**La solution :**
-Un HUB unique pour freelancers marketing qui couvre le cycle complet avec l'IA partout :
-
-| Module | Ce qu'il fait | Ce que l'IA ajoute |
-|--------|--------------|-------------------|
-| **Prospect** | Scan de sites web prospects → mini-audit CRO/SEO → outreach template | IA génère l'audit + le message personnalisé (= ProspectScan intégré) |
-| **Propose** | Templates proposals par service, pricing calculator, signature électronique | IA rédige la proposal à partir du brief client en 2 min |
-| **Deliver** | Kanban simple par client, deadlines, livrables, fichiers | IA alerte si un projet est en retard ou si un client n'a pas répondu depuis 7 jours |
-| **Report** | Connecte GA + Meta + Google Ads → rapport mensuel auto | IA ÉCRIT les insights et recommandations (= ReportPilot intégré) |
-| **Bill** | Facturation auto, suivi paiements, relances | IA envoie les relances au bon timing |
-| **Retain** | Suivi satisfaction, upsell suggestions, NPS auto | IA détecte les signaux de churn ("le client ouvre moins les rapports") |
-
-**Concurrence :**
-| Outil | Prix | Ce qu'il fait | Ce qu'il manque |
-|-------|------|---------------|----------------|
-| HubSpot Free CRM | 0-800$/mois | CRM + marketing | Trop complexe, pas adapté freelancer, le pricing scale très vite |
-| Pipedrive | 15-99$/mois | CRM ventes | Pas de reporting client, pas de proposals, pas d'audit |
-| AgencyAnalytics | 79-399$/mois | Reporting | JUSTE du reporting. Pas de CRM, pas de proposals, pas de billing. |
-| Proposify | 49$/mois | Proposals | JUSTE des proposals. |
-| Toggl Track | 10-20$/mois | Time tracking | Pas de CRM, pas de reporting. |
-
-**LE GAP :** Les freelancers utilisent 6 outils à 200-500$/mois. ClientPulse remplace tout pour 49-99$/mois. Et l'IA fait le travail que le freelancer fait manuellement en 20h/semaine.
-
-**Stack :** FastAPI + Next.js + Supabase + Claude API + intégrations (GA API, Meta API, Stripe, Resend pour emails)
-
-**Pricing :** Free (2 clients) → 29$/mois (5 clients) → 79$/mois (15 clients) → 149$/mois (illimité + white-label)
-
-**Moat :** Data clients + historique projets + templates personnalisés = switching cost massif. Un freelancer qui a 12 mois de données dans ClientPulse ne migre JAMAIS.
-
-**Score : 36/41** — Le plus haut score. Résout LE problème systémique du freelancer, pas un symptôme. Remplace 6 outils. Le moat data est maximum.
-
----
-
-### 4. ADAUDIT — Audit publicitaire IA pour agences
-
-**Le problème :**
-Les agences marketing gèrent les Meta Ads et Google Ads de leurs clients. L'optimisation est complexe, les erreurs coûtent cher, et les clients demandent "pourquoi mes ads ne marchent pas ?". L'agence passe des heures à analyser les comptes publicitaires manuellement.
-
-**La solution :**
-Connecte le compte Meta Ads + Google Ads du client → l'IA analyse : budget gaspillé sur des audiences non-performantes, creative fatigue (ads qui tournent depuis trop longtemps), enchères sous-optimales, audiences qui se chevauchent, landing pages qui ne matchent pas les ads. Génère un rapport "Voici 12 000$ de gaspillage ce mois-ci et voici comment le récupérer."
+| Feature | Ce que l'agent fait |
+|---------|-------------------|
+| Waste Detector | Budget gaspillé : audiences non-performantes, creative fatigue, enchères trop élevées, audiences chevauchées. |
+| Creative Fatigue Alert | Détecte quand un ad perd en performance. "Ad 'Summer Collection' -34% CTR en 2 semaines. 3 angles alternatifs." |
+| ROAS par produit | ROAS par produit, pas par campagne. "Produit A : 4.2x. Produit B : 0.9x. Vous perdez sur B." |
+| Client Report IA | Rapport mensuel auto avec insights langage simple. White-label. |
+| Multi-account | 10+ comptes clients depuis un dashboard. |
 
 **Pricing :** 49$/mois (1 compte) → 149$/mois (10 comptes) → 299$/mois (illimité)
 
-**Score : 30/41** — Fort mais les intégrations Meta/Google sont complexes à maintenir.
+---
+
+## MOIS 3 — CREATORS + CROSS-SELL
+
+### 5. CREATORSUITE — Studio IA tout-en-un (Score 31/41)
+
+**Cible :** Content Creators YouTube/TikTok/Podcast | **Problème :** 1.6K$/an outils + 15h/sem non-créatif
+
+67% des cas de burnout = rythme insoutenable. 1 vidéo de 15 min devrait devenir 5 Shorts + 5 posts LinkedIn + 3 tweets + 1 newsletter. Le repurposing prend 4-6h/épisode. La plupart ne le font pas.
+
+| Module | Ce que l'agent fait |
+|--------|-------------------|
+| Auto-Transcribe | Vidéo/audio → transcription (Whisper/Deepgram). Timestamps, speakers, chapitres. |
+| Repurpose Engine | Transcription → 5 tweets, 3 posts LinkedIn, 1 newsletter, 10 citations, 3 threads. Ton adapté par plateforme. 1 vidéo → 20+ contenus en 2 min. |
+| Clip Detector | Identifie les 3-5 meilleurs moments pour Shorts/Reels. Timestamps + raison. En 30 secondes au lieu de 1h. |
+| Clip Cutter | Extraction auto avec captions, format vertical, transition. FFmpeg. |
+| Thumbnail Analyzer | Score ta thumbnail. Génère 3 alternatives. Prédit le CTR. |
+| Title Optimizer | 5 variantes basées sur keywords YouTube + analyse des titres qui performent dans la niche. |
+| Smart Schedule | Poste sur toutes les plateformes au meilleur horaire. |
+| Performance Coach | "Cette semaine : meilleur vidéo, pourquoi, quoi reproduire." Pas un dashboard — un COACH. |
+
+**Pricing :** Free (2 vidéos/mois) → 19$/mois (10 vidéos) → 49$/mois (illimité) → 99$/mois (teams)
+
+### 6. LEADQUIZ — Voir MUTATIONS.md
+
+### 7. [WILDCARD] — Issu des douleurs communautés (Mois 3)
+
+Identifié pendant les mois 1-2 via douleurs-observees.md de R et F. Critères : problème observé 5+ fois, willingness-to-pay confirmée, aucune solution existante.
 
 ---
 
-## VERTICAL CONTENT CREATORS
+## CROSS-SELL MATRIX COMPLÈTE
+
+| Si le client utilise | On propose | Pitch |
+|---------------------|-----------|-------|
+| StoreMD | ListingLab | "Store healthy mais listings faibles" |
+| ListingLab | StoreMD | "Listings top mais store a des problèmes" |
+| StoreMD + ListingLab | ChargebackShield | "Vous convertissez, protégez vos revenus" |
+| ChargebackShield | ProfitPilot | "Vous bloquez la fraude, connaissez votre vrai profit" |
+| ClientPulse | AdAudit | "Vous gérez vos clients, optimisez leurs ads" |
+| AdAudit | ClientPulse | "Vous auditez les ads, gérez tout le cycle" |
+| CreatorSuite | LeadQuiz | "Vous repurposez, capturez des leads" |
+
+Bundle e-com : StoreMD + ListingLab + ChargebackShield + ProfitPilot = 199$/mois (vs 316$)
+Bundle agence : ClientPulse + AdAudit = 179$/mois (vs 228$)
 
 ---
 
-### 5. CREATORSUITE — Le studio IA tout-en-un du créateur
+## RECHERCHE EN COURS — Scraping communautés
 
-**Le problème (le vrai) :**
-Un créateur YouTube/podcast utilise actuellement : Descript (editing 24$/mois) + VidIQ (7$/mois) + Canva (13$/mois) + Buffer (6$/mois) + Opus Clip (15$/mois) + ConvertKit (29$/mois) + Castmagic (39$/mois) = 133$/mois minimum. Et il passe quand même 15-20h/semaine sur des tâches non-créatives.
+Les features ci-dessus sont basées sur la recherche web (articles, rapports, données concurrents). Une phase de scraping profond est en cours pour affiner avec les douleurs RÉELLES des communautés :
 
-**La solution :**
-Un seul outil qui fait TOUT le workflow post-création :
+1. Script PRAW → 500 derniers posts par sub cible, filtrés par keywords de douleur
+2. Apify → reviews 1-2 étoiles des apps concurrentes Shopify
+3. Terrain → douleurs-observees.md rempli par R et F pendant le warming
 
-| Module | Ce qu'il fait |
-|--------|--------------|
-| **Transcribe** | Vidéo/audio → transcription parfaite (Whisper) |
-| **Repurpose** | Transcription → 5 tweets, 3 posts LinkedIn, 1 newsletter, 10 citations, 3 threads |
-| **Clip** | Vidéo longue → identifie les 5 meilleurs moments → extrait les clips (Shorts/Reels) avec captions |
-| **Thumbnail** | Analyse les thumbnails de ta niche → score ta thumbnail → génère 3 alternatives → A/B test prédictif |
-| **SEO** | Keywords YouTube + suggestions de titre → analyse la concurrence sur chaque keyword |
-| **Schedule** | Publie les clips + posts sur toutes les plateformes au meilleur horaire |
-| **Analytics** | Dashboard simplifié "cette semaine : meilleure vidéo, pourquoi, quoi refaire" |
-| **Monetize** | Media kit auto-généré + calculateur pricing sponsoring |
-
-**Concurrence :** Fragmentée (voir au-dessus — 7 outils séparés). AUCUN tout-en-un à < 50$/mois.
-
-**Stack :** FastAPI + Next.js + Supabase + Whisper/Deepgram (transcription) + Claude API (repurposing, SEO, analytics insights) + FFmpeg (clip extraction) + YouTube/TikTok/LinkedIn APIs (scheduling + analytics)
-
-**Pricing :** Free (2 vidéos/mois) → 19$/mois (10 vidéos) → 49$/mois (illimité, tous modules) → 99$/mois (teams, multi-chaînes)
-
-**Moat :** Le tout-en-un est le moat. Personne n'a construit ça parce que c'est complexe. Avec Claude Code, vous pouvez.
-
-**Score : 31/41** — Gros potentiel volume mais pricing plus bas et concurrence IA qui arrive vite.
-
----
-
-## MATRICE FINALE — Par impact business
-
-| Rang | Produit | Vertical | Coût du problème /an | Pricing | Moat | Score |
-|------|---------|----------|---------------------|---------|------|-------|
-| 🥇 | **ClientPulse** | Agences/Freelancers | 15-25K$ (6 outils + 20h/sem perdues) | 29-149$/mois | Data + workflow + switching cost | 36/41 |
-| 🥈 | **ChargebackShield** | E-commerce | 10K$ (800$/mois en chargebacks) | 49-199$/mois | Data ML + network effect | 35/41 |
-| 🥉 | **StoreMD** | E-commerce | 10-120K$ (conversions perdues) | 29-199$/mois | Data + monitoring continu + App Store | 34/41 |
-| 4 | **ProfitPilot** | E-commerce | 20K$ (temps + erreurs + déductions) | 29-149$/mois | Data financière = ultra sticky | 33/41 |
-| 5 | **ListingLab** | E-commerce | 5-30K$ (listings faibles = ventes perdues) | 29-199$/mois | Data + intégration Shopify | 32/41 |
-| 6 | **CreatorSuite** | Content Creators | 1.6K$ (7 outils) + temps | 19-99$/mois | Tout-en-un complexe | 31/41 |
-| 7 | **AdAudit** | Agences | 12K$+ (budget ads gaspillé) | 49-299$/mois | Intégrations Meta/Google | 30/41 |
-| 8 | **LeadQuiz** | E-com + Coaches | Variable | 19-79$/mois | Templates + intégration catalogue | 28/41 |
-
----
-
-## SÉQUENCE DE LANCEMENT
-
-L'ordre de lancement dépend de la validation dans les communautés.
-
-| Priorité | Produit | Validé quand | Distribué où |
-|----------|---------|-------------|-------------|
-| 1 | StoreMD + ListingLab | Premiers produits — validation pendant le warming | r/shopify, Shopify Entrepreneurs FB |
-| 2 | ChargebackShield OU ClientPulse | Selon quelle vertical répond le mieux | E-com ou agences |
-| 3 | ProfitPilot, CreatorSuite, AdAudit | Mois 2-3 selon traction | Cross-sell dans les verticals actives |
-
-Le build est fait par F dans des projets Claude séparés (2-5 jours par produit).
-Ce fichier ne gère que les specs et le scoring, pas le build.
+Les résultats du scraping et du terrain viendront compléter et ajuster les features de chaque produit.
