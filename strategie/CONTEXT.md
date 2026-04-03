@@ -50,6 +50,16 @@ Avec Claude Code et les agents IA, tout est codable. La question n'est pas "est-
 
 En dessous → le loop ne tourne pas assez vite.
 
+### Chaque SaaS = un AGENT, pas un outil
+
+Un outil, tu l'ouvres, tu fais un truc, tu fermes. Un agent travaille pour toi même quand tu n'es pas devant l'écran. Chaque SaaS FoundryTwo a un cerveau LLM (Claude API) qui DÉTECTE (webhooks, cron jobs), ANALYSE (interprète, compare, diagnostique), AGIT (notification push + recommandation 1-clic), et APPREND (feedback loop → amélioration continue).
+
+Le moat : un outil tu le quittes en 5 minutes. Un agent calibré sur TES données depuis 6 mois, tu ne le quittes plus jamais.
+
+### PWA sur tout
+
+Chaque SaaS est une Progressive Web App (Next.js + service worker + manifest.json). Installable Android (Chrome) + iOS (écran d'accueil). Notifications push. Offline pour les rapports. Même code que le web — zéro app native, zéro maintenance double.
+
 ### La Toile = avantage structurel
 
 3 comptes (R, F, F2) = 3 portes d'entrée, 1 destination. Le cross-engagement R↔F amplifie la visibilité de chaque interaction. Un solo founder a 1 voix. On en a 3.

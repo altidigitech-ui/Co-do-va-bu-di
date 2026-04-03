@@ -14,6 +14,7 @@ COMMUNAUTÉ -> DOULEUR -> VALIDATION -> BUILD -> DISTRIBUTION (VOLUME x CONSTANC
 3. Volume x Constance non-négociable. R : 30 interactions/jour. F : 15/jour.
 4. Problèmes à 10K$/an minimum. Le pricing reflète la douleur, pas la feature.
 5. Cible NON-dev uniquement. Jamais de produit pour des codeurs.
+6. Chaque SaaS = un AGENT (pas un outil). LLM + webhooks + notifications push. PWA sur tout.
 
 ## Quand R ou F ouvre ce repo
 1. Regarder la date du jour
