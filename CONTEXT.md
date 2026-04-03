@@ -62,7 +62,7 @@ En dessous → le loop ne tourne pas assez vite.
 |---|---|---|
 | **Rôle** | Growth/Distribution lead | CTO/Builder + Distribution |
 | **Temps/jour** | 7-10h | 7-10h |
-| **Split dans ce repo** | 100% distribution | 30% distribution (le build se fait dans des projets Claude séparés) |
+| **Dans ce repo** | Distribution full-time | Distribution full-time |
 | **Angle communautés** | Growth, conversion, acquisition, pricing | Technique, automatisation, stack, workflow |
 | **Comptes** | @delgado_ro72224 (perso) | @FabGangi (perso) |
 | **Studio** | Gère @foundrytwo | — |
