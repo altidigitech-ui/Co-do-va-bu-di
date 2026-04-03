@@ -38,3 +38,19 @@ Ton : direct, data-driven, provocateur.
 - EN anglais
 - 3-5 paragraphes pour les commentaires Reddit
 - JAMAIS de mention produit avant J22
+
+## Voix et variété
+Voir @romain/VOIX.md — 6 registres à alterner. JAMAIS deux commentaires avec le même style.
+
+## Frameworks commentaires
+Voir @romain/angles-et-templates.md — choisir le framework adapté au type de post.
+
+## Posts et cross-replies pré-écrits
+- Reddit : @romain/reddit/posts-prets.md et @romain/reddit/cross-replies.md
+- Facebook : @romain/facebook/posts-prets.md et @romain/facebook/cross-replies.md
+
+## Outils pour trouver les posts
+1. Check alertes F5Bot (email) — keywords configurés dans le plan J1
+2. RSS feed Feedly — reddit.com/r/shopify/rising/.rss et reddit.com/r/ecommerce/rising/.rss
+3. Reddit search trié par "Rising" dans les subs cibles
+4. Chercher les posts avec 2-10 commentaires (assez de traction, pas encore noyé)
