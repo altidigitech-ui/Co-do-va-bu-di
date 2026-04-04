@@ -79,6 +79,24 @@ Un freelancer a construit TOUT le marketing d'une entreprise (0→2.2M$ en 18 mo
 | Data Integrity Check | Au setup, compare les données ProfitPilot vs Shopify vs Stripe. Si écart > 2% → alerte avec explication du delta. Le merchant voit que les chiffres sont fiables dès le jour 1. | Reviews TrueProfit (3+) : "data was all wrong", "wrongly counts ad spend, returns", "their customer metric includes all records regardless of purchase" |
 | Proactive Bug Alert | Si l'app a un problème technique → email proactif au merchant AVANT qu'il ne le découvre. "Nous avons un souci avec le sync Meta Ads. Vos données des dernières 4h sont en attente. Résolution estimée : 2h." | Reviews TrueProfit (2+) : "cannot login since few days, no support response", "app has errors all the time" |
 | LTV propre | LTV calculée sur les vrais acheteurs uniquement (1+ achats). Filtre explicite clients acheteurs vs tous contacts Shopify. | Review TrueProfit (Yellow Tail Wines) : "their customer metric includes all records regardless of whether that person has made a purchase. Makes LTV reporting unusable." |
+| Multi-Fulfillment Sync | Combine automatiquement les coûts de shipping de ShipStation + ShipBob + Shopify Fulfillment quand une commande est splittée entre plusieurs sources. | Reviews Lifetimely (1 review KEUTEK, +4 ans) : "when a shipment is split between ShipStation and ShipBob, the app does not combine shipping costs" |
+| Post-Purchase Upsell Tracker | Tracking correct des upsells post-achat. Revenue attribué au produit original + upsell séparément. | Reviews Lifetimely (1 review Koss Design, +1 an) : "not working properly when using a post purchase upsell. Numbers are not relevant at all." |
+
+### Positionnement vs Lifetimely/AMP (concurrent principal Shopify)
+
+Lifetimely (racheté par AMP) = 4.8★ sur Shopify, 468 reviews, mais en chute libre. L'acquisition AMP a dégradé le produit et créé une fenêtre d'opportunité massive.
+
+| Gap Lifetimely/AMP | Ce que ProfitPilot fait mieux |
+|-------------------|-----------------------------|
+| Données devenues inexactes post-acquisition ("you can disregard all previous positive reviews") | Data Integrity Check au setup + réconciliation quotidienne. Les chiffres sont vérifiés vs Shopify/Stripe. |
+| COGS incorrect avec fulfillment multi-source ("shipment split between ShipStation and ShipBob, app does not combine shipping costs") | Support natif multi-fulfillment : ShipStation + ShipBob + Shopify Fulfillment combinés automatiquement. |
+| Post-purchase upsells cassent les chiffres ("not working properly with post purchase upsell") | Tracking correct des upsells post-achat. Revenue attribué correctement au produit original + upsell. |
+| Focus AMP sur les upsells, plus sur la compta ("focus is more on upsells and additional apps") | ProfitPilot = 100% comptabilité e-com. Pas de feature bloat. Pas de cross-sell d'apps tierces. |
+| Plan gratuit mensonger ("says FREE up to 50 orders but you cannot do anything without paying") | Free tier réellement fonctionnel : 50 commandes/mois avec TOUTES les features de base. |
+| Support lent ("if I pay 150€/month I expect direct live support") | Support < 2h. Live chat pendant le trial = critique pour la conversion. |
+| Pricing en hausse post-acquisition ("new prices are extremely high compared to old ones") | Pricing stable. Garantie 12 mois de prix identique pour les early adopters. |
+
+Le positionnement est clair : Lifetimely a été "enshittified" par AMP. ProfitPilot = l'alternative indie, founder-led, centrée merchant.
 
 **Pricing :** 29$/mois (1 store) → 79$/mois (multi-stores + fiscal) → 149$/mois (prédictions + advisory IA)
 **Moat :** Data financières accumulées + intégrations Shopify/Stripe/Meta/Google = irremplaçable après 3 mois
@@ -100,6 +118,8 @@ Un freelancer a construit TOUT le marketing d'une entreprise (0→2.2M$ en 18 mo
 | Attribution Cleaner | Réconcilie les données cross-plateforme (Meta vs Google vs CRM). | Thread quotidien : "Facebook dit 40 conversions, Meta dit 52, mon CRM dit 90" |
 | Weekly Audit Report | Rapport hebdomadaire auto : "Cette semaine, 847$ gaspillés sur 23 termes informationnels. 3 recommandations." | Thread quotidien : "je vérifie les performances des annonces en premier, je réalise qu'il y a quelque chose à corriger" |
 | Multi-account | 10+ comptes publicitaires clients depuis un seul dashboard. | Thread agence toiture : le freelancer gère tout pour 1 client, imagine 5-10 |
+| Integration Health Monitor | Monitoring automatique de chaque connexion API (Meta, Google, etc.). Si une intégration se déconnecte ou retourne des erreurs → alerte proactive : "Votre connexion Meta Ads est cassée depuis 2h. Reconnexion en 1 clic." | Reviews Whatagraph (4+) : "entering month 3 where they are 'working on it', reports unusable", "cannot connect Facebook to any client accounts" |
+| Self-Serve Onboarding | L'agent détecte les comptes connectés et configure automatiquement les dashboards/rapports pertinents. En 15 min, pas en 2 mois. | Reviews Whatagraph (2+) : "lead on my team spent 2 months explaining what we needed", "disconnect between sales and implementation team" |
 
 ### Positionnement vs AgencyAnalytics (concurrent principal)
 
@@ -115,6 +135,19 @@ AgencyAnalytics = 4.7★ sur G2, 432 reviews, dominant du marché. Mais c'est un
 | Pas d'alertes proactives | Weekly Audit Report envoyé automatiquement avec les 3 actions prioritaires |
 
 Le positionnement est clair : AgencyAnalytics = "montrez vos données." AdAudit = "sachez quoi faire."
+
+### Positionnement vs Whatagraph (concurrent reporting)
+
+Whatagraph = 4.3★ sur G2, ~278 reviews. Plus faible que AgencyAnalytics, et avec des failles exploitables plus graves.
+
+| Gap Whatagraph | Ce que AdAudit fait mieux |
+|--------------|-------------------------|
+| Intégrations qui cassent ("entering month 3, they are 'working on it', reports absolutely unusable, cannot connect Facebook") | Monitoring automatique des connexions API. Si une intégration se déconnecte → alerte proactive + reconnexion assistée en 1 clic. |
+| Contrats annuels rigides ("switched from quarterly to yearly only, completely inflexible") | Plans mensuels flexibles. Downgrade en 1 clic. Pas de lock-in annuel obligatoire. |
+| UI buggée / auth instable ("constant authentication bugs, every interaction requires a refresh") | Interface stable. Pas de re-auth intempestive. Sessions longues. |
+| Onboarding catastrophique ("lead on my team spent 2 months explaining what we needed") | Self-service onboarding en 15 min. L'agent configure les dashboards automatiquement basé sur les comptes connectés. |
+| Données incomplètes ("not able to fetch purchases, adds to cart") | Toutes les métriques e-com clés dès le launch : purchases, add to cart, ROAS, CPL, CPA. |
+| Promesses sales non tenues ("promised functionality that was not there") | Pas de sales team. Self-serve. Ce que tu vois dans le free tier = ce que tu obtiens en payant, en plus grand. |
 
 **Pricing :** 49$/mois (1 compte) → 149$/mois (10 comptes) → 299$/mois (illimité)
 **Moat :** Negative Keyword Agent s'améliore avec le temps + data cross-comptes
@@ -143,13 +176,34 @@ Le positionnement est clair : AgencyAnalytics = "montrez vos données." AdAudit 
 | Performance Coach | "Cette semaine : meilleure vidéo, pourquoi, quoi reproduire." | Thread 1000 abonnés (79 upvotes) : creator ne sait pas quelle direction prendre |
 | Content Theft Alert | Détecte si d'autres chaînes volent/re-uploadent tes vidéos. | Thread monétisation refusée : un musicien à 27K abonnés découvre que 3 chaînes volent ses shorts |
 | Smart Schedule | Poste sur toutes les plateformes au meilleur horaire. | Thread multi-plateforme : "poster frénétiquement à 3h du matin" |
+| Export Fiable | Export vidéo/audio garanti fonctionnel. Progress bar honnête. Si erreur → retry automatique + notification. Pas de "0 minutes remaining" qui finit en erreur. | Reviews Descript (3+) : "have NOT ONCE been able to export my video", "downloads take hours on 2GB+ internet", "parts of exported video is blank" + Review Opus Clip : "says 0 minutes left and turns out to be an error" |
+| Projets Toujours Accessibles | Les créations du creator lui appartiennent. Échec de paiement → 7 jours de grâce. Projets accessibles en lecture même après expiration du plan. | Reviews Descript (1 review 0★) : "they suspend your access with all your projects after payment failure" |
+| Clip Context Guard | L'IA de découpe vérifie que chaque clip contient une idée COMPLÈTE avant de couper. Pas de coupure mid-sentence ou mid-concept. | Reviews Opus Clip (2) : "clips cutting into shorter versions — sometimes context would be cut", "clips get cut off before the idea is finished" |
 
 **Pricing :** Free (2 vidéos/mois, repurpose basique) → 9$/mois (10 vidéos) → 29$/mois (illimité) → 59$/mois (teams)
 **Note :** Pricing volontairement BAS par rapport aux autres SaaS car WTP faible confirmée par le terrain.
 **Positionnement prix vs marché :** Les creators utilisent des outils gratuits (CapCut, Canva, etc.). AgencyAnalytics facture $79+/mois. Notre pricing (9-59$) est calibré sur la WTP réelle observée dans les communautés. Le free tier DOIT être généreux pour créer l'habitude.
 **Moat :** Faible (outils gratuits nombreux). Différenciateur = l'intégration tout-en-un + l'agent qui optimise en continu.
 
+### Positionnement vs Descript (concurrent principal editing/transcription)
+
+Descript = 4.6★ sur G2, 863 reviews, mais 41 reviews négatives révèlent un produit en dégradation. La fenêtre est ouverte.
+
+| Gap Descript | Ce que CreatorSuite fait mieux |
+|------------|------------------------------|
+| Bugs chroniques ("so buggy, won't open", "littered with bugs", "treat customers like beta testers" — 15+ reviews) | Stabilité = priorité #1. "It just works." Pas de shipping de features buggées. QA rigoureuse. |
+| Transcription qui se dégrade ("used to be 90-95% accurate, now it's worse" — 8+ reviews) | Whisper/Deepgram = qualité constante. Pas de régression. Si la qualité baisse → on switche de provider, pas on ignore. |
+| Exports qui échouent ("have NOT ONCE been able to export my video", "downloads take hours" — 3+ reviews) | Export fiable à 100%. C'est le moment de vérité — si l'export plante, tout le workflow est perdu. |
+| UI qui change constamment ("over-developed", "constantly change the UI, keystrokes", "step backwards" — 5+ reviews) | UX simple et STABLE. Les changements d'UI sont progressifs. Les workflows existants ne cassent jamais. |
+| Pricing confus ("deceptive pricing, charging you twice", "no credit for unused subscriptions" — 5+ reviews) | Pricing simple. Crédits inutilisés reportés au mois suivant. Pro-rata automatique en cas d'upgrade. |
+| Support inexistant ("just an AI bot", "suspend access after payment failure" — 5+ reviews) | Support humain accessible. Jamais bloquer l'accès aux projets du user. Les créations du creator lui appartiennent. |
+| Projets inaccessibles après problème de paiement | Si le paiement échoue → 7 jours de grâce pour régulariser. Les projets restent accessibles en lecture. |
+
+Le positionnement est clair : Descript essaie de tout faire (editing, transcription, screen recording, podcasting) et fait tout mal. CreatorSuite fait le REPURPOSING et le fait parfaitement.
+
 ### 6. LEADQUIZ — Voir MUTATIONS.md
+
+**Positionnement vs Octane AI (concurrent Shopify) :** Octane AI = 4.8★, 192 reviews, mais 4 reviews 1★ révèlent : pricing qui explose sans prévenir ($9 → $191/mois), support déficient, setup trop long. LeadQuiz se positionne sur : quiz en 2 min (pas en heures), pricing stable et transparent, multi-langue natif (gap RevenueHunt).
 
 ### 7. [WILDCARD] — Issu des douleurs communautés (Mois 3)
 
@@ -205,3 +259,11 @@ Les features marquées "Validation terrain" dans chaque tableau ont été confir
 | NoFraud | ChargebackShield | Pas disponible | — |
 | BeProfit | ProfitPilot | Pas disponible | — |
 | GoWise | ListingLab | Pas disponible | — |
+| Descript | CreatorSuite | 41 reviews ≤3★ G2 | Bugs chroniques (15+), transcription dégradée (8+), pricing confus (5+), support inexistant (5+), exports défaillants (3+), UI instable (5+) |
+| Whatagraph | AdAudit | 15 reviews ≤3★ G2 | Intégrations cassées (Facebook, HubSpot), contrats rigides annuels, UI buggée/auth instable, onboarding 2 mois, données incomplètes |
+| Lifetimely/AMP | ProfitPilot | 11 reviews 1-2★ Shopify | Données inexactes post-acquisition AMP, COGS multi-fulfillment cassé, support lent, pricing trompeur, dégradation qualité |
+| Octane AI | LeadQuiz | 4 reviews 1-2★ Shopify | Pricing explosif ($9→$191 sans prévenir), support déficient, setup complexe |
+| Plug In Speed | StoreMD | 2 reviews 1★ Shopify | Casse les sites (modifie fichiers d'autres apps), app non fonctionnelle pendant le trial |
+| Opus Clip | CreatorSuite | 1 review G2 | Clips coupés hors contexte (idée incomplète) |
+| vidIQ | CreatorSuite | 1 review G2 | Support défaillant, valeur seulement au tier le plus cher |
+| Repurpose.io | CreatorSuite | 0 reviews négatives G2 | Concurrent bien-aimé — différenciation par features IA, pas par faiblesses |

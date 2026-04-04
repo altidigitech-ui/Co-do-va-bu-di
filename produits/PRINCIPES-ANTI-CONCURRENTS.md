@@ -1,7 +1,7 @@
 # PRINCIPES ANTI-CONCURRENTS — Ce que nos concurrents font mal et qu'on ne fera JAMAIS
 
 Dernière mise à jour : 04/04/2026
-Source : 100+ reviews 1★ scrapées (Chargeflow, TrueProfit, Avada SEO, PageFly, AgencyAnalytics)
+Source : 175+ reviews 1-3★ scrapées (Chargeflow, TrueProfit, Avada SEO, PageFly, AgencyAnalytics, Descript, Whatagraph, Lifetimely/AMP, Octane AI, Plug In Speed, Opus Clip, vidIQ)
 
 Ces principes s'appliquent à TOUS les 9 SaaS FoundryTwo. Ils sont non-négociables.
 
@@ -77,14 +77,36 @@ Ces principes s'appliquent à TOUS les 9 SaaS FoundryTwo. Ils sont non-négociab
 
 ---
 
+## 8. Les créations du client lui appartiennent toujours
+
+**Ce que les concurrents font :** Descript suspend l'accès à TOUS les projets après un échec de paiement. HoneyBook rend l'export de données impossible en masse.
+
+**Notre règle :** Les données et créations du client sont TOUJOURS accessibles, même après expiration du plan. Échec de paiement → 7 jours de grâce. Export complet en 1 clic à tout moment. Les données n'appartiennent pas à notre app — elles appartiennent au client.
+
+**Implémentation :** Export CSV/PDF/ZIP en 1 clic. Mode lecture seule après expiration (pas de blocage total). Notification "Votre plan expire dans 3 jours. Vos données resteront accessibles en lecture."
+
+---
+
+## 9. Stabilité > Features
+
+**Ce que les concurrents font :** Descript ship des features buggées ("treat customers like beta testers"). PageFly casse les sites avec ses mises à jour ("every update makes it worse"). Avada introduit des bugs qui détruisent les stores.
+
+**Notre règle :** On ne ship JAMAIS une feature instable. La stabilité est un avantage compétitif. "It just works" = le standard. Chaque release passe par un QA rigoureux. Les régressions sont détectées et fixées avant que le client ne les remarque.
+
+**Implémentation :** Tests automatisés sur chaque déploiement. Monitoring Sentry avec alertes < 5min. Rollback automatique si le taux d'erreur dépasse 1%. Le client ne doit JAMAIS subir un bug en production.
+
+---
+
 ## APPLICATION PAR SAAS
 
 | Principe | StoreMD | ListingLab | ChargebackShield | ProfitPilot | AdAudit | ClientPulse | CreatorSuite | LeadQuiz |
-|----------|---------|-----------|-----------------|------------|--------|------------|-------------|---------|
+|----------|---------|-----------|-----------------|------------|--------|------------|-------------|---------| 
 | 1. Pas de modif sans consentement | App Risk Monitor, Safe Mode | Safe Mode, preview bulk | Merchant approuve avant soumission | — | — | — | — | — |
 | 2. Zéro résidu | Cleanup auto | Cleanup auto | Cleanup auto | Cleanup auto | Cleanup auto | Cleanup auto | Cleanup auto | Cleanup auto |
-| 3. Pricing transparent | ✅ | ✅ | Zéro frais cachés, pas de % commission | Alerte avant upgrade | Plan solo 49$ | ✅ | Free tier généreux | ✅ |
-| 4. Données fiables | Bot Traffic Filter | — | — | Data Integrity Check | Attribution Cleaner | — | — | — |
-| 5. Agent proactif | Alertes régressives, Weekly Report | New Product Watch | Proactive Evidence Reminder | Proactive Bug Alert | Weekly Audit Report | Signaux de churn | Performance Coach | Auto-Optimize |
-| 6. Optimisations au merchant | — | Zero Lock-in, push API Shopify | — | — | — | — | — | — |
-| 7. Support technique | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 3. Pricing transparent | ✅ | ✅ | Zéro frais cachés, pas de % commission | Alerte avant upgrade, garantie 12 mois | Plan solo 49$ | ✅ | Free tier généreux, crédits reportés | Pricing stable garanti |
+| 4. Données fiables | Bot Traffic Filter | — | — | Data Integrity Check, Multi-Fulfillment Sync | Attribution Cleaner, Integration Health Monitor | — | — | — |
+| 5. Agent proactif | Alertes régressives, Weekly Report | New Product Watch | Proactive Evidence Reminder | Proactive Bug Alert | Weekly Audit Report, Integration Health Monitor | Signaux de churn | Performance Coach | Auto-Optimize |
+| 6. Optimisations au merchant | — | Zero Lock-in, push API Shopify | — | — | — | Export 1-clic | — | — |
+| 7. Support technique | ✅ | ✅ | ✅ | Support < 2h, live chat trial | ✅ | Onboarding 5 min | Support humain, pas AI bot | ✅ |
+| 8. Créations client toujours accessibles | — | — | — | Export CSV 1-clic | Export rapports 1-clic | Export complet 1-clic | Projets accessibles même après expiration | Export quiz + données 1-clic |
+| 9. Stabilité > Features | QA apps tierces | Safe Mode | — | Réconciliation quotidienne | Monitoring intégrations | — | Export fiable 100%, Clip Context Guard | — |
