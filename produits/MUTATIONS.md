@@ -50,6 +50,8 @@ Le merchant ne sait pas que son store est cassé jusqu'à ce que les ventes bais
 | Permission Monitor | Alerte quand une app demande des permissions excessives ou nouvelles (accès données clients, modification theme). | Review PageFly : "popup saying: update the app and grant us access to customer data like name, phone, email. Can't access my store without granting access." |
 | Code Weight Scanner | Mesure le poids du code injecté par chaque app Shopify (JS, CSS, liquid). Classe par impact : "L'app Privy injecte 340KB de JS non-minifié. L'app Shogun ajoute 12 templates liquid inutilisés. Total code tiers : 2.1MB — objectif : <500KB." | Reviews Privy (10+) : "slows down your website, leaves behind so much code" + Reviews Shogun (10+) : "uses uncompressed/unminified JavaScript and CSS — each page dings pagespeed scores" |
 | Ghost Billing Detector | Alerte si une app désinstallée continue de facturer via Shopify Billing. Scanne les subscriptions actives vs apps installées. "L'app Privy est désinstallée depuis 3 mois mais facture toujours 29$/mois via Shopify." | Reviews Privy (40+) : "charged 6 months after I uninstalled", "continued charging for nearly six years on a second account", "cancelling on Shopify doesn't cancel the subscription" |
+| Email Domain Health Monitor | Détecte si les emails d'abandon de panier automatiques sont envoyés à des bots, ce qui risque de blacklister le domaine email du merchant. Alerte : "347 emails d'abandon envoyés à des adresses bot cette semaine. Votre domaine risque d'être marqué comme spam. Recommandation : filtrer les paniers asdfasdf@asdf.com avant envoi." | Thread Reddit bots (44 upvotes, 4 upvotes sur commentaire) : "Ça a mis notre adresse email sur une liste de spam parce qu'on envoyait tellement d'emails automatiques d'abandon de panier à un seul endroit." |
+| Marketing Audience Cleaner | Identifie et supprime les faux profils clients créés par les bots des listes marketing (Google Ads audiences, Klaviyo, Mailchimp). "4,200 faux profils détectés dans votre liste clients. Les supprimer améliorera votre ROAS de ~30%." | Thread Reddit bots (40 upvotes, 2 upvotes sur commentaire) : "Si vous utilisez ces données clients dans votre liste de correspondance pour les annonces Google, ça va les gâcher." "Ils suppriment manuellement des MILLIERS de faux profils clients." |
 
 ### L'agent en action
 Dimanche 3h → StoreMD scanne → compare avec vendredi → détecte mobile checkout 0.8s plus lent → identifie app update samedi → lundi 8h push : "Your mobile checkout slowed down. Reviews+ updated yesterday." Le merchant n'a rien demandé.
@@ -73,6 +75,21 @@ Data accumulation (6 mois d'historique = irremplaçable) + Bot filter exclusif +
 | Facturation fantôme post-désinstall | — | — | — | ✅ 40+ reviews | Ghost Billing Detector |
 
 Total : 380+ reviews de 4 concurrents confirment que StoreMD résout un problème MASSIF et récurrent. Chaque feature est validée par 3-4 sources indépendantes.
+
+### Données marché (sources : APPWRK 2026, Market Clarity, Reddit)
+
+- **Store moyen :** charge en 3.2 secondes (sweet spot = <2.5s)
+- **Core Web Vitals :** <50% des stores Shopify passent les 3 seuils (LCP, INP, CLS)
+- **Impact apps :** 6-10 apps = +2-3 secondes de load time. Chaque app = +200-500ms.
+- **Coût vitesse :** store à $15K/mois avec 4s au lieu de 2s perd $2,100/mois ($25,200/an)
+- **"App tax" combinée :** $3,000-8,000/an (subscriptions + conversion loss) pour un store 10-30K$/mois
+- **Bot traffic :** 30% du budget ads cible des bots ($900/mois). Fake orders = 10h/semaine à traiter.
+- **Bots coordonnés :** "asdfasdf@asdf.com" attaque des centaines de stores simultanément. Paniers de $700 à $100,000.
+- **Impact existentiel :** un store fermé pendant 2 ANS à cause d'attaques bots (thread Reddit)
+- **Bots blacklistent les domaines email :** les emails d'abandon envoyés aux bots marquent le domaine comme spam
+- **1 seconde de délai = -7% conversion** (Google). 3 secondes = 40% des visiteurs partent.
+
+Market Clarity recommande un pricing de $149-199/mois pour le bot blocking et $199/mois pour le diagnostic conversion. Notre pricing ($29-199/mois) inclut TOUT dans un seul produit.
 
 ---
 
@@ -134,6 +151,15 @@ Typeform (39$/mois) et Interact (89$/mois) ne sont PAS connectés au catalogue S
 
 ### Pricing
 Free (1 quiz, 50 réponses/mois) → 19$/mois (3 quiz, 500 réponses) → 49$/mois (illimité) → 79$/mois (multi-stores)
+
+### Données marché conversion (sources : Market Clarity, Reddit)
+
+- **Taux de conversion moyen Shopify :** 0.5-2.5%. Un store à 10K visiteurs/mois à 0.5% au lieu de 2.5% perd $10,000/mois.
+- **Quiz vs popup :** un quiz convertit 2-3x mieux qu'un popup générique (thread Reddit 9 upvotes)
+- **CSV hell :** les merchants passent 15h/mois à gérer des CSV. ListingLab Bulk Import élimine ça.
+- **Le trafic sans conversion est la frustration #2** sur Reddit/Shopify Community (Market Clarity, milliers de plaintes analysées)
+
+Le quiz est un outil de CONVERSION, pas juste de lead gen. Positionnement : "Vous avez du trafic mais pas de ventes ? Un quiz guide vos visiteurs vers le bon produit."
 
 ---
 

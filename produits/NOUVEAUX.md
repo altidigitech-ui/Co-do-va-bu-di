@@ -31,8 +31,29 @@ Un merchant passe 4 HEURES PAR JOUR sur les chargebacks. 200-1000 commandes/jour
 | Revenue Dashboard | Combien sauvé : chargebacks évités + gagnés. ROI visible. Inclut le win rate AVANT vs APRÈS installation. "Avant ChargebackShield : 30% win rate. Après : 72%." | Thread 230 upvotes : "Ce mois : 4800$ sauvés, 1200$ récupérés. ROI abonnement : 60x." + Reviews Chargeflow (4+) : "we lost ALL chargebacks since implementing", "win rate over 6 months still at 0%." |
 | Proactive Evidence Reminder | L'agent rappelle au merchant de soumettre des preuves supplémentaires AVANT la deadline. "Deadline dans 48h. Vous avez le tracking mais pas la preuve de communication client — l'ajouter augmenterait vos chances de 35%." | Reviews Chargeflow (3+) : "they don't reach out to remind you to submit additional info", "submitted before evidence window closed so my proof was never included" |
 | Business Model Adapter | À l'onboarding, le merchant choisit son type (digital, physique, dropship, abonnement). L'agent adapte sa stratégie de contestation, ses templates de preuves, et ses signaux de risque. | Review Chargeflow : "We have a business model that Chargeflow may not be familiar with" |
+| AMEX Risk Alert | Si le client paie avec AMEX → le Pre-Ship Score ajoute un facteur de risque. Notification : "Commande AMEX — risque chargeback élevé historiquement. Recommandation : exiger signature à la livraison." | Thread Reddit 53 upvotes (3 commentaires distincts) : "On ne prend plus AMEX." "Client a admis avoir commandé, admis avoir reçu. AMEX a maintenu le chargeback." "J'ai perdu tous les bénéfices du mois à cause d'un seul chargeback AMEX." |
+| Freight Forwarder Detection | Détecte si l'adresse de livraison est un transitaire/réexpéditeur connu. Score risque +30 points. Alerte : "Adresse identifiée comme transitaire. Risque élevé de chargeback 'non reçu'." | Thread Reddit $4200 (125 upvotes) : "On n'envoie plus aux commissionnaires de transport. La plupart du temps, ce sont des arnaques." "Un client canadien a utilisé un centre de réexpédition US pour un article à $4200 puis a fait un chargeback 'non reçu'." |
+| Refund vs Contest Calculator | Pour chaque chargeback, l'agent calcule si contester ou rembourser est plus rentable. "Cette commande de 47$ coûterait 85$ à contester (temps + risque de perte). Recommandation : rembourser et blacklister le client." | Thread Reddit 53 upvotes (14 upvotes sur commentaire) : "Si quelqu'un n'est pas content, même s'il est fou, on lui donne une étiquette retour. Ça limite les chargebacks et le gaspillage d'énergie." |
+| 3DS Recommender | Pour les commandes à haut risque, recommande d'activer 3D Secure. "3DS transfère la responsabilité du chargeback vers la banque du client. Recommandé pour les commandes > 500$." | Thread Reddit $4200 (1 commentaire) : "Une fois 3DS activé, la responsabilité passe de nous à l'utilisateur si le paiement passe avec 3DS." |
 
 **Pricing :** Free (50 commandes/mois) → 49$/mois (500) → 99$/mois (2000) → 199$/mois (illimité)
+
+### Données marché (sources : Mastercard 2025, Market Clarity, Reddit)
+
+- **TAM global chargebacks :** 33.78 milliards $ drainés des retailers en 2025 (Mastercard)
+- **Volume disputes :** 324 millions/an d'ici 2028 (+24% vs 2025)
+- **Friendly fraud :** 71% des pertes ne sont PAS de la vraie fraude (Mastercard)
+- **Perte moyenne par store :** $800/mois en chargebacks
+- **Win rate actuel :** 20%. Potentiel avec IA : 60%
+- **Coût réel par chargeback :** 2.6-4.61x le montant de la transaction (produit + shipping + fees + temps)
+- **Seuil critique :** 0.65% dispute rate → programme de monitoring Visa. 0.9% → amendes 25-100K$/mois
+- **AMEX :** processeur le plus risqué — merchants arrêtent de l'accepter (3+ témoignages Reddit)
+- **Transitaires :** risque maximum — "la plupart sont des arnaques" (thread $4200, 125 upvotes)
+- **Recouvrement post-chargeback :** "10 clients sur X nous ont rappelés gênés pour payer" (thread 53 upvotes)
+- **Un seul chargeback de $4200 peut tuer un small business overnight** (thread 125 upvotes)
+
+Market Clarity recommande un pricing de $99-299/mois pour ce type de produit. Notre pricing ($49-199/mois) est volontairement plus accessible pour capturer les petits merchants.
+
 **Moat :** Data ML + network effect (blacklist partagée) + intégration recouvrement unique
 
 ---
@@ -99,6 +120,19 @@ Lifetimely (racheté par AMP) = 4.8★ sur Shopify, 468 reviews, mais en chute l
 Le positionnement est clair : Lifetimely a été "enshittified" par AMP. ProfitPilot = l'alternative indie, founder-led, centrée merchant.
 
 **Pricing :** 29$/mois (1 store) → 79$/mois (multi-stores + fiscal) → 149$/mois (prédictions + advisory IA)
+
+### Données marché (sources : Market Clarity, Reddit)
+
+- **Bookkeeping e-com :** 20h/mois de travail DIY = $800/mois de coût d'opportunité
+- **Comptable externe :** $500-1,000/mois
+- **Déductions manquées :** $5,000/an en moyenne
+- **Urgences fiscales :** $3,000 en moyenne
+- **Coût annuel total du problème :** $20,000+ par merchant
+- **La comptabilité est la frustration #6** sur Reddit/Shopify Community (Market Clarity)
+- **Market size :** 2 millions de stores Shopify. TAM estimé à $49/mois × 2M = $98M/an.
+
+Market Clarity recommande un pricing de $49/mois (undercut tout le monde). Notre pricing ($29-149/mois) est aligné avec un entry point encore plus bas.
+
 **Moat :** Data financières accumulées + intégrations Shopify/Stripe/Meta/Google = irremplaçable après 3 mois
 
 ### 4. ADAUDIT — Auditeur publicitaire IA (Score 30/41)
@@ -263,6 +297,7 @@ Identifié pendant les mois 1-2 via douleurs-observees.md de R et F. Critères :
 | AdAudit | ClientPulse | "Vous auditez les ads, gérez tout le cycle" |
 | CreatorSuite | LeadQuiz | "Vous repurposez, capturez des leads" |
 | StoreMD (App Impact) | ProfitPilot (App Cost) | "StoreMD montre l'impact technique, ProfitPilot montre le coût financier de chaque app" |
+| StoreMD (Bot Traffic Filter) | ChargebackShield | "StoreMD bloque les bots et le card testing AVANT. ChargebackShield gère les chargebacks qui passent quand même. Les deux ensemble = protection complète." |
 
 **Bundle e-com :** StoreMD + ListingLab + ChargebackShield + ProfitPilot = 199$/mois (vs 316$)
 **Bundle agence :** ClientPulse + AdAudit = 179$/mois (vs 228$)
@@ -311,3 +346,26 @@ Les features marquées "Validation terrain" dans chaque tableau ont été confir
 | Databox | AdAudit | 11 reviews ≤3★ G2 | Templates/métriques qui cassent (3), bait-and-switch pricing (3), support lent et défensif (3) |
 | DashThis | AdAudit | 2 reviews ≤3★ G2 | Données inconsistantes, pricing élevé |
 | Riverside.fm | CreatorSuite | 26 reviews ≤3★ G2 | Enregistrements perdus 30% chance (10), support IA chatbot (8), exports ultra-lents (5), free plan inutile (5) |
+
+---
+
+## DONNÉES REDDIT — Threads majeurs scrapés
+
+| Thread | Upvotes | Commentaires | SaaS concerné | Insight clé |
+|--------|---------|-------------|---------------|-------------|
+| "Comment les chargebacks sont-ils légaux ?" | 53 | 69 | ChargebackShield | Banks incitées à favoriser le client. AMEX pire processeur. Recouvrement fonctionne. Rembourser > contester pour petits montants. |
+| "$4,200 chargeback" | 125 | 78 | ChargebackShield | Transitaires = risque max. Données GPS UPS comme preuve. Billing descriptor comme vérification. badbuyerlist.com existe. 3DS shift responsabilité. |
+| "Paniers abandonnés BIZARRES et GROS" | 44 | 70 | StoreMD | asdfasdf@asdf.com attaque des centaines de stores. Paniers $700-$100K. Bots sabotent données marketing. Blacklistent domaines email. |
+| "Centaines de commandes bots, milliers de faux comptes" | 40 | 48 | StoreMD + ChargebackShield | Card testing massif. Store fermé 2 ans. $25K+ en frais potentiels. Cloudflare + capture manuelle comme défense. |
+| "Du trafic mais pas de conversions" | 7 | 45 | StoreMD + LeadQuiz | Mauvais ciblage, site pas optimisé, confiance manquante. Le diagnostic 3 couches de StoreMD résout ça. |
+
+### TOTAL CUMULÉ SCRAPING
+
+| Source | Volume | Concurrents/SaaS |
+|--------|--------|-----------------|
+| Reddit terrain (sessions précédentes) | 50+ threads, 5000+ commentaires | 8 SaaS validés |
+| Reddit threads Market Clarity | 5 threads, 310 commentaires | ChargebackShield, StoreMD, LeadQuiz |
+| Reviews Shopify App Store | 400+ reviews 1-2★ | Chargeflow, TrueProfit, Avada, PageFly, Privy, Shogun, Octane AI, Lifetimely, Plug In Speed |
+| Reviews G2 | 130+ reviews ≤3★ | AgencyAnalytics, Whatagraph, Databox, DashThis, Descript, Riverside.fm, Opus Clip, vidIQ, Dubsado, HoneyBook |
+| Méta-analyses | Market Clarity (milliers de plaintes) + Mastercard 2025 + APPWRK 2026 | Données marché globales |
+| **TOTAL** | **55+ threads Reddit + 530+ reviews + données marché** | **18 concurrents analysés** |
