@@ -149,6 +149,24 @@ Whatagraph = 4.3★ sur G2, ~278 reviews. Plus faible que AgencyAnalytics, et av
 | Données incomplètes ("not able to fetch purchases, adds to cart") | Toutes les métriques e-com clés dès le launch : purchases, add to cart, ROAS, CPL, CPA. |
 | Promesses sales non tenues ("promised functionality that was not there") | Pas de sales team. Self-serve. Ce que tu vois dans le free tier = ce que tu obtiens en payant, en plus grand. |
 
+### Positionnement vs Databox (concurrent dashboards)
+
+Databox = 4.4★ sur G2, 193 reviews. Le plus faible des 3 concurrents reporting (AgencyAnalytics 4.7★, Whatagraph 4.3★, Databox 4.4★).
+
+| Gap Databox | Ce que AdAudit fait mieux |
+|------------|-------------------------|
+| Templates et métriques qui cassent constamment ("templates always break, individual metrics always break") | Monitoring proactif : si une métrique se déconnecte → alerte + reconnexion automatique. Pas de dashboard cassé silencieux. |
+| Bait-and-switch pricing ("bulk of features in top service tiers", "hidden restrictions") | Toutes les features essentielles dans le plan de base. Pas de features cachées. Ce que tu vois dans le free = ce que tu obtiens en payant, en plus grand. |
+| Support lent et défensif ("rarely same-DAY service", "always play the victim, can take months to fix a critical issue") | Support < 2h. Ownership des problèmes. Si un bug est signalé → investigation immédiate, pas de blame-shifting. |
+| Personnalisation limitée ("not a lot of granular control, metrics come as they are") | Filtres avancés, custom queries, drag-and-drop flexible. L'agent adapte le dashboard au type de campagne. |
+
+**Récap concurrents AdAudit — 3 concurrents scrapés :**
+- AgencyAnalytics (4.7★, dominant) : dashboards passifs, pas d'insights, cher pour solo
+- Whatagraph (4.3★) : intégrations cassées, contrats rigides, UI buggée
+- Databox (4.4★) : templates cassés, bait-and-switch, support défensif
+
+Aucun des 3 ne fait ce qu'AdAudit fait : DIRE quoi faire, pas juste montrer les données.
+
 **Pricing :** 49$/mois (1 compte) → 149$/mois (10 comptes) → 299$/mois (illimité)
 **Moat :** Negative Keyword Agent s'améliore avec le temps + data cross-comptes
 
@@ -179,6 +197,7 @@ Whatagraph = 4.3★ sur G2, ~278 reviews. Plus faible que AgencyAnalytics, et av
 | Export Fiable | Export vidéo/audio garanti fonctionnel. Progress bar honnête. Si erreur → retry automatique + notification. Pas de "0 minutes remaining" qui finit en erreur. | Reviews Descript (3+) : "have NOT ONCE been able to export my video", "downloads take hours on 2GB+ internet", "parts of exported video is blank" + Review Opus Clip : "says 0 minutes left and turns out to be an error" |
 | Projets Toujours Accessibles | Les créations du creator lui appartiennent. Échec de paiement → 7 jours de grâce. Projets accessibles en lecture même après expiration du plan. | Reviews Descript (1 review 0★) : "they suspend your access with all your projects after payment failure" |
 | Clip Context Guard | L'IA de découpe vérifie que chaque clip contient une idée COMPLÈTE avant de couper. Pas de coupure mid-sentence ou mid-concept. | Reviews Opus Clip (2) : "clips cutting into shorter versions — sometimes context would be cut", "clips get cut off before the idea is finished" |
+| Cloud Processing Rapide | Traitement vidéo/audio parallèle cloud-based. Clips extraits en <2 min pour une vidéo de 15 min. Progress bar honnête avec ETA précise. | Reviews Riverside.fm (5+) : "1 minute clip took 20 minutes to export", "2 hour show expected 24 hours to export" + Review Opus Clip : "says 0 minutes left and turns out to be an error" |
 
 **Pricing :** Free (2 vidéos/mois, repurpose basique) → 9$/mois (10 vidéos) → 29$/mois (illimité) → 59$/mois (teams)
 **Note :** Pricing volontairement BAS par rapport aux autres SaaS car WTP faible confirmée par le terrain.
@@ -200,6 +219,26 @@ Descript = 4.6★ sur G2, 863 reviews, mais 41 reviews négatives révèlent un 
 | Projets inaccessibles après problème de paiement | Si le paiement échoue → 7 jours de grâce pour régulariser. Les projets restent accessibles en lecture. |
 
 Le positionnement est clair : Descript essaie de tout faire (editing, transcription, screen recording, podcasting) et fait tout mal. CreatorSuite fait le REPURPOSING et le fait parfaitement.
+
+### Positionnement vs Riverside.fm (concurrent recording/transcription)
+
+Riverside.fm = 4.8★ sur G2, 1676 reviews, mais 26 reviews ≤3★ révèlent des failles critiques.
+
+| Gap Riverside.fm | Ce que CreatorSuite fait mieux |
+|-----------------|------------------------------|
+| Enregistrements perdus — "alarming 30% chance you won't get the entirety of an interview" (10 reviews) | CreatorSuite ne fait PAS de recording live (pas notre scope). Mais pour le processing post-upload : fiabilité 100%. Backup automatique de chaque fichier uploadé avant traitement. |
+| Support IA chatbot frustrant — "impossible to find a human through their AI chatbot", "AI bot support they pretend are real people" (8 reviews) | Support humain réel. Pas de chatbot en première ligne. |
+| Exports ultra-lents — "1 minute clip took 20 minutes to export", "2 hour show expected to take 24 hours" (5 reviews) | Processing parallèle cloud-based. Clips extraits en <2 min pour une vidéo de 15 min. |
+| Free plan inutile — "free account is completely useless" (5 reviews) | Free tier généreux : 2 vidéos/mois avec repurpose basique. Le creator voit la valeur AVANT de payer. |
+| UX confuse — "hard to find stuff I'm working on", "very little guidance on setup" (4 reviews) | Dashboard de projets clair. Onboarding guidé step-by-step. |
+
+**Récap concurrents CreatorSuite — 4 concurrents scrapés :**
+- Descript (4.6★, 863 reviews) : bugs chroniques, transcription dégradée, exports cassés, pricing confus
+- Riverside.fm (4.8★, 1676 reviews) : enregistrements perdus, support IA, exports lents
+- Opus Clip (4.6★, 4 reviews) : clips hors contexte
+- Repurpose.io (4.4★, 46 reviews) : 0 reviews négatives — concurrent bien-aimé
+
+La différenciation CreatorSuite = tout-en-un REPURPOSING (pas recording, pas editing lourd). Stable, rapide, et l'agent optimise en continu.
 
 ### 6. LEADQUIZ — Voir MUTATIONS.md
 
@@ -267,3 +306,8 @@ Les features marquées "Validation terrain" dans chaque tableau ont été confir
 | Opus Clip | CreatorSuite | 1 review G2 | Clips coupés hors contexte (idée incomplète) |
 | vidIQ | CreatorSuite | 1 review G2 | Support défaillant, valeur seulement au tier le plus cher |
 | Repurpose.io | CreatorSuite | 0 reviews négatives G2 | Concurrent bien-aimé — différenciation par features IA, pas par faiblesses |
+| Privy | StoreMD + LeadQuiz | 262 reviews 1-2★ Shopify | Prix abusifs (80+), facturation fantôme post-désinstall (40+), support lent (45+), emails pas envoyés (25+), harcèlement reviews (20+), site ralenti (10+) |
+| Shogun | StoreMD | 57 reviews 1-2★ Shopify | Vendor lock-in + prix +300-500% (15), code résiduel impossible à retirer (12), ralentissement site/SEO (10), bugs/instabilité (10) |
+| Databox | AdAudit | 11 reviews ≤3★ G2 | Templates/métriques qui cassent (3), bait-and-switch pricing (3), support lent et défensif (3) |
+| DashThis | AdAudit | 2 reviews ≤3★ G2 | Données inconsistantes, pricing élevé |
+| Riverside.fm | CreatorSuite | 26 reviews ≤3★ G2 | Enregistrements perdus 30% chance (10), support IA chatbot (8), exports ultra-lents (5), free plan inutile (5) |

@@ -1,7 +1,7 @@
 # PRINCIPES ANTI-CONCURRENTS — Ce que nos concurrents font mal et qu'on ne fera JAMAIS
 
 Dernière mise à jour : 04/04/2026
-Source : 175+ reviews 1-3★ scrapées (Chargeflow, TrueProfit, Avada SEO, PageFly, AgencyAnalytics, Descript, Whatagraph, Lifetimely/AMP, Octane AI, Plug In Speed, Opus Clip, vidIQ)
+Source : 530+ reviews 1-3★ scrapées (Chargeflow, TrueProfit, Avada SEO, PageFly, AgencyAnalytics, Descript, Whatagraph, Lifetimely/AMP, Octane AI, Plug In Speed, Opus Clip, vidIQ, Privy, Shogun, Databox, DashThis, Riverside.fm)
 
 Ces principes s'appliquent à TOUS les 9 SaaS FoundryTwo. Ils sont non-négociables.
 
@@ -97,6 +97,16 @@ Ces principes s'appliquent à TOUS les 9 SaaS FoundryTwo. Ils sont non-négociab
 
 ---
 
+## 10. Annulation instantanée, zéro facturation fantôme
+
+**Ce que les concurrents font :** Privy continue de facturer 6 mois, voire 6 ANS après désinstallation. "Cancelling on Shopify doesn't cancel the subscription." Shogun facture tant que les pages existent. Chargeflow facture après suppression de l'app.
+
+**Notre règle :** Désinstallation = arrêt IMMÉDIAT de toute facturation. Pas de "contactez-nous pour annuler." Pas de frais cachés post-désinstallation. Pas de période de grâce qui facture. Le merchant désinstalle → c'est fini, point.
+
+**Implémentation :** Webhook Shopify `app/uninstalled` → arrêt immédiat de la subscription Stripe. Email de confirmation "Votre abonnement [NomApp] est annulé. Dernier paiement : [date]. Aucun futur prélèvement." StoreMD Ghost Billing Detector aide les merchants à détecter ce problème chez les AUTRES apps.
+
+---
+
 ## APPLICATION PAR SAAS
 
 | Principe | StoreMD | ListingLab | ChargebackShield | ProfitPilot | AdAudit | ClientPulse | CreatorSuite | LeadQuiz |
@@ -109,4 +119,5 @@ Ces principes s'appliquent à TOUS les 9 SaaS FoundryTwo. Ils sont non-négociab
 | 6. Optimisations au merchant | — | Zero Lock-in, push API Shopify | — | — | — | Export 1-clic | — | — |
 | 7. Support technique | ✅ | ✅ | ✅ | Support < 2h, live chat trial | ✅ | Onboarding 5 min | Support humain, pas AI bot | ✅ |
 | 8. Créations client toujours accessibles | — | — | — | Export CSV 1-clic | Export rapports 1-clic | Export complet 1-clic | Projets accessibles même après expiration | Export quiz + données 1-clic |
-| 9. Stabilité > Features | QA apps tierces | Safe Mode | — | Réconciliation quotidienne | Monitoring intégrations | — | Export fiable 100%, Clip Context Guard | — |
+| 9. Stabilité > Features | QA apps tierces | Safe Mode | — | Réconciliation quotidienne | Monitoring intégrations | — | Export fiable 100%, Clip Context Guard, Cloud Processing | — |
+| 10. Annulation instantanée | Ghost Billing Detector | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
