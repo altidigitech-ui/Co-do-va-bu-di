@@ -19,7 +19,7 @@ Un merchant passe 4 HEURES PAR JOUR sur les chargebacks. 200-1000 commandes/jour
 |---------|-------------------|--------------------|
 | Pre-Ship Score | Score risque 0-100 par commande AVANT expédition. Cross-order pattern detection (même adresse, même IP, mêmes produits sur plusieurs commandes). | Thread 230 upvotes : "les clients ne nous contactent même pas, ils appuient sur le bouton 'contestation' de leur appli bancaire" |
 | Smart Hold | Commandes >75% risque → attente auto. Commandes safe → passent sans friction. | Thread 230 upvotes : "les commandes à faible risque de Shopify passent mais on a quand même des chargebacks" |
-| Auto-Evidence Builder | Chargeback reçu → l'agent compile le dossier automatiquement (tracking, emails, screenshots, communication client) dans le format Visa/Mastercard. PDF de 10-20 pages en 1 clic. | Thread 230 upvotes : "j'ai passé 4h à assembler les preuves. 10+ pages de preuves, et les banques ne les lisent même pas" |
+| Auto-Evidence Builder | Chargeback reçu → l'agent compile le dossier automatiquement (tracking, emails, screenshots, communication client) dans le format Visa/Mastercard. PDF de 10-20 pages en 1 clic. RÈGLE ABSOLUE : le merchant VOIT et APPROUVE le dossier avant soumission. Jamais d'auto-submit aveugle. Notification "Dossier prêt — 12 pages de preuves — approuver ?" | Thread 230 upvotes : "j'ai passé 4h à assembler les preuves. 10+ pages de preuves, et les banques ne les lisent même pas" + Reviews Chargeflow (3+) : "auto submit without key evidence", "submitted before evidence window closed", "they just submit a prompt from ChatGPT and call it a day." |
 | Email "menace polie" auto | Dès qu'un chargeback est détecté → email au client : "Nous constatons une opposition... probablement une erreur... les banques facturent des frais pour les oppositions non valides... nous soumettons parfois aux recouvrements." | Thread 230 upvotes : commentaire à 6 upvotes avec template exact validé par la communauté |
 | Intégration recouvrement TSI/Rocket | Bouton "Envoyer en recouvrement" en 1 clic. PDF pré-rempli avec toutes les preuves. | Thread 230 upvotes : "on envoie CHAQUE chargeback perdu en recouvrement. TSI récupère chaque centime. Certains paient immédiatement." |
 | Plainte IC3 FBI pré-remplie | Formulaire IC3 pré-rempli avec les données de la commande. | Thread 230 upvotes (35 upvotes sur ce commentaire) : "la plupart voudront arranger ça avant qu'une plainte pénale ne soit déposée" |
@@ -28,7 +28,9 @@ Un merchant passe 4 HEURES PAR JOUR sur les chargebacks. 200-1000 commandes/jour
 | Friendly Fraud Detector | Identifie les patterns : livraison confirmée + aucun contact support + chargeback = friendly fraud. | Thread 230 upvotes : "ils reçoivent le produit, ne contactent JAMAIS le support, et font un chargeback" |
 | Billing Descriptor Code | Vérifie que le nom affiché sur le relevé bancaire du client est clair. | Thread chargebacks : certains clients font opposition parce qu'ils ne reconnaissent pas le nom sur leur relevé |
 | Payment Processor Health Dashboard | Compare les taux de chargeback par processeur. Suggère un processeur backup. | Thread processeurs : "Stripe est le pire. Amex encore pire. Mastercard/Discover les meilleurs." |
-| Revenue Dashboard | Combien sauvé : chargebacks évités + gagnés. ROI visible. | Thread 230 upvotes : "Ce mois : 4800$ sauvés, 1200$ récupérés. ROI abonnement : 60x." |
+| Revenue Dashboard | Combien sauvé : chargebacks évités + gagnés. ROI visible. Inclut le win rate AVANT vs APRÈS installation. "Avant ChargebackShield : 30% win rate. Après : 72%." | Thread 230 upvotes : "Ce mois : 4800$ sauvés, 1200$ récupérés. ROI abonnement : 60x." + Reviews Chargeflow (4+) : "we lost ALL chargebacks since implementing", "win rate over 6 months still at 0%." |
+| Proactive Evidence Reminder | L'agent rappelle au merchant de soumettre des preuves supplémentaires AVANT la deadline. "Deadline dans 48h. Vous avez le tracking mais pas la preuve de communication client — l'ajouter augmenterait vos chances de 35%." | Reviews Chargeflow (3+) : "they don't reach out to remind you to submit additional info", "submitted before evidence window closed so my proof was never included" |
+| Business Model Adapter | À l'onboarding, le merchant choisit son type (digital, physique, dropship, abonnement). L'agent adapte sa stratégie de contestation, ses templates de preuves, et ses signaux de risque. | Review Chargeflow : "We have a business model that Chargeflow may not be familiar with" |
 
 **Pricing :** Free (50 commandes/mois) → 49$/mois (500) → 99$/mois (2000) → 199$/mois (illimité)
 **Moat :** Data ML + network effect (blacklist partagée) + intégration recouvrement unique
@@ -74,6 +76,9 @@ Un freelancer a construit TOUT le marketing d'une entreprise (0→2.2M$ en 18 mo
 | OPEX Categorizer | Catégorisation automatique des dépenses opérationnelles (apps, VA, shipping, ads). | Thread VA (111 upvotes) : "les dépenses du VA se mélangent avec les coûts généraux" |
 | Tax Ready | Catégorisation auto. Rapport fiscal 1 clic. Détection déductions manquées. | Thread comptabilité (5 upvotes) : merchants utilisent Excel et "n'ont même pas besoin de QuickBooks" |
 | Cashflow Forecast | Prédit le cashflow 30/60/90 jours. | Thread RTO : "les fondateurs D2C sont obsédés par le CAC et le ROAS mais ignorent la logistique inverse" |
+| Data Integrity Check | Au setup, compare les données ProfitPilot vs Shopify vs Stripe. Si écart > 2% → alerte avec explication du delta. Le merchant voit que les chiffres sont fiables dès le jour 1. | Reviews TrueProfit (3+) : "data was all wrong", "wrongly counts ad spend, returns", "their customer metric includes all records regardless of purchase" |
+| Proactive Bug Alert | Si l'app a un problème technique → email proactif au merchant AVANT qu'il ne le découvre. "Nous avons un souci avec le sync Meta Ads. Vos données des dernières 4h sont en attente. Résolution estimée : 2h." | Reviews TrueProfit (2+) : "cannot login since few days, no support response", "app has errors all the time" |
+| LTV propre | LTV calculée sur les vrais acheteurs uniquement (1+ achats). Filtre explicite clients acheteurs vs tous contacts Shopify. | Review TrueProfit (Yellow Tail Wines) : "their customer metric includes all records regardless of whether that person has made a purchase. Makes LTV reporting unusable." |
 
 **Pricing :** 29$/mois (1 store) → 79$/mois (multi-stores + fiscal) → 149$/mois (prédictions + advisory IA)
 **Moat :** Data financières accumulées + intégrations Shopify/Stripe/Meta/Google = irremplaçable après 3 mois
@@ -95,6 +100,21 @@ Un freelancer a construit TOUT le marketing d'une entreprise (0→2.2M$ en 18 mo
 | Attribution Cleaner | Réconcilie les données cross-plateforme (Meta vs Google vs CRM). | Thread quotidien : "Facebook dit 40 conversions, Meta dit 52, mon CRM dit 90" |
 | Weekly Audit Report | Rapport hebdomadaire auto : "Cette semaine, 847$ gaspillés sur 23 termes informationnels. 3 recommandations." | Thread quotidien : "je vérifie les performances des annonces en premier, je réalise qu'il y a quelque chose à corriger" |
 | Multi-account | 10+ comptes publicitaires clients depuis un seul dashboard. | Thread agence toiture : le freelancer gère tout pour 1 client, imagine 5-10 |
+
+### Positionnement vs AgencyAnalytics (concurrent principal)
+
+AgencyAnalytics = 4.7★ sur G2, 432 reviews, dominant du marché. Mais c'est un OUTIL de dashboards, pas un AGENT. Voici les gaps qu'on exploite :
+
+| Gap AgencyAnalytics | Ce que AdAudit fait mieux |
+|--------------------|-----------------------|
+| Dashboards PASSIFS — le freelancer doit interpréter les données lui-même | AdAudit DIT quoi faire : "Vous gaspillez 2340$/mois sur 3 audiences. Fusionnez-les." |
+| Pas de détection proactive de gaspillage | Waste Detector + Creative Fatigue Alert = l'agent alerte AVANT que le budget ne soit brûlé |
+| Chiffres qui ne matchent pas entre plateformes ("hard to explain to customers why numbers differ") | Attribution Cleaner réconcilie Meta vs Google vs CRM |
+| Minimum 5 clients obligatoire ($79/mois plan Freelancer) | AdAudit : 1 compte dès 49$/mois. Le freelancer solo ne paie que pour ce qu'il utilise |
+| Pas de résumé automatique en langage simple | L'agent génère les insights en phrases, pas en graphiques. "Ce mois : 847$ gaspillés sur 23 termes informationnels." |
+| Pas d'alertes proactives | Weekly Audit Report envoyé automatiquement avec les 3 actions prioritaires |
+
+Le positionnement est clair : AgencyAnalytics = "montrez vos données." AdAudit = "sachez quoi faire."
 
 **Pricing :** 49$/mois (1 compte) → 149$/mois (10 comptes) → 299$/mois (illimité)
 **Moat :** Negative Keyword Agent s'améliore avec le temps + data cross-comptes
@@ -126,6 +146,7 @@ Un freelancer a construit TOUT le marketing d'une entreprise (0→2.2M$ en 18 mo
 
 **Pricing :** Free (2 vidéos/mois, repurpose basique) → 9$/mois (10 vidéos) → 29$/mois (illimité) → 59$/mois (teams)
 **Note :** Pricing volontairement BAS par rapport aux autres SaaS car WTP faible confirmée par le terrain.
+**Positionnement prix vs marché :** Les creators utilisent des outils gratuits (CapCut, Canva, etc.). AgencyAnalytics facture $79+/mois. Notre pricing (9-59$) est calibré sur la WTP réelle observée dans les communautés. Le free tier DOIT être généreux pour créer l'habitude.
 **Moat :** Faible (outils gratuits nombreux). Différenciateur = l'intégration tout-en-un + l'agent qui optimise en continu.
 
 ### 6. LEADQUIZ — Voir MUTATIONS.md
@@ -169,3 +190,18 @@ Identifié pendant les mois 1-2 via douleurs-observees.md de R et F. Critères :
 | CreatorSuite | 8+ | 2800+ | 400+ | ✅✅ (mais WTP basse ⚠️) |
 
 Les features marquées "Validation terrain" dans chaque tableau ont été confirmées par des vrais utilisateurs sur Reddit avec des douleurs chiffrées et des cas concrets.
+
+---
+
+## DONNÉES REVIEWS CONCURRENTS — Résumé du scraping Shopify App Store + G2
+
+| Concurrent | SaaS cible | Reviews analysées | Patterns clés exploitables |
+|-----------|-----------|------------------|--------------------------|
+| Chargeflow | ChargebackShield | 20+ × 1★ Shopify | Auto-submit aveugle, frais cachés ($100 vérification, 8% cancellation), win rate PIRE après installation, support zombie, pas d'adaptation par type de business |
+| TrueProfit | ProfitPilot | 7 × 1★ Shopify | Données fausses, pricing explosif (+400% sans prévenir), bugs login non communiqués, LTV inclut les non-acheteurs |
+| Avada SEO | StoreMD + ListingLab | 40+ × 1★ Shopify | App détruit le store (SEO, collections, images), ralentit au lieu d'accélérer, résidus code après désinstall, images cassées irréversibles, pixel Meta bloqué, lock-in (revert à la désinstall), support non-technique |
+| PageFly | StoreMD | 20+ × 1★ Shopify | Code injecté sans permission, pages cassées après updates, résidus massifs après désinstall, duplication de 3000+ pages, demande d'accès données clients, homepage cassée 3x en 1 an |
+| AgencyAnalytics | AdAudit | 432 reviews G2 (4.7★) | Dashboard passif (pas d'insights actionnables), intégrations limitées en profondeur, chiffres qui ne matchent pas entre plateformes, cher pour solo (min 5 clients), pas d'alertes proactives, pas de détection de gaspillage |
+| NoFraud | ChargebackShield | Pas disponible | — |
+| BeProfit | ProfitPilot | Pas disponible | — |
+| GoWise | ListingLab | Pas disponible | — |

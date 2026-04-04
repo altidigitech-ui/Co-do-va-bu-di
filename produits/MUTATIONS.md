@@ -44,6 +44,10 @@ Le merchant ne sait pas que son store est cassé jusqu'à ce que les ventes bais
 | Benchmark concurrence | Scanne 3-5 concurrents. Compare les scores. | Thread vitesse : merchant demande comment savoir si son site est rapide par rapport aux autres |
 | Fix Generator | Pour chaque problème → action corrective en langage simple. | Thread vitesse : "Pas 'Optimize LCP' mais 'Désinstallez Popup Manager. +1.8s de vitesse'" |
 | Weekly Report Push | Rapport lundi matin en push + email. Score, tendance, top 3 actions. | Thread quotidien : "à 16h j'ai fait beaucoup mais rien qui fasse avancer les choses" |
+| Uninstall Residue Detector | Scanne le theme code pour détecter les résidus d'apps désinstallées (sitemaps orphelins, scripts morts, snippets liquid cassés). "3 résidus trouvés : Avada SEO (snippet liquid), PageFly (3 sitemaps), Reviews+ (script JS). Les retirer gagnerait 0.8s." | Reviews Avada (4+) + PageFly (4+) : "code staying behind after uninstall", "it bricked my site", "like a virus" |
+| Pixel Health Check | Vérifie que les pixels Meta/Google se déclenchent correctement après chaque changement d'app ou de theme. | Review Avada : "freezing Facebook Pixel. They only load after a user clicks. You LOSE vital PageView data." |
+| App Update Tracker | Après chaque mise à jour d'app Shopify, re-scanne et compare les scores. Alerte si régression. "L'app X a été mise à jour il y a 2h. Votre score mobile est passé de 78 à 64." | Reviews PageFly (3+) : "every update makes it worse", "they update the app and all websites start to look different" |
+| Permission Monitor | Alerte quand une app demande des permissions excessives ou nouvelles (accès données clients, modification theme). | Review PageFly : "popup saying: update the app and grant us access to customer data like name, phone, email. Can't access my store without granting access." |
 
 ### L'agent en action
 Dimanche 3h → StoreMD scanne → compare avec vendredi → détecte mobile checkout 0.8s plus lent → identifie app update samedi → lundi 8h push : "Your mobile checkout slowed down. Reviews+ updated yesterday." Le merchant n'a rien demandé.
@@ -74,13 +78,15 @@ Un merchant de bandes dessinées passe des heures chaque semaine à "extraire de
 | Rewrite ciblé | Réécrit UNIQUEMENT ce qui est faible. Garde ce qui marche. | Concurrents (GoWise, SEO On) réécrivent tout à l'aveugle |
 | Bulk Import Intelligent | Drag & drop CSV/tableur distributeur → l'agent matche images aux produits, formate les données, crée les listings. | Thread BD (5 upvotes) : "extraire tableurs, nettoyer données, chercher images = perte de temps" |
 | Dead Listing Detector | Alerte quand un listing reçoit du trafic mais est OOS. Suggère produit de remplacement. | Thread OOS : "un entonnoir sans issue — les magasins perdent 40-50% de revenus potentiels" |
-| Image Optimizer | Compression, redimensionnement, format WebP, alt text SEO auto-générés. En bulk. | Thread images (44 commentaires) : merchants utilisent ChatGPT pour compresser 1 image à la fois. "2048x2048, sous 200Ko, format WebP" |
+| Image Optimizer | Compression, redimensionnement, format WebP, alt text SEO auto-générés. En bulk. RÈGLE ABSOLUE : jamais d'optimisation destructrice. Garde TOUJOURS l'original. Preview avant/après obligatoire. Réversion en 1 clic. | Thread images (44 commentaires) : merchants utilisent ChatGPT pour compresser 1 image à la fois. "2048x2048, sous 200Ko, format WebP" + Reviews Avada (3+) : "image optimization ruined my shop's product photos", "messed up ALL first images of my products." |
 | Product Variant Organizer | Analyse un catalogue et SUGGÈRE la meilleure structure de variantes. | Thread bonbons (9 upvotes) : merchant galère avec variantes complexes (taille × saveur × quantité) |
 | SEO Engine | Keywords par produit. Volume, difficulté, suggestions. | Thread images : "le texte alternatif est non négociable pour le SEO" |
 | Multi-langue | Optimisation en 20+ langues. | Merchants EU qui vendent en FR, DE, ES, IT |
 | New Product Watch | Webhook Shopify : nouveau produit → analyse auto → alerte si faible → version optimisée proposée en 5 min. | Merchants ajoutent des produits régulièrement sans les optimiser |
 | Benchmark catégorie | Compare chaque listing aux top sellers de la même catégorie. | Thread images : "les 5 best sellers ont des descriptions de 150-200 mots avec 3 bullet points" |
 | Bulk Operations | Réécrire 50-500 listings en 1 clic. Review + approve avant push Shopify. | Merchants avec 200-5000 produits ne peuvent pas optimiser un par un |
+| Zero Lock-in | Les optimisations sont pushées DANS Shopify via API. Si tu désinstalles ListingLab, tes listings restent optimisés. Jamais de revert. | Reviews Avada (3+) : "work reverted upon cancelling", "when you stop, it reverts everything — from my point of view this is a scam" |
+| Safe Mode | Avant toute modification bulk, preview des changements. Le merchant approuve CHAQUE batch avant push. Jamais de modification silencieuse. | Reviews Avada (8+) + PageFly (5+) : "changes theme code WITHOUT permission", "disconfigured my entire store" |
 
 ### Pricing
 Free (5 analyses) → 29$/mois (100 produits) → 79$/mois (1000 produits, benchmark, A/B titles) → 199$/mois (illimité, API, white-label)
