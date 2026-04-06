@@ -22,6 +22,8 @@ Karma début : 0 | Karma fin : ___ (+___)
 | | | | | |
 
 ## FACEBOOK
+- Compte perso réutilisé (même stratégie que Fabrice — nouveau compte = risque ban Facebook 2026)
+
 | # | Groupe | Type | Résumé | Réactions |
 |---|--------|------|--------|-----------|
 | | | | | |
