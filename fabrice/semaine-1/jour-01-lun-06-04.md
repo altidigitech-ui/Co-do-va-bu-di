@@ -9,11 +9,11 @@ Karma début : 1 | Karma fin : 1 (+0)
 | 9h-9h30 | Setup Reddit (compte, username, bio, avatar) | ✅ |
 | 9h30-10h | S'abonner à 20 subs | ✅ |
 | 10h-10h30 | Browse + upvote 5-10 posts | ✅ |
-| 10h30-11h | Setup Facebook (profil, photo, cover) | ⏳ En attente validation compte |
-| 11h-11h30 | Ajouter 2-3 amis FB | ❌ Bloqué (compte en review) |
+| 10h30-11h | Setup Facebook (profil, photo, cover) | ✅ (compte perso réutilisé après ban du nouveau compte) |
+| 11h-11h30 | Ajouter 2-3 amis FB | ✅ (amis déjà présents sur compte perso) |
 | 14h-14h30 | Browse Reddit subs cibles | ✅ |
-| 14h30-15h | Browse Facebook | ❌ Bloqué |
-| 15h | Rejoindre 1 FB Group perso | ❌ Bloqué |
+| 14h30-15h | Browse Facebook | ✅ |
+| 15h | Rejoindre 1 FB Group perso | ✅ |
 | 20h | Tracking | ✅ |
 
 ## REDDIT
@@ -24,8 +24,9 @@ Karma début : 1 | Karma fin : 1 (+0)
 - Zéro commentaire (règle J1-J3 respectée)
 
 ## FACEBOOK
-- Compte créé mais en attente de validation (appel soumis le 06/04, review en cours)
-- Bloqué : impossible d'ajouter des amis ou rejoindre des groupes
+- Nouveau compte créé → banni définitivement par Facebook → pivot vers compte perso
+- Compte perso réutilisé : historique long, amis réels, publications passées
+- Publications passées passées en "Amis uniquement", bio mise à jour avec "Tech builder"
 
 ## DMs
 | Direction | Avec qui | Sujet | Résultat |
@@ -54,4 +55,4 @@ Karma début : 1 | Karma fin : 1 (+0)
 - R a reply à mon post : ☐ (J1 = pas de commentaire)
 
 ## BILAN
-Temps actif : ~3h | Ce qui a marché : setup Reddit complet + F5Bot + lurk productif (40 posts, 13 douleurs) | Ajustement demain : relancer Facebook si toujours bloqué, continuer lurk intensif r/shopify + r/ecommerce
+Temps actif : ~3h | Ce qui a marché : setup Reddit complet + F5Bot + lurk productif (40 posts, 13 douleurs) | Ajustement demain : rejoindre 1er FB Group perso + Shopify Entrepreneurs FB, continuer lurk intensif r/shopify + r/ecommerce

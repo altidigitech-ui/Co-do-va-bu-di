@@ -16,4 +16,4 @@
 ## Facebook
 | Groupe | Date | Status | Notes |
 |--------|------|--------|-------|
-| — | 06/04 | Compte en attente de validation | Appel soumis, review Facebook en cours |
+| Compte perso | 06/04 | Actif | Compte perso existant réutilisé — historique long, amis réels, publications passées. Nouveau compte banni par Facebook. Bio mise à jour. Publications passées limitées en visibilité. |
