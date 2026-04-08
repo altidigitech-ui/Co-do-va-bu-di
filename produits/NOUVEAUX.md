@@ -1,60 +1,146 @@
 # NOUVEAUX SaaS — Créés from scratch
 
-Dernière mise à jour : 04/04/2026
-Même architecture commune que MUTATIONS.md (Agent 4 couches + PWA).
-Source : 50+ threads Reddit (5000+ commentaires) + recherche web
+Dernière mise à jour : 08/04/2026
+Même architecture commune que MUTATIONS.md (Agent 4 couches + Mem0 + Ouroboros + LangGraph + PWA).
+Source : 55+ threads Reddit (5000+ commentaires) + 660+ reviews concurrents + recherche web
 
 ---
 
 ## MOIS 1 — E-COMMERCE
 
-### 1. CHARGEBACKSHIELD — Bouclier anti-fraude prédictif (Score 35/41)
+> ChargebackShield (18 features) a été fusionné dans ProfitPilot comme Module Anti-Fraude le 08/04/2026.
+> Voir ProfitPilot ci-dessous pour les specs complètes.
+> Raison : le merchant n'installe qu'UNE app pour profit + fraude (anti-app-bloat).
 
-**Cible :** E-commerce Shopify | **Problème :** 10K$/an (800$/mois chargebacks)
-**Validation terrain :** 7+ threads, 1000+ commentaires — LE sujet le plus douloureux de l'e-com
+### 1. PROFITPILOT — Santé financière complète (Score 39/41)
 
-Un merchant passe 4 HEURES PAR JOUR sur les chargebacks. 200-1000 commandes/jour, 2-4 chargebacks quotidiens, tous infondés. "J'ai passé 4h aujourd'hui juste à gérer les rétrofacturations. C'est du temps que je devrais utiliser pour développer mon business." Un autre a perdu son business de 15 ans à cause des chargebacks. Un merchant à 25K€/mois s'est fait bannir par Stripe pour 6 chargebacks. Stat Mastercard : 75% des chargebacks sont de la "fraude amicale."
+**Cible :** E-commerce Shopify | **Mois :** 1 | **Features :** 41 | **Modules :** 4
+**Validation terrain :** 12+ threads, 1200+ commentaires, 660+ reviews concurrents (BeProfit, TrueProfit, GoProfit, Chargeflow, NoFraud/Wyllo)
+
+#### Le problème (30K$/an)
+Chargebacks ($800/mois) + compta manuelle ($20K/an) + faux positifs non mesurés + ad spend sous-compté (gonfle les profits de 30-85%) + duties non-remboursables sur retours = 30K$+/an de problèmes financiers. Le merchant pense faire 48% de marge alors qu'il fait 23%.
+
+#### Module Profit (15 features — ex-ProfitPilot core)
 
 | Feature | Ce que l'agent fait | Validation terrain |
-|---------|-------------------|--------------------|
+|---------|-------------------|-------------------|
+| True Profit par produit | Revenue - TOUS les coûts (COGS + shipping + fees + ads + apps + duties). Par produit, par commande, par canal. | Market Clarity : "TurboTax for Shopify" = $20K+/an d'opportunité |
+| App Cost Allocator | Répartit le coût de chaque app Shopify par produit/commande. | Thread apps : "I pay $287/month in apps, no idea which are worth it" |
+| Daily P&L | Profit & Loss temps réel, mis à jour chaque commande. | TrueProfit/BeProfit le font mais avec des données fausses (reviews 1★) |
+| Margin Alerts | Alerte quand la marge d'un produit passe sous le seuil configuré. | GoProfit fait ça — on doit être au même niveau minimum |
+| Ad Spend Tracker (100%) | Track 100% de l'ad spend (Meta, Google, TikTok), PAS juste l'attribué. | FAILLE BeProfit : ne track que 15% du Google Ads spend. Profits gonflés. |
+| Return Cost Calculator | Coût RÉEL de chaque retour : produit + shipping retour + temps + stock mort. | Lifetimely ne le fait pas correctement |
+| OPEX Categorizer | Catégorise automatiquement les dépenses opérationnelles. | Thread compta : "I spend 20h/month on bookkeeping" |
+| Tax Ready | Export fiscal 1 clic. Données pré-formatées pour le comptable. | Thread tax : "$3000 tax preparation emergencies are common" |
+| Cashflow Forecast | Prédiction cashflow 30/60/90 jours basée sur les tendances. | Aucun concurrent Shopify ne fait ça |
+| Data Integrity Check | Vérifie nos données vs Shopify/Stripe. Écart > 2% → alerte + explication. | FAILLE TrueProfit : "données fausses" (7 reviews 1★) |
+| Proactive Bug Alert | Détecte et alerte les bugs dans les données AVANT que le merchant les voie. | FAILLE TrueProfit : "they don't communicate bugs" |
+| LTV propre | Lifetime Value calculée SANS les non-acheteurs ni les bots. | FAILLE TrueProfit : "LTV includes non-buyers" |
+| Multi-Fulfillment Sync | Sync données multi-entrepôts (3PL, Amazon MCF, ShipBob). | Thread fulfillment : "my data is split across 3 warehouses" |
+| Post-Purchase Upsell Tracker | Mesure le revenue des upsells post-achat. | Thread upsell : "I have no idea if my upsells are profitable" |
+
+#### Module Anti-Fraude (18 features — ex-ChargebackShield fusionné)
+
+Un merchant passe 4 HEURES PAR JOUR sur les chargebacks. 200-1000 commandes/jour, 2-4 chargebacks quotidiens, tous infondés. Un autre a perdu son business de 15 ans à cause des chargebacks. Un merchant à 25K€/mois s'est fait bannir par Stripe pour 6 chargebacks. Stat Mastercard : 75% des chargebacks sont de la "fraude amicale."
+
+| Feature | Ce que l'agent fait | Validation terrain |
+|---------|-------------------|-------------------|
 | Pre-Ship Score | Score risque 0-100 par commande AVANT expédition. Cross-order pattern detection (même adresse, même IP, mêmes produits sur plusieurs commandes). | Thread 230 upvotes : "les clients ne nous contactent même pas, ils appuient sur le bouton 'contestation' de leur appli bancaire" |
 | Smart Hold | Commandes >75% risque → attente auto. Commandes safe → passent sans friction. | Thread 230 upvotes : "les commandes à faible risque de Shopify passent mais on a quand même des chargebacks" |
-| Auto-Evidence Builder | Chargeback reçu → l'agent compile le dossier automatiquement (tracking, emails, screenshots, communication client) dans le format Visa/Mastercard. PDF de 10-20 pages en 1 clic. RÈGLE ABSOLUE : le merchant VOIT et APPROUVE le dossier avant soumission. Jamais d'auto-submit aveugle. Notification "Dossier prêt — 12 pages de preuves — approuver ?" | Thread 230 upvotes : "j'ai passé 4h à assembler les preuves. 10+ pages de preuves, et les banques ne les lisent même pas" + Reviews Chargeflow (3+) : "auto submit without key evidence", "submitted before evidence window closed", "they just submit a prompt from ChatGPT and call it a day." |
-| Email "menace polie" auto | Dès qu'un chargeback est détecté → email au client : "Nous constatons une opposition... probablement une erreur... les banques facturent des frais pour les oppositions non valides... nous soumettons parfois aux recouvrements." | Thread 230 upvotes : commentaire à 6 upvotes avec template exact validé par la communauté |
-| Intégration recouvrement TSI/Rocket | Bouton "Envoyer en recouvrement" en 1 clic. PDF pré-rempli avec toutes les preuves. | Thread 230 upvotes : "on envoie CHAQUE chargeback perdu en recouvrement. TSI récupère chaque centime. Certains paient immédiatement." |
-| Plainte IC3 FBI pré-remplie | Formulaire IC3 pré-rempli avec les données de la commande. | Thread 230 upvotes (35 upvotes sur ce commentaire) : "la plupart voudront arranger ça avant qu'une plainte pénale ne soit déposée" |
+| Auto-Evidence Builder | Chargeback reçu → l'agent compile le dossier automatiquement (tracking, emails, screenshots, communication client) dans le format Visa/Mastercard. PDF de 10-20 pages en 1 clic. RÈGLE ABSOLUE : le merchant VOIT et APPROUVE le dossier avant soumission. Jamais d'auto-submit aveugle. | Thread 230 upvotes : "j'ai passé 4h à assembler les preuves" + Reviews Chargeflow (3+) : "auto submit without key evidence", "they just submit a prompt from ChatGPT" |
+| Email "menace polie" auto | Dès qu'un chargeback est détecté → email au client : "Nous constatons une opposition... probablement une erreur..." | Thread 230 upvotes : commentaire à 6 upvotes avec template exact validé par la communauté |
+| Intégration recouvrement TSI/Rocket | Bouton "Envoyer en recouvrement" en 1 clic. PDF pré-rempli avec toutes les preuves. | Thread 230 upvotes : "on envoie CHAQUE chargeback perdu en recouvrement. TSI récupère chaque centime." |
+| Plainte IC3 FBI pré-remplie | Formulaire IC3 pré-rempli avec les données de la commande. | Thread 230 upvotes (35 upvotes) : "la plupart voudront arranger ça avant qu'une plainte pénale ne soit déposée" |
 | Ratio Monitor temps réel | Surveille le ratio en temps réel. Alerte AVANT le seuil 0.9% (Visa) ou 1.0% (Mastercard). | Thread processeurs (81 upvotes) : merchant banni pour 6 chargebacks. "Dépasser 0.9% = amendes 25K-100K$/mois" |
-| Blacklist partagée cross-merchants | Base de données partagée des fraudeurs récidivistes (tokenisé). | Thread 230 upvotes (96 upvotes sur ce commentaire) : "une blacklist des rétrofacturations, c'est une super idée" — un dev Shopify a créé une app gratuite pour ça |
+| Blacklist partagée cross-merchants | Base de données partagée des fraudeurs récidivistes (tokenisé). | Thread 230 upvotes (96 upvotes) : "une blacklist des rétrofacturations, c'est une super idée" |
 | Friendly Fraud Detector | Identifie les patterns : livraison confirmée + aucun contact support + chargeback = friendly fraud. | Thread 230 upvotes : "ils reçoivent le produit, ne contactent JAMAIS le support, et font un chargeback" |
-| Billing Descriptor Code | Vérifie que le nom affiché sur le relevé bancaire du client est clair. | Thread chargebacks : certains clients font opposition parce qu'ils ne reconnaissent pas le nom sur leur relevé |
+| Billing Descriptor Code | Vérifie que le nom affiché sur le relevé bancaire du client est clair. | Thread chargebacks : clients font opposition car nom non reconnu |
 | Payment Processor Health Dashboard | Compare les taux de chargeback par processeur. Suggère un processeur backup. | Thread processeurs : "Stripe est le pire. Amex encore pire. Mastercard/Discover les meilleurs." |
-| Revenue Dashboard | Combien sauvé : chargebacks évités + gagnés. ROI visible. Inclut le win rate AVANT vs APRÈS installation. "Avant ChargebackShield : 30% win rate. Après : 72%." | Thread 230 upvotes : "Ce mois : 4800$ sauvés, 1200$ récupérés. ROI abonnement : 60x." + Reviews Chargeflow (4+) : "we lost ALL chargebacks since implementing", "win rate over 6 months still at 0%." |
-| Proactive Evidence Reminder | L'agent rappelle au merchant de soumettre des preuves supplémentaires AVANT la deadline. "Deadline dans 48h. Vous avez le tracking mais pas la preuve de communication client — l'ajouter augmenterait vos chances de 35%." | Reviews Chargeflow (3+) : "they don't reach out to remind you to submit additional info", "submitted before evidence window closed so my proof was never included" |
-| Business Model Adapter | À l'onboarding, le merchant choisit son type (digital, physique, dropship, abonnement). L'agent adapte sa stratégie de contestation, ses templates de preuves, et ses signaux de risque. | Review Chargeflow : "We have a business model that Chargeflow may not be familiar with" |
-| AMEX Risk Alert | Si le client paie avec AMEX → le Pre-Ship Score ajoute un facteur de risque. Notification : "Commande AMEX — risque chargeback élevé historiquement. Recommandation : exiger signature à la livraison." | Thread Reddit 53 upvotes (3 commentaires distincts) : "On ne prend plus AMEX." "Client a admis avoir commandé, admis avoir reçu. AMEX a maintenu le chargeback." "J'ai perdu tous les bénéfices du mois à cause d'un seul chargeback AMEX." |
-| Freight Forwarder Detection | Détecte si l'adresse de livraison est un transitaire/réexpéditeur connu. Score risque +30 points. Alerte : "Adresse identifiée comme transitaire. Risque élevé de chargeback 'non reçu'." | Thread Reddit $4200 (125 upvotes) : "On n'envoie plus aux commissionnaires de transport. La plupart du temps, ce sont des arnaques." "Un client canadien a utilisé un centre de réexpédition US pour un article à $4200 puis a fait un chargeback 'non reçu'." |
-| Refund vs Contest Calculator | Pour chaque chargeback, l'agent calcule si contester ou rembourser est plus rentable. "Cette commande de 47$ coûterait 85$ à contester (temps + risque de perte). Recommandation : rembourser et blacklister le client." | Thread Reddit 53 upvotes (14 upvotes sur commentaire) : "Si quelqu'un n'est pas content, même s'il est fou, on lui donne une étiquette retour. Ça limite les chargebacks et le gaspillage d'énergie." |
-| 3DS Recommender | Pour les commandes à haut risque, recommande d'activer 3D Secure. "3DS transfère la responsabilité du chargeback vers la banque du client. Recommandé pour les commandes > 500$." | Thread Reddit $4200 (1 commentaire) : "Une fois 3DS activé, la responsabilité passe de nous à l'utilisateur si le paiement passe avec 3DS." |
+| Revenue Dashboard | Combien sauvé : chargebacks évités + gagnés. ROI visible. Win rate AVANT vs APRÈS. | Thread 230 upvotes + Reviews Chargeflow (4+) : "we lost ALL chargebacks since implementing" |
+| Proactive Evidence Reminder | Rappelle au merchant de soumettre des preuves AVANT la deadline. | Reviews Chargeflow (3+) : "submitted before evidence window closed so my proof was never included" |
+| Business Model Adapter | À l'onboarding, adapte stratégie selon type (digital, physique, dropship, abonnement). | Review Chargeflow : "We have a business model that Chargeflow may not be familiar with" |
+| AMEX Risk Alert | Commande AMEX → facteur de risque ajouté au Pre-Ship Score. | Thread 53 upvotes : "On ne prend plus AMEX." "J'ai perdu tous les bénéfices du mois à cause d'un seul chargeback AMEX." |
+| Freight Forwarder Detection | Détecte si l'adresse est un transitaire/réexpéditeur. Score risque +30 points. | Thread $4200 (125 upvotes) : "On n'envoie plus aux commissionnaires de transport." |
+| Refund vs Contest Calculator | Calcule si contester ou rembourser est plus rentable. | Thread 53 upvotes : "Si quelqu'un n'est pas content, on lui donne une étiquette retour." |
+| 3DS Recommender | Recommande 3D Secure pour commandes à haut risque. Transfère la responsabilité vers la banque. | Thread $4200 : "Une fois 3DS activé, la responsabilité passe à l'utilisateur." |
 
-**Pricing :** Free (50 commandes/mois) → 49$/mois (500) → 99$/mois (2000) → 199$/mois (illimité)
-
-### Données marché (sources : Mastercard 2025, Market Clarity, Reddit)
+##### Données marché Anti-Fraude (sources : Mastercard 2025, Market Clarity, Reddit)
 
 - **TAM global chargebacks :** 33.78 milliards $ drainés des retailers en 2025 (Mastercard)
 - **Volume disputes :** 324 millions/an d'ici 2028 (+24% vs 2025)
 - **Friendly fraud :** 71% des pertes ne sont PAS de la vraie fraude (Mastercard)
 - **Perte moyenne par store :** $800/mois en chargebacks
 - **Win rate actuel :** 20%. Potentiel avec IA : 60%
-- **Coût réel par chargeback :** 2.6-4.61x le montant de la transaction (produit + shipping + fees + temps)
-- **Seuil critique :** 0.65% dispute rate → programme de monitoring Visa. 0.9% → amendes 25-100K$/mois
-- **AMEX :** processeur le plus risqué — merchants arrêtent de l'accepter (3+ témoignages Reddit)
-- **Transitaires :** risque maximum — "la plupart sont des arnaques" (thread $4200, 125 upvotes)
-- **Recouvrement post-chargeback :** "10 clients sur X nous ont rappelés gênés pour payer" (thread 53 upvotes)
-- **Un seul chargeback de $4200 peut tuer un small business overnight** (thread 125 upvotes)
+- **Coût réel par chargeback :** 2.6-4.61x le montant de la transaction
+- **Seuil critique :** 0.65% dispute rate → monitoring Visa. 0.9% → amendes 25-100K$/mois
 
-Market Clarity recommande un pricing de $99-299/mois pour ce type de produit. Notre pricing ($49-199/mois) est volontairement plus accessible pour capturer les petits merchants.
+#### Module Intelligence (NOUVEAU — 5 features, analyse concurrentielle avril 2026)
 
-**Moat :** Data ML + network effect (blacklist partagée) + intégration recouvrement unique
+Failles exploitées : BeProfit (15% ad spend), GoProfit (Smart Alerts statiques), NoFraud/Wyllo (faux positifs coûtent plus que la fraude).
+
+| Feature | Ce que l'agent fait | Validation terrain |
+|---------|-------------------|-------------------|
+| Total Ad Spend Tracker (100%) | Duplicata intentionnel avec Module Profit — la feature est si critique qu'elle mérite un scanner dédié qui alerte si l'écart entre spend reporté et spend réel dépasse 10%. | BeProfit review 1★ : "only imported ~15% of actual Google Ads spend. This massively inflates profit figures." |
+| Smart Alerts Temps Réel | Alertes profit drops + chargeback spikes + margin alerts + refund spikes dans le même flux. Push immédiat. | GoProfit : "catches profit drops & spikes the moment they happen." On fait ça + alertes fraude. |
+| False Positive Cost Tracker | EXCLUSIVITÉ. Quand le module Anti-Fraude bloque une commande, tracker si c'était un vrai fraudeur ou un faux positif. Après 30 jours : "X bloquées. Y vraie fraude ($Z sauvés). W faux positifs ($V perdus). Net : $Z-$V." | NoFraud/Wyllo review : "too sensitive, cancelling genuine orders. Probably costing me more in lost orders than fraud orders." |
+| Promo Planner / Simulator | Simule l'impact d'une promo AVANT de la lancer. "Si -20% pendant 3 jours : profit estimé -$1,200, risque chargeback +12%." Profit + risque fraude combiné. | GoProfit fait le profit seul. On ajoute le risque fraude. |
+| Return Abuse Detector | Identifie les clients qui retournent systématiquement (>3 retours en 6 mois). Cross-reference avec Anti-Fraude. "Client X : 7 achats, 5 retours, wardrobing détecté. Coût : -$340." | NoFraud/Wyllo fait "policy abuse" mais pas lié au profit. |
+
+#### Module Tarifs & Landed Cost (NOUVEAU — 3 features, analyse tarifs avril 2026)
+
+De minimis $800 MORT pour China/HK (mai 2025). Tarifs US changent constamment (Supreme Court fév 2026). AUCUN profit tracker Shopify n'intègre les landed costs.
+
+| Feature | Ce que l'agent fait | Validation terrain |
+|---------|-------------------|-------------------|
+| Landed Cost Calculator | True profit incluant duties, tarifs, shipping. "Ce produit : $12 COGS + $3.60 shipping + $1.44 tarif = $17.04 landed cost. Marge réelle : 23%, pas 48%." | Reddit r/smallbusiness : "This requires SKU-level margin visibility. If you are still running pricing off a spreadsheet, you are guessing." (156 upvotes) |
+| Tariff Impact Simulator | Simule changement tarif AVANT qu'il arrive. "Si tarifs China +25%, profit sur 47 SKUs baisse de $4,200/mois." | US tarifs changent toutes les semaines en 2026. Merchants ne peuvent pas anticiper. |
+| Non-Refundable Duty Tracker | Import duties perdus sur retours. Coût caché que personne ne mesure. "3 retours imports China = $89 duties perdus en plus du produit." | Nventory.io : "Import duties are non-refundable when products are returned." |
+
+#### Positionnement vs Lifetimely/AMP (concurrent principal Shopify)
+
+Lifetimely (racheté par AMP) = 4.8★ sur Shopify, 468 reviews, mais en chute libre. L'acquisition AMP a dégradé le produit et créé une fenêtre d'opportunité massive.
+
+| Gap Lifetimely/AMP | Ce que ProfitPilot fait mieux |
+|-------------------|-----------------------------|
+| Données devenues inexactes post-acquisition | Data Integrity Check au setup + réconciliation quotidienne |
+| COGS incorrect avec fulfillment multi-source | Support natif multi-fulfillment : ShipStation + ShipBob + Shopify Fulfillment |
+| Post-purchase upsells cassent les chiffres | Tracking correct des upsells post-achat |
+| Focus AMP sur les upsells, plus sur la compta | ProfitPilot = 100% santé financière. Pas de feature bloat. |
+| Plan gratuit mensonger | Free tier réellement fonctionnel : 50 commandes/mois |
+| Support lent | Support < 2h. Live chat pendant le trial. |
+| Pricing en hausse post-acquisition | Pricing stable. Garantie 12 mois pour early adopters. |
+
+#### Pricing fusionné ProfitPilot
+
+| Plan | Prix | Profit | Anti-Fraude | Intelligence + Tarifs |
+|------|------|--------|-----------|----------------------|
+| Free | 0$ | 50 commandes/mois | 50 commandes/mois | — |
+| Starter | 49$/mois | 1 store, daily P&L | 500 commandes, Pre-Ship Score | Smart Alerts |
+| Pro | 129$/mois | multi-stores, fiscal, prédictions | 2000 commandes, auto-evidence, blacklist | Tous les modules |
+| Enterprise | 249$/mois | illimité, advisory IA | illimité, recouvrement, API | Tous + API |
+
+#### Concurrents directs ProfitPilot
+
+| Concurrent | Ce qu'il fait | Ce que ProfitPilot fait EN PLUS |
+|---|---|---|
+| TrueProfit (300+ reviews, données fausses) | Profit tracking, LTV, COGS | Anti-fraude intégré, Data Integrity Check, 100% ad spend |
+| BeProfit (200+ reviews, 15% ad spend) | P&L multi-store, UTM attribution | Track 100% ad spend (pas 15%), anti-fraude, False Positive tracker |
+| GoProfit (50+ reviews, "Built for Shopify") | Smart Alerts, Promo Planner, 4.9★ | Anti-fraude + Promo Planner avec risque fraude + Tarifs |
+| Lifetimely/AMP (en chute libre) | LTV, COGS | Tout mieux + pas de dégradation post-acquisition |
+| Chargeflow (auto-submit aveugle) | Chargeback recovery | Profit tracking intégré, evidence builder avec approval |
+| NoFraud/Wyllo (7K brands, "Built for Shopify") | Fraud screening | Profit tracking + False Positive Cost tracker |
+
+#### Moat ProfitPilot
+Data financières 6+ mois + Data ML fraude calibrée par merchant + Network effect blacklist + intégrations Shopify/Stripe/Meta/Google + False Positive Cost (exclusivité) + Landed Cost Calculator (exclusivité) = quasi impossible à remplacer après 3 mois.
+
+#### Données marché Profit (sources : Market Clarity, Reddit)
+
+- **Bookkeeping e-com :** 20h/mois de travail DIY = $800/mois de coût d'opportunité
+- **Comptable externe :** $500-1,000/mois
+- **Déductions manquées :** $5,000/an en moyenne
+- **Urgences fiscales :** $3,000 en moyenne
+- **Coût annuel total du problème :** $30,000+ par merchant (profit + fraude combinés)
+- **Market size :** 2 millions de stores Shopify. TAM estimé à $129/mois × 2M = $258M/an.
 
 ---
 
@@ -79,63 +165,7 @@ Un freelancer a construit TOUT le marketing d'une entreprise (0→2.2M$ en 18 mo
 **Pricing :** Free (2 clients) → 29$/mois (5 clients) → 79$/mois (15 clients) → 149$/mois (illimité, white-label)
 **Moat :** Data clients + historique + templates = switching cost massif après 6 mois
 
-### 3. PROFITPILOT — Comptabilité e-com IA (Score 33/41)
-
-**Cible :** E-commerce | **Problème :** 20K$/an (15-20h/mois compta + erreurs)
-**Validation terrain :** 5+ threads, 200+ commentaires (marges, comptabilité, retours, attribution, tarifs)
-
-"Bienvenue dans le e-commerce où tout le monde parle de revenus et personne ne parle de ce qu'il garde vraiment." Un merchant avec AOV de 85$ découvre 20$+ de coûts cachés par commande. Un autre dépense 9000$/mois en ads "mais aucune idée de quelle plateforme génère de vrais bénéfices après COGS." Un merchant a vu ses coûts augmenter de 7$/unité du jour au lendemain à cause des tarifs douaniers.
-
-| Feature | Ce que l'agent fait | Validation terrain |
-|---------|-------------------|--------------------|
-| True Profit par produit | Profit RÉEL temps réel : revenue - COGS - shipping - ads - fees Shopify - returns. | Thread AOV (134 upvotes) : "j'ai 85$ d'AOV mais 20$+ de coûts avant le COGS" |
-| App Cost Allocator | Répartit le coût de chaque app PAR COMMANDE, pas juste par mois. | Thread AOV : "4-5$/commande en abonnements apps — un tueur silencieux" |
-| Daily P&L | Mis à jour quotidiennement. "Hier : 847$ revenue, 203$ profit réel (24% marge)." | Thread AOV : "la plupart des gens ne font pas ce calcul avant qu'il ne soit trop tard" |
-| Margin Alerts | Alerte quand COGS augmente ou marge descend sous seuil. | Thread tarifs (37 upvotes) : "mon coût a augmenté de 7$/unité du jour au lendemain" |
-| Ad Spend Tracker | Profit réel par source (Meta vs Google vs organique). | Thread attribution (36 upvotes) : "le ROAS ne dit pas le profit réel après COGS et shipping" |
-| Return Cost Calculator | Coût RÉEL d'un retour : shipping retour + manutention + stock mort + temps. | Thread RTO (5 upvotes, 27 commentaires) : "l'impact des RTO est un casse-tête — bataille manuelle constante avec des CSV" |
-| OPEX Categorizer | Catégorisation automatique des dépenses opérationnelles (apps, VA, shipping, ads). | Thread VA (111 upvotes) : "les dépenses du VA se mélangent avec les coûts généraux" |
-| Tax Ready | Catégorisation auto. Rapport fiscal 1 clic. Détection déductions manquées. | Thread comptabilité (5 upvotes) : merchants utilisent Excel et "n'ont même pas besoin de QuickBooks" |
-| Cashflow Forecast | Prédit le cashflow 30/60/90 jours. | Thread RTO : "les fondateurs D2C sont obsédés par le CAC et le ROAS mais ignorent la logistique inverse" |
-| Data Integrity Check | Au setup, compare les données ProfitPilot vs Shopify vs Stripe. Si écart > 2% → alerte avec explication du delta. Le merchant voit que les chiffres sont fiables dès le jour 1. | Reviews TrueProfit (3+) : "data was all wrong", "wrongly counts ad spend, returns", "their customer metric includes all records regardless of purchase" |
-| Proactive Bug Alert | Si l'app a un problème technique → email proactif au merchant AVANT qu'il ne le découvre. "Nous avons un souci avec le sync Meta Ads. Vos données des dernières 4h sont en attente. Résolution estimée : 2h." | Reviews TrueProfit (2+) : "cannot login since few days, no support response", "app has errors all the time" |
-| LTV propre | LTV calculée sur les vrais acheteurs uniquement (1+ achats). Filtre explicite clients acheteurs vs tous contacts Shopify. | Review TrueProfit (Yellow Tail Wines) : "their customer metric includes all records regardless of whether that person has made a purchase. Makes LTV reporting unusable." |
-| Multi-Fulfillment Sync | Combine automatiquement les coûts de shipping de ShipStation + ShipBob + Shopify Fulfillment quand une commande est splittée entre plusieurs sources. | Reviews Lifetimely (1 review KEUTEK, +4 ans) : "when a shipment is split between ShipStation and ShipBob, the app does not combine shipping costs" |
-| Post-Purchase Upsell Tracker | Tracking correct des upsells post-achat. Revenue attribué au produit original + upsell séparément. | Reviews Lifetimely (1 review Koss Design, +1 an) : "not working properly when using a post purchase upsell. Numbers are not relevant at all." |
-
-### Positionnement vs Lifetimely/AMP (concurrent principal Shopify)
-
-Lifetimely (racheté par AMP) = 4.8★ sur Shopify, 468 reviews, mais en chute libre. L'acquisition AMP a dégradé le produit et créé une fenêtre d'opportunité massive.
-
-| Gap Lifetimely/AMP | Ce que ProfitPilot fait mieux |
-|-------------------|-----------------------------|
-| Données devenues inexactes post-acquisition ("you can disregard all previous positive reviews") | Data Integrity Check au setup + réconciliation quotidienne. Les chiffres sont vérifiés vs Shopify/Stripe. |
-| COGS incorrect avec fulfillment multi-source ("shipment split between ShipStation and ShipBob, app does not combine shipping costs") | Support natif multi-fulfillment : ShipStation + ShipBob + Shopify Fulfillment combinés automatiquement. |
-| Post-purchase upsells cassent les chiffres ("not working properly with post purchase upsell") | Tracking correct des upsells post-achat. Revenue attribué correctement au produit original + upsell. |
-| Focus AMP sur les upsells, plus sur la compta ("focus is more on upsells and additional apps") | ProfitPilot = 100% comptabilité e-com. Pas de feature bloat. Pas de cross-sell d'apps tierces. |
-| Plan gratuit mensonger ("says FREE up to 50 orders but you cannot do anything without paying") | Free tier réellement fonctionnel : 50 commandes/mois avec TOUTES les features de base. |
-| Support lent ("if I pay 150€/month I expect direct live support") | Support < 2h. Live chat pendant le trial = critique pour la conversion. |
-| Pricing en hausse post-acquisition ("new prices are extremely high compared to old ones") | Pricing stable. Garantie 12 mois de prix identique pour les early adopters. |
-
-Le positionnement est clair : Lifetimely a été "enshittified" par AMP. ProfitPilot = l'alternative indie, founder-led, centrée merchant.
-
-**Pricing :** 29$/mois (1 store) → 79$/mois (multi-stores + fiscal) → 149$/mois (prédictions + advisory IA)
-
-### Données marché (sources : Market Clarity, Reddit)
-
-- **Bookkeeping e-com :** 20h/mois de travail DIY = $800/mois de coût d'opportunité
-- **Comptable externe :** $500-1,000/mois
-- **Déductions manquées :** $5,000/an en moyenne
-- **Urgences fiscales :** $3,000 en moyenne
-- **Coût annuel total du problème :** $20,000+ par merchant
-- **La comptabilité est la frustration #6** sur Reddit/Shopify Community (Market Clarity)
-- **Market size :** 2 millions de stores Shopify. TAM estimé à $49/mois × 2M = $98M/an.
-
-Market Clarity recommande un pricing de $49/mois (undercut tout le monde). Notre pricing ($29-149/mois) est aligné avec un entry point encore plus bas.
-
-**Moat :** Data financières accumulées + intégrations Shopify/Stripe/Meta/Google = irremplaçable après 3 mois
-
-### 4. ADAUDIT — Auditeur publicitaire IA (Score 30/41)
+### 3. ADAUDIT — Auditeur publicitaire IA (Score 30/41)
 
 **Cible :** Agences marketing + merchants D2C | **Problème :** 12K$+/an budget ads gaspillé
 **Validation terrain :** 5+ threads, 500+ commentaires (Google Ads CPL, SEO, outils IA marketing)
@@ -208,7 +238,7 @@ Aucun des 3 ne fait ce qu'AdAudit fait : DIRE quoi faire, pas juste montrer les 
 
 ## MOIS 3 — CREATORS + CROSS-SELL
 
-### 5. CREATORSUITE — Studio IA tout-en-un (Score 31/41)
+### 4. CREATORSUITE — Studio IA tout-en-un (Score 31/41)
 
 **Cible :** Content Creators YouTube/TikTok/Podcast | **Problème :** 1.6K$/an outils + 15h/sem non-créatif
 **Validation terrain :** 8+ threads, 2800+ upvotes (workflow, outils, burn-out, multi-plateforme)
@@ -274,32 +304,32 @@ Riverside.fm = 4.8★ sur G2, 1676 reviews, mais 26 reviews ≤3★ révèlent d
 
 La différenciation CreatorSuite = tout-en-un REPURPOSING (pas recording, pas editing lourd). Stable, rapide, et l'agent optimise en continu.
 
-### 6. LEADQUIZ — Voir MUTATIONS.md
+### 5. LEADQUIZ — Voir MUTATIONS.md (12 features, 5 nouvelles issues de l'analyse concurrentielle)
 
 **Positionnement vs Octane AI (concurrent Shopify) :** Octane AI = 4.8★, 192 reviews, mais 4 reviews 1★ révèlent : pricing qui explose sans prévenir ($9 → $191/mois), support déficient, setup trop long. LeadQuiz se positionne sur : quiz en 2 min (pas en heures), pricing stable et transparent, multi-langue natif (gap RevenueHunt).
 
-### 7. [WILDCARD] — Issu des douleurs communautés (Mois 3)
+### 6. [WILDCARD] — Issu des douleurs communautés (Mois 3)
 
 Identifié pendant les mois 1-2 via douleurs-observees.md de R et F. Critères : problème observé 5+ fois, willingness-to-pay confirmée, aucune solution existante satisfaisante.
 
 ---
 
-## CROSS-SELL MATRIX COMPLÈTE
+## CROSS-SELL MATRIX COMPLÈTE (6 SaaS)
 
 | Si le client utilise | On propose | Pitch |
 |---------------------|-----------|-------|
-| StoreMD | ListingLab | "Store healthy mais listings faibles" |
-| ListingLab | StoreMD | "Listings top mais store a des problèmes" |
-| StoreMD + ListingLab | ChargebackShield | "Vous convertissez, protégez vos revenus" |
-| ChargebackShield | ProfitPilot | "Vous bloquez la fraude, connaissez votre vrai profit" |
-| ProfitPilot | AdAudit | "Vous connaissez votre profit, optimisez vos ads" |
-| ClientPulse | AdAudit | "Vous gérez vos clients, optimisez leurs ads" |
-| AdAudit | ClientPulse | "Vous auditez les ads, gérez tout le cycle" |
-| CreatorSuite | LeadQuiz | "Vous repurposez, capturez des leads" |
-| StoreMD (App Impact) | ProfitPilot (App Cost) | "StoreMD montre l'impact technique, ProfitPilot montre le coût financier de chaque app" |
-| StoreMD (Bot Traffic Filter) | ChargebackShield | "StoreMD bloque les bots et le card testing AVANT. ChargebackShield gère les chargebacks qui passent quand même. Les deux ensemble = protection complète." |
+| StoreMD | ProfitPilot | "Store en bonne santé ? Regardons combien vous gardez vraiment." |
+| ProfitPilot | StoreMD | "Vous trackez vos profits ? Vérifiez que votre store ne saigne pas côté technique." |
+| StoreMD + ProfitPilot | LeadQuiz | "Store sain + finances sous contrôle = il vous manque les leads. Quiz convertit 2-3x mieux qu'un popup." |
+| LeadQuiz | StoreMD | "Vous capturez des leads ? Vérifiez que votre store ne les fait pas fuir." |
+| StoreMD (App Impact) | ProfitPilot (App Cost) | "StoreMD montre l'impact technique, ProfitPilot montre le coût financier de chaque app." |
+| StoreMD (Bot Traffic Filter) | ProfitPilot (Anti-Fraude) | "StoreMD bloque les bots AVANT. ProfitPilot gère les chargebacks qui passent. Protection complète." |
+| ProfitPilot | AdAudit | "Vous connaissez votre profit, optimisez vos ads." |
+| ClientPulse | AdAudit | "Vous gérez vos clients, optimisez leurs ads." |
+| AdAudit | ClientPulse | "Vous auditez les ads, gérez tout le cycle." |
+| CreatorSuite | LeadQuiz | "Vous repurposez, capturez des leads." |
 
-**Bundle e-com :** StoreMD + ListingLab + ChargebackShield + ProfitPilot = 199$/mois (vs 316$)
+**Bundle e-com :** StoreMD + ProfitPilot + LeadQuiz = 219$/mois (vs 277$)
 **Bundle agence :** ClientPulse + AdAudit = 179$/mois (vs 228$)
 
 ---
@@ -308,13 +338,11 @@ Identifié pendant les mois 1-2 via douleurs-observees.md de R et F. Critères :
 
 | SaaS | Threads scrapés | Upvotes total | Commentaires | Niveau de validation |
 |------|----------------|---------------|-------------|---------------------|
-| ChargebackShield | 7+ | 500+ | 1000+ | ✅✅✅ NUCLÉAIRE |
-| StoreMD | 8+ | 300+ | 500+ | ✅✅✅ BÉTON |
+| StoreMD (43 features, 5 modules) | 12+ | 300+ | 600+ | ✅✅✅ BÉTON |
+| ProfitPilot (41 features, 4 modules) | 12+ | 750+ | 1200+ | ✅✅✅ NUCLÉAIRE |
 | AdAudit | 5+ | 600+ | 500+ | ✅✅✅ BÉTON |
-| ProfitPilot | 5+ | 250+ | 200+ | ✅✅ SOLIDE |
 | ClientPulse | 6+ | 500+ | 400+ | ✅✅ SOLIDE |
-| ListingLab | 4+ | 30+ | 100+ | ✅✅ SOLIDE |
-| LeadQuiz | 1 | 9 | 20 | ✅ VALIDÉ |
+| LeadQuiz (12 features) | 1 | 9 | 20 | ✅ VALIDÉ |
 | CreatorSuite | 8+ | 2800+ | 400+ | ✅✅ (mais WTP basse ⚠️) |
 
 Les features marquées "Validation terrain" dans chaque tableau ont été confirmées par des vrais utilisateurs sur Reddit avec des douleurs chiffrées et des cas concrets.
@@ -325,14 +353,14 @@ Les features marquées "Validation terrain" dans chaque tableau ont été confir
 
 | Concurrent | SaaS cible | Reviews analysées | Patterns clés exploitables |
 |-----------|-----------|------------------|--------------------------|
-| Chargeflow | ChargebackShield | 20+ × 1★ Shopify | Auto-submit aveugle, frais cachés ($100 vérification, 8% cancellation), win rate PIRE après installation, support zombie, pas d'adaptation par type de business |
+| Chargeflow | ProfitPilot (Anti-Fraude) | 20+ × 1★ Shopify | Auto-submit aveugle, frais cachés ($100 vérification, 8% cancellation), win rate PIRE après installation, support zombie, pas d'adaptation par type de business |
 | TrueProfit | ProfitPilot | 7 × 1★ Shopify | Données fausses, pricing explosif (+400% sans prévenir), bugs login non communiqués, LTV inclut les non-acheteurs |
-| Avada SEO | StoreMD + ListingLab | 40+ × 1★ Shopify | App détruit le store (SEO, collections, images), ralentit au lieu d'accélérer, résidus code après désinstall, images cassées irréversibles, pixel Meta bloqué, lock-in (revert à la désinstall), support non-technique |
+| Avada SEO | StoreMD | 40+ × 1★ Shopify | App détruit le store (SEO, collections, images), ralentit au lieu d'accélérer, résidus code après désinstall, images cassées irréversibles, pixel Meta bloqué, lock-in (revert à la désinstall), support non-technique |
 | PageFly | StoreMD | 20+ × 1★ Shopify | Code injecté sans permission, pages cassées après updates, résidus massifs après désinstall, duplication de 3000+ pages, demande d'accès données clients, homepage cassée 3x en 1 an |
 | AgencyAnalytics | AdAudit | 432 reviews G2 (4.7★) | Dashboard passif (pas d'insights actionnables), intégrations limitées en profondeur, chiffres qui ne matchent pas entre plateformes, cher pour solo (min 5 clients), pas d'alertes proactives, pas de détection de gaspillage |
-| NoFraud | ChargebackShield | Pas disponible | — |
-| BeProfit | ProfitPilot | Pas disponible | — |
-| GoWise | ListingLab | Pas disponible | — |
+| NoFraud/Wyllo | ProfitPilot (Anti-Fraude) | 7K brands G2 | Trop sensible, faux positifs coûtent plus que la fraude |
+| BeProfit | ProfitPilot | 200+ reviews Shopify | 15% ad spend seulement, billing fantôme |
+| GoProfit | ProfitPilot | 50+ reviews Shopify (4.9★) | Smart Alerts statiques, pas de fraude intégrée |
 | Descript | CreatorSuite | 41 reviews ≤3★ G2 | Bugs chroniques (15+), transcription dégradée (8+), pricing confus (5+), support inexistant (5+), exports défaillants (3+), UI instable (5+) |
 | Whatagraph | AdAudit | 15 reviews ≤3★ G2 | Intégrations cassées (Facebook, HubSpot), contrats rigides annuels, UI buggée/auth instable, onboarding 2 mois, données incomplètes |
 | Lifetimely/AMP | ProfitPilot | 11 reviews 1-2★ Shopify | Données inexactes post-acquisition AMP, COGS multi-fulfillment cassé, support lent, pricing trompeur, dégradation qualité |
@@ -353,10 +381,10 @@ Les features marquées "Validation terrain" dans chaque tableau ont été confir
 
 | Thread | Upvotes | Commentaires | SaaS concerné | Insight clé |
 |--------|---------|-------------|---------------|-------------|
-| "Comment les chargebacks sont-ils légaux ?" | 53 | 69 | ChargebackShield | Banks incitées à favoriser le client. AMEX pire processeur. Recouvrement fonctionne. Rembourser > contester pour petits montants. |
-| "$4,200 chargeback" | 125 | 78 | ChargebackShield | Transitaires = risque max. Données GPS UPS comme preuve. Billing descriptor comme vérification. badbuyerlist.com existe. 3DS shift responsabilité. |
+| "Comment les chargebacks sont-ils légaux ?" | 53 | 69 | ProfitPilot (Anti-Fraude) | Banks incitées à favoriser le client. AMEX pire processeur. Recouvrement fonctionne. Rembourser > contester pour petits montants. |
+| "$4,200 chargeback" | 125 | 78 | ProfitPilot (Anti-Fraude) | Transitaires = risque max. Données GPS UPS comme preuve. Billing descriptor comme vérification. badbuyerlist.com existe. 3DS shift responsabilité. |
 | "Paniers abandonnés BIZARRES et GROS" | 44 | 70 | StoreMD | asdfasdf@asdf.com attaque des centaines de stores. Paniers $700-$100K. Bots sabotent données marketing. Blacklistent domaines email. |
-| "Centaines de commandes bots, milliers de faux comptes" | 40 | 48 | StoreMD + ChargebackShield | Card testing massif. Store fermé 2 ans. $25K+ en frais potentiels. Cloudflare + capture manuelle comme défense. |
+| "Centaines de commandes bots, milliers de faux comptes" | 40 | 48 | StoreMD + ProfitPilot (Anti-Fraude) | Card testing massif. Store fermé 2 ans. $25K+ en frais potentiels. Cloudflare + capture manuelle comme défense. |
 | "Du trafic mais pas de conversions" | 7 | 45 | StoreMD + LeadQuiz | Mauvais ciblage, site pas optimisé, confiance manquante. Le diagnostic 3 couches de StoreMD résout ça. |
 
 ### TOTAL CUMULÉ SCRAPING
@@ -364,8 +392,29 @@ Les features marquées "Validation terrain" dans chaque tableau ont été confir
 | Source | Volume | Concurrents/SaaS |
 |--------|--------|-----------------|
 | Reddit terrain (sessions précédentes) | 50+ threads, 5000+ commentaires | 8 SaaS validés |
-| Reddit threads Market Clarity | 5 threads, 310 commentaires | ChargebackShield, StoreMD, LeadQuiz |
+| Reddit threads Market Clarity | 5 threads, 310 commentaires | ProfitPilot (Anti-Fraude), StoreMD, LeadQuiz |
 | Reviews Shopify App Store | 400+ reviews 1-2★ | Chargeflow, TrueProfit, Avada, PageFly, Privy, Shogun, Octane AI, Lifetimely, Plug In Speed |
 | Reviews G2 | 130+ reviews ≤3★ | AgencyAnalytics, Whatagraph, Databox, DashThis, Descript, Riverside.fm, Opus Clip, vidIQ, Dubsado, HoneyBook |
 | Méta-analyses | Market Clarity (milliers de plaintes) + Mastercard 2025 + APPWRK 2026 | Données marché globales |
 | **TOTAL** | **55+ threads Reddit + 530+ reviews + données marché** | **18 concurrents analysés** |
+
+### Scraping Round 2 — Avril 2026 (analyse concurrentielle post-fusion)
+
+| Source | Données |
+|---|---|
+| StoreScan Shopify App Store | 0 reviews, 9 scanners, $9.99-49.99, hébergé Render |
+| Clawly Shopify App Store | 0 reviews, framework IA généraliste |
+| GoProfit Shopify App Store | 4.9★, 50+ reviews, "Built for Shopify", Smart Alerts |
+| BeProfit Shopify App Store + reviews 1★ | 15% ad spend seulement, billing fantôme |
+| NoFraud/Wyllo G2 + reviews | 7K brands, trop sensible, faux positifs |
+| RevenueHunt StorLeads | -12.7% YoY, intégration Klaviyo cassée |
+| Recomma + Lantern Shopify | Concurrents quiz montants |
+| Shopify Agentic Commerce (mars 2026) | AI orders x15, ChatGPT Shopping |
+| Shopify Tinker (mars 2026) | 100+ outils IA gratuits, pas menace directe |
+| EAA enforcement (juin 2025) | Amendes 5K-250K€, overlays ≠ vrais fixes |
+| US Tariffs (fév-mars 2026) | De minimis mort, Section 122/232 |
+| OpenClaw (247K+ stars) | Browser automation patterns → Playwright |
+| Mem0 (52K+ stars) | Mémoire persistante agents |
+| Ouroboros | Self-improving agent patterns |
+
+**Total cumulé post-fusion :** 55+ threads, 5000+ commentaires, 660+ reviews, 22 concurrents analysés, 4 frameworks agents
