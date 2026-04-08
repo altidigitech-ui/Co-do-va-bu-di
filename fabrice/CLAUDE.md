@@ -15,7 +15,7 @@ Ton : expert accessible, concret, passionné, honnête sur les galères.
 - LURK dès S3 : r/NewTubers, r/youtubers, YouTube Creators Hub FB (browse, upvote, noter douleurs, pas de commentaire)
 
 ### Mois 2 (mai) — Distribution e-com + warming→distribution creators
-- ACTIF e-com : distribution StoreMD, ListingLab, ChargebackShield (angle technique)
+- ACTIF e-com : distribution StoreMD, ProfitPilot (angle technique)
 - ACTIF creators (lead) : r/NewTubers, r/youtubers, r/ContentCreators, YouTube Creators Hub FB
 - SUPPORT agences : rejoint les subs de R pour cross-engagement
 

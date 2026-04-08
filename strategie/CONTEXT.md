@@ -120,45 +120,40 @@ Coaches/course creators (25/41), restaurants (22/41), real estate (20/41).
 
 ## 6. PORTEFEUILLE PRODUITS
 
-### 6.1 Mutations des SaaS existants
+### 6.1 Portefeuille actuel (6 SaaS, post-fusion 08/04/2026)
 
-| Original | Mutation | Cible | Score | Mois |
-|----------|---------|-------|-------|------|
-| Leak Detector | **StoreMD** — Médecin CRO permanent : monitoring continu, benchmark concurrence, alertes, historique | E-commerce | 34/41 | Mois 1 |
-| FicheProduitAI | **ListingLab** — Labo d'optimisation catalogue : scan complet, scoring par listing, priorisation, bulk rewrite, benchmark | E-commerce | 32/41 | Mois 1 |
-| QuizForge | **LeadQuiz** — Quiz lead generation : connecté au catalogue Shopify, recommandation produit, analytics | E-com + Coaches | 28/41 | Mois 3 |
+| Produit | Features | Modules | Cible | Score | Mois |
+|---------|----------|---------|-------|-------|------|
+| **StoreMD** — Médecin IA permanent (incl. module Listings ex-ListingLab) | 43 | 5 (Health+Listings+Agentic+Compliance+Browser) | E-commerce | 38/41 | Mois 1 |
+| **ProfitPilot** — Santé financière complète (incl. module Anti-Fraude ex-ChargebackShield) | 41 | 4 (Profit+Anti-Fraude+Intelligence+Tarifs) | E-commerce | 39/41 | Mois 1 |
+| **ClientPulse** — Hub IA du freelancer (prospect→propose→deliver→report→bill→retain) | 6 modules | 6 | Agences/Freelancers | 36/41 | Mois 2 |
+| **AdAudit** — Audit publicitaire IA (Meta + Google Ads) | 10 | — | Agences | 30/41 | Mois 2 |
+| **CreatorSuite** — Studio IA tout-en-un (transcribe→repurpose→clip→thumbnail→schedule→analytics) | 14 | — | Creators | 31/41 | Mois 3 |
+| **LeadQuiz** — Quiz lead gen connecté catalogue (incl. 5 features concurrence) | 12 | 2 (Core+Concurrence) | E-com + Coaches | 30/41 | Mois 3 |
 
-### 6.2 Nouveaux SaaS à créer
-
-| Produit | Vertical | Problème (coût/an) | Score | Mois |
-|---------|----------|-------------------|-------|------|
-| **ClientPulse** — Hub IA du freelancer (prospect→propose→deliver→report→bill→retain) | Agences/Freelancers | 15-25K$ (6 outils + 20h/sem perdues) | 36/41 | Mois 2 |
-| **ChargebackShield** — Prévention fraude IA prédictive + contestation auto | E-commerce | 10K$ (800$/mois chargebacks) | 35/41 | Mois 1 |
-| **ProfitPilot** — Comptabilité e-commerce automatisée IA ("TurboTax for Shopify") | E-commerce | 20K$ (temps + erreurs + déductions) | 33/41 | Mois 2 |
-| **CreatorSuite** — Studio IA tout-en-un (transcribe→repurpose→clip→thumbnail→schedule→analytics) | Creators | 1.6K$ outils + 15h/sem | 31/41 | Mois 3 |
-| **AdAudit** — Audit publicitaire IA (Meta + Google Ads) | Agences | 12K$+ budget gaspillé | 30/41 | Mois 2 |
-
-### 6.3 SaaS KILL
+### 6.2 SaaS KILL
 
 | Produit | Raison |
 |---------|--------|
 | PayloadDiff | Cible dev = contraire à la stratégie |
 | DevToolsAPI | Idem |
 | Leak Detector (tel quel) | Remplacé par StoreMD |
-| FicheProduitAI (tel quel) | Remplacé par ListingLab |
+| FicheProduitAI (tel quel) | Fusionné dans StoreMD (module Listings) |
 | QuizForge SCORM | Remplacé par LeadQuiz |
+| ListingLab (autonome) | Fusionné dans StoreMD (module Listings) — 08/04/2026 |
+| ChargebackShield (autonome) | Fusionné dans ProfitPilot (module Anti-Fraude) — 08/04/2026 |
 
 ---
 
-## 7. CADENCE PRODUITS — 9 SaaS en 3 mois
+## 7. CADENCE PRODUITS — 6 SaaS en 3 mois
 
 ### Plan 3 mois
 
 | Mois | Produits (F build) | Vertical | Distribution |
 |------|-------------------|----------|-------------|
-| **Mois 1 (avril)** | StoreMD, ListingLab, ChargebackShield | E-commerce | R+F ensemble dans e-com |
-| **Mois 2 (mai)** | ClientPulse, ProfitPilot, AdAudit | Agences + E-com | R lead agences, F lead creators. Les deux distribuent e-com. |
-| **Mois 3 (juin)** | CreatorSuite, LeadQuiz, [wildcard] | Creators + Cross-sell | R+F dans les 3 verticals. Scale ce qui marche. |
+| **Mois 1 (avril)** | StoreMD (43 features, 5 modules incl. Listings), ProfitPilot (41 features, 4 modules incl. Anti-Fraude) | E-commerce | R+F ensemble dans e-com |
+| **Mois 2 (mai)** | ClientPulse, AdAudit | Agences + E-com | R lead agences, F lead creators. Les deux distribuent e-com. |
+| **Mois 3 (juin)** | CreatorSuite, LeadQuiz (12 features), [wildcard] | Creators + Cross-sell | R+F dans les 3 verticals. Scale ce qui marche. |
 
 ### Cycle par produit
 Le build se fait dans des projets Claude séparés. Ce repo ne gère que la distribution.
@@ -173,7 +168,7 @@ Le build se fait dans des projets Claude séparés. Ce repo ne gère que la dist
 ### Objectifs
 - Mois 1 : 3 SaaS live, audience e-com chaude, warming secondaire lancé
 - Mois 2 : 6 SaaS live, 2 verticals actives, premiers MRR
-- Mois 3 : 9 SaaS live, 3 verticals actives, identification du winner
+- Mois 3 : 6 SaaS live, 3 verticals actives, identification du winner
 
 ### Suivi
 Le statut de chaque produit est dans produits/STATUS.md.
@@ -289,3 +284,4 @@ Le framework de scoring /35 reste utilisable pour évaluer de nouvelles idées, 
 | 03/04/2026 | Nouveaux produits : ClientPulse (36), ChargebackShield (35), ProfitPilot (33) | Problèmes à 10-25K$/an, moat data, scoring top |
 | 03/04/2026 | Cadence 3-4 SaaS/mois | Claude Code = build en 2-5j. La distribution est le bottleneck. |
 | 03/04/2026 | Ce repo = distribution uniquement | Le build se fait dans des projets Claude séparés |
+| 08/04/2026 | Fusion 9→6 SaaS : ListingLab→StoreMD, ChargebackShield→ProfitPilot | Anti-app-bloat, plus de valeur par produit, 96 features Shopify totales |

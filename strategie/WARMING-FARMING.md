@@ -362,7 +362,7 @@ Le warming décale la validation de ~3 semaines par rapport au plan initial :
 | Produit prêt pour distribution | — | 05/05 (F build en 2-5j dans un projet séparé) |
 | Produit live | mi-mai | fin mai - début juin |
 
-Le warming N'EST PAS du temps perdu. Pendant ces 3-4 semaines, R et F distribuent. En parallèle, F build les premiers produits (StoreMD, ListingLab) dans des projets Claude séparés. Les deux avancent simultanément.
+Le warming N'EST PAS du temps perdu. Pendant ces 3-4 semaines, R et F distribuent. En parallèle, F build les premiers produits (StoreMD, ProfitPilot) dans des projets Claude séparés. Les deux avancent simultanément.
 
 ---
 

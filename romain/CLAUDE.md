@@ -14,7 +14,7 @@ Ton : direct, data-driven, provocateur.
 - LURK dès S3 : r/digital_marketing, r/freelance, Digital Distillery FB (browse, upvote, noter douleurs, pas de commentaire)
 
 ### Mois 2 (mai) — Distribution e-com + warming→distribution agences
-- ACTIF e-com : distribution StoreMD, ListingLab, ChargebackShield
+- ACTIF e-com : distribution StoreMD, ProfitPilot
 - ACTIF agences (lead) : r/digital_marketing, r/freelance, r/SEO, r/PPC, Digital Distillery FB, Marketing Solved FB
 - SUPPORT creators : rejoint les subs de F pour cross-engagement
 

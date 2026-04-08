@@ -39,9 +39,9 @@ Karma début : 1 | Karma fin : 1 (+0)
 | r/shopify | "Google Shopping listings STILL showing up despite noindex + paywall" | SEO / indexation | Moyen |
 | r/shopify | "Getting ATCs but no consistent sales - hard to hit enough weekly purchase events" | Ads / petit budget | Faible |
 | r/shopify | "D'Etsy à Shopify - gestion des variantes" + Magento→Shopify + Squarespace→Shopify | Migration plateforme | Moyen |
-| r/shopify | "creating a shopify for the first time what add ons are worth it?" (41 comments) | Choix apps / onboarding | Fort — ListingLab angle |
-| r/shopify | "ShopPay bug - every subscription on that card across entire ecosystem failed" (26 upvotes) | Chargebacks / billing | Fort — ChargebackShield |
-| r/shopify | "Shopify Appeal denied - CB rate 0.94% under 1% but banned anyway" (24 comments) | Chargebacks / account ban | Fort — ChargebackShield |
+| r/shopify | "creating a shopify for the first time what add ons are worth it?" (41 comments) | Choix apps / onboarding | Fort — StoreMD module Listings |
+| r/shopify | "ShopPay bug - every subscription on that card across entire ecosystem failed" (26 upvotes) | Chargebacks / billing | Fort — ProfitPilot module Anti-Fraude |
+| r/shopify | "Shopify Appeal denied - CB rate 0.94% under 1% but banned anyway" (24 comments) | Chargebacks / account ban | Fort — ProfitPilot module Anti-Fraude |
 | r/shopify | "Account closed but getting charged" | Billing fantôme | Faible |
 | r/ecommerce | "Google Merchant Center = Merry-go-round of Hell - denied for misrepresentation" (18 comments) | GMC / verification | Moyen |
 | r/ecommerce | "Abandoned cart tools just give numbers, no emailable data I can act on" (32 comments) | Cart abandonment | Moyen |

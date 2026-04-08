@@ -3,7 +3,7 @@
 Dernière mise à jour : 04/04/2026
 Source : 530+ reviews 1-3★ scrapées (Chargeflow, TrueProfit, Avada SEO, PageFly, AgencyAnalytics, Descript, Whatagraph, Lifetimely/AMP, Octane AI, Plug In Speed, Opus Clip, vidIQ, Privy, Shogun, Databox, DashThis, Riverside.fm)
 
-Ces principes s'appliquent à TOUS les 9 SaaS FoundryTwo. Ils sont non-négociables.
+Ces principes s'appliquent à TOUS les 6 SaaS FoundryTwo. Ils sont non-négociables.
 
 ---
 
@@ -109,15 +109,15 @@ Ces principes s'appliquent à TOUS les 9 SaaS FoundryTwo. Ils sont non-négociab
 
 ## APPLICATION PAR SAAS
 
-| Principe | StoreMD | ListingLab | ChargebackShield | ProfitPilot | AdAudit | ClientPulse | CreatorSuite | LeadQuiz |
-|----------|---------|-----------|-----------------|------------|--------|------------|-------------|---------| 
-| 1. Pas de modif sans consentement | App Risk Monitor, Safe Mode | Safe Mode, preview bulk | Merchant approuve avant soumission | — | — | — | — | — |
-| 2. Zéro résidu | Cleanup auto | Cleanup auto | Cleanup auto | Cleanup auto | Cleanup auto | Cleanup auto | Cleanup auto | Cleanup auto |
-| 3. Pricing transparent | ✅ | ✅ | Zéro frais cachés, pas de % commission | Alerte avant upgrade, garantie 12 mois | Plan solo 49$ | ✅ | Free tier généreux, crédits reportés | Pricing stable garanti |
-| 4. Données fiables | Bot Traffic Filter | — | — | Data Integrity Check, Multi-Fulfillment Sync | Attribution Cleaner, Integration Health Monitor | — | — | — |
-| 5. Agent proactif | Alertes régressives, Weekly Report | New Product Watch | Proactive Evidence Reminder | Proactive Bug Alert | Weekly Audit Report, Integration Health Monitor | Signaux de churn | Performance Coach | Auto-Optimize |
-| 6. Optimisations au merchant | — | Zero Lock-in, push API Shopify | — | — | — | Export 1-clic | — | — |
-| 7. Support technique | ✅ | ✅ | ✅ | Support < 2h, live chat trial | ✅ | Onboarding 5 min | Support humain, pas AI bot | ✅ |
-| 8. Créations client toujours accessibles | — | — | — | Export CSV 1-clic | Export rapports 1-clic | Export complet 1-clic | Projets accessibles même après expiration | Export quiz + données 1-clic |
-| 9. Stabilité > Features | QA apps tierces | Safe Mode | — | Réconciliation quotidienne | Monitoring intégrations | — | Export fiable 100%, Clip Context Guard, Cloud Processing | — |
-| 10. Annulation instantanée | Ghost Billing Detector | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Principe | StoreMD (incl. Listings) | ProfitPilot (incl. Anti-Fraude) | AdAudit | ClientPulse | CreatorSuite | LeadQuiz |
+|----------|------------------------|-------------------------------|--------|------------|-------------|---------|
+| 1. Pas de modif sans consentement | App Risk Monitor, Safe Mode, preview bulk | Merchant approuve avant soumission | — | — | — | — |
+| 2. Zéro résidu | Cleanup auto | Cleanup auto | Cleanup auto | Cleanup auto | Cleanup auto | Cleanup auto |
+| 3. Pricing transparent | ✅ | Zéro frais cachés, pas de % commission, alerte avant upgrade, garantie 12 mois | Plan solo 49$ | ✅ | Free tier généreux, crédits reportés | Pricing stable garanti |
+| 4. Données fiables | Bot Traffic Filter | Data Integrity Check, Multi-Fulfillment Sync | Attribution Cleaner, Integration Health Monitor | — | — | — |
+| 5. Agent proactif | Alertes régressives, Weekly Report, New Product Watch | Proactive Bug Alert, Proactive Evidence Reminder | Weekly Audit Report, Integration Health Monitor | Signaux de churn | Performance Coach | Auto-Optimize |
+| 6. Optimisations au merchant | Zero Lock-in, push API Shopify | — | — | Export 1-clic | — | — |
+| 7. Support technique | ✅ | Support < 2h, live chat trial | ✅ | Onboarding 5 min | Support humain, pas AI bot | ✅ |
+| 8. Créations client toujours accessibles | — | Export CSV 1-clic | Export rapports 1-clic | Export complet 1-clic | Projets accessibles même après expiration | Export quiz + données 1-clic |
+| 9. Stabilité > Features | QA apps tierces, Safe Mode | Réconciliation quotidienne | Monitoring intégrations | — | Export fiable 100%, Clip Context Guard, Cloud Processing | — |
+| 10. Annulation instantanée | Ghost Billing Detector | ✅ | ✅ | ✅ | ✅ | ✅ |

@@ -6,3 +6,4 @@
 | 03/04/2026 | LD → StoreMD, FPA → ListingLab, QF → LeadQuiz | Mutations profondes | En cours |
 | 03/04/2026 | Cadence 3-4 SaaS/mois | Claude Code = build 2-5j | En cours |
 | 03/04/2026 | Repo = distribution uniquement | Build dans projets séparés | Fait |
+| 08/04/2026 | Fusion 9→6 SaaS : ListingLab→StoreMD, ChargebackShield→ProfitPilot | Anti-app-bloat, plus de valeur par produit, 96 features Shopify totales | Actif |
