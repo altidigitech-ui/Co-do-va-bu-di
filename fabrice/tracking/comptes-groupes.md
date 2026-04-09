@@ -17,3 +17,10 @@
 | Groupe | Date | Status | Notes |
 |--------|------|--------|-------|
 | Compte perso | 06/04 | Actif | Compte perso existant réutilisé — historique long, amis réels, publications passées. Nouveau compte banni par Facebook. Bio mise à jour. Publications passées limitées en visibilité. |
+| Shopify Entrepreneurs | 07/04 | Rejoint | Groupe cible principal — HeyCarson/Jonathan Kennedy ~116K membres |
+| Shopify Newbies & Beginners | 07/04 | Rejoint | Groupe cible débutants |
+| eCommerce Entrepreneurs | 07/04 | Rejoint | Groupe cible — Richard Lazazzera |
+| Shopify Dropshipping Community | 07/04 | Rejoint | 147K — bonus, pas prioritaire |
+| Shopify Dropshipping (165K) | 07/04 | Rejoint | Bonus, pas prioritaire |
+| Shopify Dropshipping for Entrepreneurs | 07/04 | Rejoint | 107K — bonus, pas prioritaire |
+| Global Shopify Entrepreneurs | 07/04 | Rejoint | 34K — bonus |
