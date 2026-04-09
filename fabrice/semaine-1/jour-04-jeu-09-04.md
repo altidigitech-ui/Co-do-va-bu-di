@@ -43,4 +43,4 @@ Karma début : 1 | Karma fin : ___ (+___)
 - R a reply à mon post : ☐
 
 ## BILAN
-Temps actif : ~3h | Ce qui a marché : 3 premiers commentaires postés (r/AskReddit + r/ELI5 x2), angle tech accessible bien reçu | Ajustement demain : monter à 3-5 commentaires/jour subs faciles, continuer lurk subs cibles
+Temps actif : ~3h | Ce qui a marché : 3 premiers commentaires postés (r/AskReddit + r/ELI5 x2), lurk r/shopify + r/ecommerce productif (9 nouvelles douleurs), browse FB Groups non productif (spam/promo dominant) | Ajustement demain : monter à 3-5 commentaires/jour subs faciles, abandonner Facebook comme source de douleurs (Reddit suffit), FB reste uniquement pour warming/farming

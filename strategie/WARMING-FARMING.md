@@ -387,3 +387,11 @@ Le warming N'EST PAS du temps perdu. Pendant ces 3-4 semaines, R et F distribuen
 - [ ] Relire le PLAYBOOK-DISTRIBUTION ensemble
 - [ ] Caler les horaires quotidiens pour la semaine 1
 - [ ] Définir qui lead quelle vertical (R = ecom + marketing, F = creators + ecom)
+
+---
+
+## 7. LEÇONS TERRAIN
+
+### J4 (09/04/2026) — Facebook Groups vs Reddit pour le mining de douleurs
+
+Les groupes Facebook Shopify (dropshipping surtout) sont composés à ~90% de spam, promo d'apps, "hire me", et questions ultra-débutantes. Les douleurs techniques profondes (speed, SEO, listings, migrations, monitoring) sont quasi absentes. Reddit est 10x plus riche pour le mining de douleurs. **Décision : Facebook reste dans le plan CDV uniquement pour warming/farming et présence communautaire. Le mining de douleurs se fait exclusivement sur Reddit.**

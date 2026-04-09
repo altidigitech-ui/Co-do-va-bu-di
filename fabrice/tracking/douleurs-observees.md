@@ -23,3 +23,6 @@
 | 20 | 09/04 | r/shopify | "All About Us pages suddenly 404, no idea why" (10 comments) | Monitoring / alertes | Fort — StoreMD angle |
 | 21 | 09/04 | r/shopify | "900 hours figuring out Shopify UI" (71 comments) | UX / complexité plateforme | Moyen |
 | 22 | 09/04 | r/shopify | Etsy→Shopify variants management — même douleur que J1, pattern confirmé | Migration / variantes | Moyen — récurrent |
+| 23 | 09/04 | FB Shopify Dropshipping | "when you look at your analytics, do you know what to do next, or does it feel overwhelming?" | Monitoring / data overwhelm | Fort — StoreMD angle |
+| 24 | 09/04 | FB Shopify Dropshipping | "Too much data, no idea what to do with it / Low traffic low conversions / Managing inventory" | Monitoring / confusion | Fort — StoreMD angle |
+| 25 | 09/04 | FB Shopify Dropshipping | "Which app are you using to track your orders and sales? Measure growth?" (6 likes, 13 comments) | Apps / tracking | Moyen |
