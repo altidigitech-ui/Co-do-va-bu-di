@@ -14,3 +14,12 @@
 | 11 | 06/04 | r/ecommerce | "Losing money on every currency conversion - sell on Amazon+Shopify+Etsy" (19 comments) | Multi-currency | Faible |
 | 12 | 06/04 | r/ecommerce | "Conversion rate dropped for nearly two weeks before I noticed" (21 comments) | Monitoring / alertes | Moyen — StoreMD angle |
 | 13 | 06/04 | r/ecommerce | "AI backlash - worry customers will leave 1-star reviews" (22 comments) | AI perception | Faible |
+| 14 | 09/04 | r/shopify | "mobile responsiveness got messy when marketing team touches Shopify without dev" (9 upvotes, 21 comments) | Ops / gouvernance store | Moyen |
+| 15 | 09/04 | r/shopify | "B2B features on Basic - extremely hard to navigate, can't create B2B market" (14 upvotes, 32 comments) | B2B setup | Faible |
+| 16 | 09/04 | r/shopify | "B2B features = absolute garbage, only 3 catalogs, only Dawn/Horizon" (23 upvotes, 54 comments) | B2B limitations | Faible |
+| 17 | 09/04 | r/ecommerce | "15min sessions, ATCs but zero checkouts" (8 upvotes, 21 comments) | Conversion funnel | Moyen |
+| 18 | 09/04 | r/ecommerce | "Paid social CAC $25→$48, CPMs +35%, creatives burning out" (6 upvotes, 23 comments) | CAC / ads costs | Faible |
+| 19 | 09/04 | r/shopify | "Only PayPal as gateway, does that lower conversion?" (13 comments) | Payment / checkout | Moyen |
+| 20 | 09/04 | r/shopify | "All About Us pages suddenly 404, no idea why" (10 comments) | Monitoring / alertes | Fort — StoreMD angle |
+| 21 | 09/04 | r/shopify | "900 hours figuring out Shopify UI" (71 comments) | UX / complexité plateforme | Moyen |
+| 22 | 09/04 | r/shopify | Etsy→Shopify variants management — même douleur que J1, pattern confirmé | Migration / variantes | Moyen — récurrent |

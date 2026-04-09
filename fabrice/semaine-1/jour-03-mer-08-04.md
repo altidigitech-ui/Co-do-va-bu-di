@@ -7,7 +7,26 @@ Karma début : 1 | Karma fin : 1 (+0)
 | Heure | Action | Fait ? |
 |-------|--------|--------|
 | Browse Reddit | ☐ SKIP |
-| Rejoindre Shopify Newbies FB | ✅ (fait J2) |
+| Facebook observation | ☐ SKIP |
+
+## REDDIT
+- Journée skippée (focus StoreMD produit)
+
+## FACEBOOK
+- Pas d'activité
+
+## DMs
+| Direction | Avec qui | Sujet | Résultat |
+|-----------|----------|-------|----------|
+| — | — | — | — |
+
+## DOULEURS OBSERVÉES
+| Communauté | Verbatim | Catégorie | Potentiel SaaS ? |
+|-----------|----------|-----------|--------------------|
+| — | — | — | — |
+
+## CROSS-ENGAGEMENT R
+- ☐ Pas d'activité
 
 ## BILAN
 Temps actif : 0h terrain CDV | Raison : journée dédiée à StoreMD (produit). Terrain repris J4.
