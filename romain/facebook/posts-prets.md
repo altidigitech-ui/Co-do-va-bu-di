@@ -1,4 +1,6 @@
 # POSTS FACEBOOK — Romain
+
+> ⚠️ RÈGLE #0 ACTIVE : Passer par le filtre anti-IA (VOIX.md §RÈGLE #0) avant publication. JAMAIS publier tel quel.
 Groupes cibles : Shopify Entrepreneurs, Ecommerce Entrepreneurs, Shopify Newbies
 
 ## J20 (ven 25/04) — Shopify Entrepreneurs FB — 1er post

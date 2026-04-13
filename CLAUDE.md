@@ -1,5 +1,17 @@
 # Co-do-va-bu-di
 
+## ⚠️ RÈGLE CRITIQUE — ANTI-DÉTECTION IA
+
+**Chaque commentaire, post, et reply Reddit/Facebook généré par Claude DOIT passer pour un humain.** Les mods Reddit passent les commentaires dans des détecteurs IA (GPTZero, ZeroGPT, Originality). Un ban = compte grillé = semaines de travail perdues.
+
+**Cette règle s'applique à TOUT le contenu généré dans ce repo, pour R ET F.**
+
+Avant de rédiger le moindre commentaire, lire :
+- fabrice/VOIX.md §RÈGLE #0
+- romain/VOIX.md §RÈGLE #0
+
+Si un commentaire pourrait être détecté comme IA → le réécrire jusqu'à ce qu'il passe. Aucune exception.
+
 ## Projet
 Repo opérationnel distribution-first pour FoundryTwo.
 Deux personnes full-time : R (Romain, growth) et F (Fabrice, CTO/builder).

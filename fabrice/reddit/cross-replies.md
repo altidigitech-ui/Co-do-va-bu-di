@@ -1,5 +1,7 @@
 # CROSS-REPLIES REDDIT — Fabrice repond aux posts de Romain
 
+> ⚠️ RÈGLE #0 ACTIVE : Ces replies sont des DRAFTS. Passer par le filtre anti-IA avant publication.
+
 Quand R poste, F reply dans les 15 min avec un angle TECHNIQUE (pas growth).
 
 ## Quand R poste sur les conversion killers

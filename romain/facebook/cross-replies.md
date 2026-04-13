@@ -1,5 +1,7 @@
 # CROSS-REPLIES FACEBOOK — Romain repond aux posts FB de Fabrice
 
+> ⚠️ RÈGLE #0 ACTIVE : Passer par le filtre anti-IA (VOIX.md §RÈGLE #0) avant publication. JAMAIS publier tel quel.
+
 Quand F poste dans un FB Group, R commente dans les 15 min.
 
 ## Sur les posts techniques de F (speed, apps, images)

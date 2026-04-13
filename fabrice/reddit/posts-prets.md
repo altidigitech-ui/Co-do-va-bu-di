@@ -1,5 +1,7 @@
 # POSTS REDDIT — Fabrice
 
+> ⚠️ RÈGLE #0 ACTIVE : Ces posts sont des DRAFTS. Avant publication, Claude doit les passer par le filtre anti-IA de VOIX.md §RÈGLE #0. Ajouter des imperfections, casser la structure, varier les longueurs de phrases. JAMAIS publier tel quel.
+
 ## J18 (mer 23/04) — r/shopify — 1er post
 
 Titre : "I tested the page speed of 50 Shopify stores — here's what's actually killing your load times"

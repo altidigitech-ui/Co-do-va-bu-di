@@ -1,5 +1,7 @@
 # Fabrice — Distribution (angle technique)
 
+**⚠️ RÈGLE CRITIQUE : Chaque commentaire Reddit/Facebook DOIT passer les détecteurs IA. Lire VOIX.md §RÈGLE #0 AVANT de rédiger. Un ban = compte grillé = semaines perdues. JAMAIS de commentaire "propre".**
+
 ## Qui
 Co-fondateur CTO de FoundryTwo. Distribution full-time dans ce repo.
 Le build des SaaS se fait dans des projets Claude séparés — PAS ici.

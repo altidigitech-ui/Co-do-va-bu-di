@@ -1,5 +1,7 @@
 # ANGLES & TEMPLATES — Fabrice
 
+> ⚠️ RÈGLE #0 ACTIVE : Ces templates donnent l'ANGLE et les POINTS CLÉS uniquement. Claude DOIT les réécrire dans un style humain imparfait (voir VOIX.md §RÈGLE #0). Un template copié proprement = détection IA = ban. Réécrire comme si F tapait vite depuis son téléphone.
+
 Même usage que pour R. F copie le post → Claude choisit le framework → génère avec VOIX.md de F.
 
 ## Par type de post Reddit/FB

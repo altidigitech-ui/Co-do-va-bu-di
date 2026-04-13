@@ -1,5 +1,7 @@
 # POSTS REDDIT — Romain
 
+> ⚠️ RÈGLE #0 ACTIVE : Ces posts sont des DRAFTS. Avant publication, Claude doit les passer par le filtre anti-IA de VOIX.md §RÈGLE #0. Ajouter des imperfections, casser la structure, varier les longueurs de phrases. JAMAIS publier tel quel.
+
 ## J18 (mer 23/04) — r/ecommerce — 1er post
 
 Titre : "3 conversion killers I keep seeing on Shopify stores (none of them are what you think)"

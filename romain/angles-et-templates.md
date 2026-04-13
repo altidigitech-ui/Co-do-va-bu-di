@@ -1,5 +1,7 @@
 # ANGLES & TEMPLATES — Romain
 
+> ⚠️ RÈGLE #0 ACTIVE : Ces templates donnent l'ANGLE et les POINTS CLÉS uniquement. Claude DOIT les réécrire dans un style humain imparfait (voir VOIX.md §RÈGLE #0). Un template copié proprement = détection IA = ban. Réécrire comme si R tapait vite depuis son téléphone.
+
 Quand Claude génère un commentaire pour R, il utilise le framework adapté au type de post.
 R copie le titre/contenu du post → le colle à Claude → Claude choisit le framework → génère le commentaire avec la VOIX.md de R.
 
