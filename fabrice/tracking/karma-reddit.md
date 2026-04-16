@@ -11,3 +11,4 @@
 | J8 | 13/04 | 1 | +0 | Ban d'un sub non-cible (flag bot IA) — incident, pas de karma gagné |
 | J9 | 14/04 | 1 | +0 | Skip — debug StoreMD |
 | J10 | 15/04 | ___ | +___ | Reprise terrain. 1 commentaire posté r/AskReddit avec nouvelles règles anti-IA. |
+| J11 | 16/04 | ___ | +___ | Session karma : 7 commentaires (4 r/AskReddit + 3 r/CasualConversation). Nouvelles règles anti-IA appliquées. |
