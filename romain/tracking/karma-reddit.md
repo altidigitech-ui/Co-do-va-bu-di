@@ -10,3 +10,4 @@
 | J7 | 12/04 | 1 | 0 | Rien fait. |
 | J8 | 13/04 | 1 | 0 | Rien fait. |
 | J9 | 14/04 | ___ | +___ | F5Bot configuré (6 keywords). 2 commentaires Reddit : r/AskReddit (réinvention après 30 ans) + r/AskReddit (perte de poids — commentaire perso vécu). Vérifier karma demain matin. |
+| J11 | 16/04 | ___ | +___ | 1 commentaire Reddit posté dans r/AskReddit (FR) sur post "As-tu déjà changé de marque pour un concurrent en tant que client ?" — angle GPT vers Claude + apprentissage Python. Vérifier karma demain. |
