@@ -26,3 +26,11 @@
 | 23 | 09/04 | FB Shopify Dropshipping | "when you look at your analytics, do you know what to do next, or does it feel overwhelming?" | Monitoring / data overwhelm | Fort — StoreMD angle |
 | 24 | 09/04 | FB Shopify Dropshipping | "Too much data, no idea what to do with it / Low traffic low conversions / Managing inventory" | Monitoring / confusion | Fort — StoreMD angle |
 | 25 | 09/04 | FB Shopify Dropshipping | "Which app are you using to track your orders and sales? Measure growth?" (6 likes, 13 comments) | Apps / tracking | Moyen |
+| 26 | 17/04 | r/shopify | "Starting a store and EVERYTHING is a subscription, profits = subscriptions" (88 upvotes, 110 comments) | App overload / coûts | Fort — StoreMD angle |
+| 27 | 17/04 | r/shopify | "Meta integration godawful, deduplication errors, low event coverage" (10 upvotes, 16 comments) | Intégrations / Meta | Moyen |
+| 28 | 17/04 | r/shopify | "CSV export ruins barcodes — Excel scientific notation" (10 comments) | Data / migration | Moyen |
+| 29 | 17/04 | r/shopify | "Payment processor nightmare, Braintree fait faux bond, $1.58M/an" (13 upvotes, 48 comments) | Payment | Moyen |
+| 30 | 17/04 | r/shopify | "Sessions spam Singapore/South Korea, don't know if real or spam" (8 upvotes, 22 comments) | Monitoring / spam | Fort — StoreMD angle |
+| 31 | 17/04 | r/shopify | "EU company selling US, banks flag charges, losing orders silently" (6 upvotes, 15 comments) | Conversion invisible | Fort — StoreMD angle |
+| 32 | 17/04 | r/shopify | "Orders from ChatGPT channel — anyone received one?" (11 upvotes) | Nouveau canal | Moyen |
+| 33 | 17/04 | r/shopify | "Buy with Shop button forces app registration" (5 upvotes) | Checkout / conversion | Moyen |
