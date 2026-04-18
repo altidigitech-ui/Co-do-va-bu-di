@@ -11,3 +11,5 @@
 | J8 | 13/04 | 1 | +0 | Ban d'un sub non-cible (flag bot IA) — incident, pas de karma gagné |
 | J9 | 14/04 | 1 | +0 | Skip — debug StoreMD |
 | J10 | 15/04 | ___ | +___ | Reprise terrain. 1 commentaire posté r/AskReddit avec nouvelles règles anti-IA. |
+| J12 | 17/04 | 3 | +0 | 4 commentaires r/AskReddit (posts frais <10 min). Stratégie "New" lancée. |
+| J13 | 18/04 | 23 | +20 | Stratégie "New" payante. 3 AskReddit + 1er commentaire r/ecommerce (MILESTONE). |
